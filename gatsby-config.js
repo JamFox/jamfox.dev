@@ -16,12 +16,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-styled-components",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "G-KXX81CYERE",
-      },
-    },
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
@@ -49,6 +43,15 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         path: "./src/pages",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-KXX81CYERE"],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
   ],
