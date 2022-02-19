@@ -4,6 +4,13 @@ module.exports = {
     siteUrl: "https://jamfox.dev",
   },
   plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "src/images",
+        name: "images",
+      },
+    },
     "gatsby-plugin-offline",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
