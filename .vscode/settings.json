@@ -1,7 +1,11 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#302B37",
-        "titleBar.activeBackground": "#433D4D",
-        "titleBar.activeForeground": "#FAFAFB"
-    }
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#302B37",
+    "titleBar.activeBackground": "#433D4D",
+    "titleBar.activeForeground": "#FAFAFB"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

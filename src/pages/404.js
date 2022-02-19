@@ -1,54 +1,51 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react"
+import {StaticImage} from "gatsby-plugin-image"
+import {Link} from "gatsby"
+import styled from "styled-components"
+import {Button, HeadingXL, SEO, TextBody} from "../components"
+import {HomeLayout} from "../components/LayoutHome"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+const ButtonCentered = styled(Button)`
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+`
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+const InlineText = styled(TextBody)`
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  horizontal-align: center;
+`
 
-// markup
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <>
+      <SEO title="404: Not found" />
+      <HomeLayout>
+        <Wrapper>
+          <HeadingXL>NOT FOUND </HeadingXL>
+          <InlineText style={{textAlign: "center"}}>
+            This page doesn&#39;t exist{" "}
+            <StaticImage
+              src="../images/rock.png"
+              width={43}
+              aspectRatio={1 / 1}
+              layout="fixed"
+              quality={90}
+            />
+          </InlineText>
+          <Link to="/">
+            <ButtonCentered>Go home</ButtonCentered>
+          </Link>
+        </Wrapper>
+      </HomeLayout>
+    </>
   )
 }
-
-export default NotFoundPage
