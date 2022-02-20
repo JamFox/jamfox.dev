@@ -8,11 +8,11 @@ export const Button = styled.a`
   border-radius: 100px;
   color: var(--accent-color);
   display: flex;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
   justify-content: center;
   margin: 2vh auto 5vh auto;
-  padding: 10px 30px;
+  padding: 10px 20px;
   text-align: center;
   transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   width: 200px;
