@@ -75,7 +75,7 @@ const InlineWrapper = styled.div`
 export default function HomePage({data}) {
   return (
     <>
-      <SEO title="Portfolio" />
+      <SEO title="Home" />
       <HeaderHome />
       <HomeLayout>
         <Hero>
