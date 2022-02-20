@@ -5,7 +5,7 @@ export const TextBody = styled.div`
   color: var(--dark-color-light);
   display: block;
   letter-spacing: -0.003em;
-  line-height: 2.5;
+  line-height: 1.4;
   margin: 0 5% 2vh 5%;
 
   @media (max-width: ${BREAKPOINT}px) {

@@ -1,8 +1,10 @@
 import React from "react"
+import {StaticImage} from "gatsby-plugin-image"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import {FixedBar} from "../components"
 import {BREAKPOINT} from "../utils/constants"
+import banan from "../images/banan.gif"
 
 const HeaderWrapper = styled(FixedBar)`
   justify-content: space-between;
@@ -25,13 +27,31 @@ const Logo = styled.p`
   }
 `
 
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5vh;
+`
+
+const TextWrapper = styled.div`
+  margin: 1vh;
+`
+
 export function HeaderLogo() {
   return (
     <HeaderWrapper>
       <Logo>JF</Logo>
-      <Link to="/">
-        <p>Back to home</p>
-      </Link>
+      <Wrapper>
+        <TextWrapper>
+          <Link to="/">
+            <p display="inline-block">Back to home</p>
+          </Link>
+        </TextWrapper>
+        <Link to="/">
+          <img src={banan} alt="banan.gif" width={20} />
+        </Link>
+      </Wrapper>
     </HeaderWrapper>
   )
 }

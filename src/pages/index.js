@@ -5,6 +5,7 @@ import {HeadingXL, Button, SEO} from "../components"
 import {HeaderHome} from "../components/HeaderHome"
 import {HomeLayout} from "../components/LayoutHome"
 import {BREAKPOINT} from "../utils/constants"
+import {rock} from "../images/gal.gif"
 
 const Hero = styled.div`
   margin-bottom: 20vh;
@@ -30,9 +31,38 @@ const TextHome = styled.p`
   }
 `
 
-const ButtonInline = styled(Button)`
+const ButtonInlineHotpink = styled(Button)`
   margin: 2vh;
   width: 180px;
+  background: url("https://c.tenor.com/RJgdogvsjEsAAAAd/galaxie-galaxy.gif")
+    scroll 0 no-repeat;
+`
+
+const ButtonInlineRed = styled(Button)`
+  margin: 2vh;
+  width: 180px;
+  border: 3px solid var(--red-color);
+  :hover {
+    box-shadow: 3px 11px 0 0 var(--red-color);
+  }
+`
+
+const ButtonInlinePink = styled(Button)`
+  margin: 2vh;
+  width: 180px;
+  border: 3px solid var(--pink-color);
+  :hover {
+    box-shadow: -3px 11px 0 0 var(--pink-color);
+  }
+`
+
+const ButtonInlineOrange = styled(Button)`
+  margin: 2vh;
+  width: 180px;
+  border: 3px solid var(--orange-color);
+  :hover {
+    box-shadow: -9px 9px 0 0 var(--orange-color);
+  }
 `
 
 const Wrapper = styled.div`
@@ -55,23 +85,23 @@ export default function HomePage({data}) {
         </Hero>
         <Wrapper>
           <InlineWrapper>
-            <Link to="/">
-              <ButtonInline>wowa</ButtonInline>
+            <Link to="https://youtu.be/Qtep7N2xpJE">
+              <ButtonInlineHotpink>wowa</ButtonInlineHotpink>
             </Link>
           </InlineWrapper>
           <InlineWrapper>
-            <Link to="/">
-              <ButtonInline>wiwa</ButtonInline>
+            <Link to="https://youtu.be/izWxL2mhPvQ">
+              <ButtonInlineRed>wiwa</ButtonInlineRed>
             </Link>
           </InlineWrapper>
           <InlineWrapper>
-            <Link to="/">
-              <ButtonInline>mister</ButtonInline>
+            <Link to="https://youtu.be/zvqV7tO2rC8">
+              <ButtonInlinePink>mister</ButtonInlinePink>
             </Link>
           </InlineWrapper>
           <InlineWrapper>
-            <Link to="/">
-              <ButtonInline>mister</ButtonInline>
+            <Link to="https://youtu.be/4bW-wjC61E0">
+              <ButtonInlineOrange>lul</ButtonInlineOrange>
             </Link>
           </InlineWrapper>
         </Wrapper>

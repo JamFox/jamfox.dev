@@ -4,6 +4,9 @@ import {BREAKPOINT} from "../utils/constants"
 
 export const GlobalStyles = createGlobalStyle`
   :root {
+    --orange-color: hsla(16, 100%, 72%, 1);
+    --pink-color: hsla(348, 100%, 72%, 1);
+    --red-color: hsla(357, 100%, 63%, 1);
     --hotpink-color: hsl(339, 100%, 55%);
     --dark-color: hsla(0, 0%, 11%, 1);
     --dark-color-light: hsla(0, 0%, 62%, 0.9);
