@@ -52,16 +52,13 @@ export default function HomePage({data}) {
         </Hero>
         <InlineWrapper>
           <Link to="/">
-            <ButtonInline>these</ButtonInline>
+            <ButtonInline>wowa</ButtonInline>
           </Link>
           <Link to="/">
-            <ButtonInline>dont</ButtonInline>
+            <ButtonInline>wiwa</ButtonInline>
           </Link>
           <Link to="/">
-            <ButtonInline>go</ButtonInline>
-          </Link>
-          <Link to="/">
-            <ButtonInline>anywhere</ButtonInline>
+            <ButtonInline>mister</ButtonInline>
           </Link>
         </InlineWrapper>
       </HomeLayout>
