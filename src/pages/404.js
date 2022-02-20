@@ -9,19 +9,20 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 5vh;
 `
-const ButtonCentered = styled(Button)`
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10vh;
+const InlineWrapper = styled.div`
+  text-align: center;
+  margin: 10vh;
 `
 
 const InlineText = styled(TextBody)`
-  margin-top: 10vh;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  horizontal-align: center;
+  display: inline-block;
+  margin: 0vh 2vh 0vh;
+`
+
+const InlineImg = styled(StaticImage)`
+  display: inline-block;
 `
 
 export default function NotFoundPage() {
@@ -31,18 +32,19 @@ export default function NotFoundPage() {
       <HomeLayout>
         <Wrapper>
           <HeadingXL>NOT FOUND </HeadingXL>
-          <InlineText style={{textAlign: "center"}}>
-            This page doesn&#39;t exist{" "}
+          <InlineWrapper>
+            <InlineText style={{textAlign: "center"}}>
+              This page doesn&#39;t exist{" "}
+            </InlineText>
             <StaticImage
               src="../images/rock.png"
               width={43}
               aspectRatio={1 / 1}
-              layout="fixed"
               quality={90}
             />
-          </InlineText>
+          </InlineWrapper>
           <Link to="/">
-            <ButtonCentered>Go home</ButtonCentered>
+            <Button>Go home</Button>
           </Link>
         </Wrapper>
       </HomeLayout>
