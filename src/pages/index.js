@@ -89,8 +89,8 @@ export default function HomePage({data}) {
             </Link>
           </InlineWrapper>
           <InlineWrapper>
-            <Link to="https://youtu.be/izWxL2mhPvQ">
-              <ButtonInlineRed>wiwa</ButtonInlineRed>
+            <Link to="/setup">
+              <ButtonInlineRed>Setup</ButtonInlineRed>
             </Link>
           </InlineWrapper>
           <InlineWrapper>

@@ -40,7 +40,9 @@ const TextWrapper = styled.div`
 export function HeaderLogo() {
   return (
     <HeaderWrapper>
-      <Logo>JF</Logo>
+      <Link to="/">
+        <Logo>JF</Logo>
+      </Link>
       <Wrapper>
         <TextWrapper>
           <Link to="/">
