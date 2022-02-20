@@ -18,4 +18,18 @@ export const HeadingL = styled.h2`
   @media (max-width: ${BREAKPOINT}px) {
     font-size: 30px;
   }
+
+  @keyframes headingl {
+    0% {
+      left: 500px;
+      opacity: 0;
+    }
+    100% {
+      left: 0px;
+      opacity: 1;
+    }
+  }
+  position: relative;
+  animation-name: headingl;
+  animation-duration: 0.5s;
 `

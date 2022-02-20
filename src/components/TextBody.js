@@ -11,4 +11,18 @@ export const TextBody = styled.div`
   @media (max-width: ${BREAKPOINT}px) {
     margin: 0 0 5vh 0;
   }
+
+  @keyframes textbody {
+    0% {
+      left: -500px;
+      opacity: 0;
+    }
+    100% {
+      left: 0px;
+      opacity: 1;
+    }
+  }
+  position: relative;
+  animation-name: textbody;
+  animation-duration: 0.5s;
 `

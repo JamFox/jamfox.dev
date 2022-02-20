@@ -34,6 +34,10 @@ const TextHome = styled.p`
     font-size: 19px;
     margin-bottom: 7vh;
   }
+
+  position: relative;
+  animation-name: headingxl;
+  animation-duration: 0.4s;
 `
 const Post = styled.div`
   border-bottom: 1px solid lightgray;

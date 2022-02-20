@@ -19,4 +19,18 @@ export const HeadingXL = styled.h1`
   @media (max-width: ${BREAKPOINT}px) {
     font-size: 45px;
   }
+
+  @keyframes headingxl {
+    0% {
+      top: -500px;
+      opacity: 0;
+    }
+    100% {
+      top: 0px;
+      opacity: 1;
+    }
+  }
+  position: relative;
+  animation-name: headingxl;
+  animation-duration: 0.5s;
 `

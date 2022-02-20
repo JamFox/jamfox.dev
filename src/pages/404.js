@@ -1,5 +1,4 @@
 import React from "react"
-import {StaticImage} from "gatsby-plugin-image"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import {Button, HeadingXL, SEO, TextBody} from "../components"
@@ -17,6 +16,9 @@ const InlineWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: 5vh;
+  position: relative;
+  animation-name: textbody;
+  animation-duration: 0.5s;
 `
 
 const InlineText = styled(TextBody)`

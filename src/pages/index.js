@@ -5,14 +5,12 @@ import {HeadingXL, Button, SEO} from "../components"
 import {HeaderHome} from "../components/HeaderHome"
 import {HomeLayout} from "../components/LayoutHome"
 import {BREAKPOINT} from "../utils/constants"
-import {rock} from "../images/gal.gif"
 
 const Hero = styled.div`
   margin-bottom: 20vh;
 
   @media (max-width: ${BREAKPOINT}px) {
     margin-bottom: 15vh;
-  }
 `
 const TextHome = styled.p`
   color: var(--light-color);
@@ -29,6 +27,10 @@ const TextHome = styled.p`
     font-size: 19px;
     margin-bottom: 7vh;
   }
+
+  position: relative;
+  animation-name: headingxl;
+  animation-duration: 0.4s;
 `
 
 const ButtonInlineHotpink = styled(Button)`
@@ -45,6 +47,7 @@ const ButtonInlineRed = styled(Button)`
   :hover {
     box-shadow: 3px 11px 0 0 var(--red-color);
   }
+  animation-duration: 0.4s;
 `
 
 const ButtonInlinePink = styled(Button)`
@@ -54,6 +57,7 @@ const ButtonInlinePink = styled(Button)`
   :hover {
     box-shadow: -3px 11px 0 0 var(--pink-color);
   }
+  animation-duration: 0.3s;
 `
 
 const ButtonInlineOrange = styled(Button)`
@@ -63,6 +67,8 @@ const ButtonInlineOrange = styled(Button)`
   :hover {
     box-shadow: -9px 9px 0 0 var(--orange-color);
   }
+
+  animation-duration: 0.2s;
 `
 
 const Wrapper = styled.div`

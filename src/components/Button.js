@@ -21,6 +21,20 @@ export const Button = styled.a`
     box-shadow: 9px 9px 0 0 var(--hotpink-color);
   }
 
+  @keyframes button {
+    0% {
+      left: -500px;
+      opacity: 0;
+    }
+    100% {
+      left: 0px;
+      opacity: 1;
+    }
+  }
+  position: relative;
+  animation-name: button;
+  animation-duration: 0.5s;
+
   @media (max-width: ${BREAKPOINT}px) {
     font-size: 20px;
   }
