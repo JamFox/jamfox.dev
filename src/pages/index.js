@@ -31,13 +31,16 @@ const TextHome = styled.p`
 `
 
 const ButtonInline = styled(Button)`
-  display: inline-block;
   margin: 2vh;
   width: 180px;
 `
 
-const InlineWrapper = styled.div`
+const Wrapper = styled.div`
   text-align: center;
+`
+
+const InlineWrapper = styled.div`
+  display: inline-block;
 `
 
 export default function HomePage({data}) {
@@ -50,17 +53,28 @@ export default function HomePage({data}) {
           <HeadingXL>JamFox's Home</HeadingXL>
           <TextHome>Under construction!</TextHome>
         </Hero>
-        <InlineWrapper>
-          <Link to="/">
-            <ButtonInline>wowa</ButtonInline>
-          </Link>
-          <Link to="/">
-            <ButtonInline>wiwa</ButtonInline>
-          </Link>
-          <Link to="/">
-            <ButtonInline>mister</ButtonInline>
-          </Link>
-        </InlineWrapper>
+        <Wrapper>
+          <InlineWrapper>
+            <Link to="/">
+              <ButtonInline>wowa</ButtonInline>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <Link to="/">
+              <ButtonInline>wiwa</ButtonInline>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <Link to="/">
+              <ButtonInline>mister</ButtonInline>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <Link to="/">
+              <ButtonInline>mister</ButtonInline>
+            </Link>
+          </InlineWrapper>
+        </Wrapper>
       </HomeLayout>
     </>
   )
