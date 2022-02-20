@@ -8,6 +8,7 @@ import {
   TextBody,
   HeaderLogo,
   HeadingL,
+  Layout,
   TextDate,
 } from "../components"
 import {HomeLayout} from "../components/LayoutHome"
@@ -166,10 +167,14 @@ const GifWrapper = styled.div`
   align-items: center;
   justify-content: left;
   content-align: left;
-  width: 26%;
+  width: auto;
   position: relative;
   animation-name: textbody;
   animation-duration: 0.5s;
+`
+
+const TextAboutImg = styled(TextAbout)`
+  width: auto;
 `
 
 export default function AboutPage() {
@@ -192,7 +197,7 @@ export default function AboutPage() {
           </ImgWrapper>
 
           <GifWrapper>
-            <TextAbout>Heyya! Name's Karl. </TextAbout>
+            <TextAboutImg>Heyya! Name's Karl. </TextAboutImg>
             <Link to="/">
               <img src={banan} alt="ratnce.gif" width={25} />
             </Link>
