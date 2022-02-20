@@ -33,16 +33,14 @@ const TextHome = styled.p`
   animation-duration: 0.4s;
 `
 
-const ButtonInlineHotpink = styled(Button)`
+const ButtonInline = styled(Button)`
   margin: 2vh;
   width: 180px;
-  background: url("https://c.tenor.com/RJgdogvsjEsAAAAd/galaxie-galaxy.gif")
-    scroll 0 no-repeat;
+  /*background: url("https://c.tenor.com/RJgdogvsjEsAAAAd/galaxie-galaxy.gif")
+    scroll 0 no-repeat; */
 `
 
-const ButtonInlineRed = styled(Button)`
-  margin: 2vh;
-  width: 180px;
+const ButtonInlineRed = styled(ButtonInline)`
   border: 3px solid var(--red-color);
   :hover {
     box-shadow: 3px 11px 0 0 var(--red-color);
@@ -50,9 +48,7 @@ const ButtonInlineRed = styled(Button)`
   animation-duration: 0.4s;
 `
 
-const ButtonInlinePink = styled(Button)`
-  margin: 2vh;
-  width: 180px;
+const ButtonInlinePink = styled(ButtonInline)`
   border: 3px solid var(--pink-color);
   :hover {
     box-shadow: -3px 11px 0 0 var(--pink-color);
@@ -60,14 +56,11 @@ const ButtonInlinePink = styled(Button)`
   animation-duration: 0.3s;
 `
 
-const ButtonInlineOrange = styled(Button)`
-  margin: 2vh;
-  width: 180px;
+const ButtonInlineOrange = styled(ButtonInline)`
   border: 3px solid var(--orange-color);
   :hover {
     box-shadow: -9px 9px 0 0 var(--orange-color);
   }
-
   animation-duration: 0.2s;
 `
 
@@ -91,8 +84,8 @@ export default function HomePage({data}) {
         </Hero>
         <Wrapper>
           <InlineWrapper>
-            <Link to="https://youtu.be/Qtep7N2xpJE">
-              <ButtonInlineHotpink>wowa</ButtonInlineHotpink>
+            <Link to="/about">
+              <ButtonInline>About</ButtonInline>
             </Link>
           </InlineWrapper>
           <InlineWrapper>

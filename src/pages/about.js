@@ -1,0 +1,261 @@
+import React from "react"
+import {Link} from "gatsby"
+import styled from "styled-components"
+import {
+  Button,
+  HeadingXL,
+  SEO,
+  TextBody,
+  HeaderLogo,
+  HeadingL,
+  TextDate,
+} from "../components"
+import {HomeLayout} from "../components/LayoutHome"
+import {StaticImage} from "gatsby-plugin-image"
+import {BREAKPOINT} from "../utils/constants"
+import banan from "../images/ratnce.gif"
+
+const Wrapper = styled.div`
+  margin: 2vh 5vh 5vh 5vh;
+  text-align: center;
+`
+const InlineWrapper = styled.div`
+  display: inline-block;
+  margin: 1vh 0vh 0vh 0vh;
+  text-align: justify;
+`
+const TextAbout = styled.p`
+  width: 100%;
+  margin: 1vh 2vh 0vh 0vh;
+
+  @keyframes textbody {
+    0% {
+      right: -500px;
+      opacity: 0;
+    }
+    100% {
+      right: 0px;
+      opacity: 1;
+    }
+  }
+  position: relative;
+  animation-name: textbody;
+  animation-duration: 0.5s;
+`
+
+const ImgWrapper = styled.div`
+  float: left;
+  margin: 2vh;
+
+  position: relative;
+  animation-name: textbody;
+  animation-duration: 0.4s;
+`
+
+const ButtonInline = styled(Button)`
+  margin: 2vh;
+  width: 180px;
+  border: 3px solid hsla(201, 100%, 35%, 1);
+  :hover {
+    box-shadow: 9px 9px 0 0 hsla(201, 100%, 21%, 1);
+  }
+  animation-duration: 0.5s;
+`
+
+const ButtonInlineGit = styled(ButtonInline)`
+  border: 3px solid hsla(360, 100%, 100%, 0.75);
+  :hover {
+    box-shadow: 9px 9px 0 0 hsla(360, 100%, 100%, 0.55);
+  }
+  animation-duration: 0.4s;
+`
+
+const ButtonInlinePDF = styled(ButtonInline)`
+  border: 3px solid var(--pink-color);
+  :hover {
+    box-shadow: 9px 9px 0 0 hsla(348, 100%, 71%, 0.83);
+  }
+  animation-duration: 0.3s;
+`
+
+const Post = styled.div`
+  margin-bottom: 50px;
+
+  @media (max-width: ${BREAKPOINT}px) {
+    padding-left: 0;
+  }
+`
+
+const PostWrapper = styled.div`
+  display: inline-block;
+  margin: 1vh 0vh 0vh 0vh;
+  text-align: center;
+  width: 50%;
+
+  @keyframes post2 {
+    0% {
+      left: 1000px;
+      opacity: 0;
+    }
+    100% {
+      left: 0px;
+      opacity: 1;
+    }
+  }
+  position: relative;
+  animation-name: post2;
+  animation-duration: 0.9s;
+`
+
+const PostWrapper2 = styled(PostWrapper)`
+  @keyframes post {
+    0% {
+      left: -1000px;
+      opacity: 0;
+    }
+    100% {
+      left: 0px;
+      opacity: 1;
+    }
+  }
+  position: relative;
+  animation-name: post;
+  animation-duration: 0.9s;
+`
+
+const ExpHeading = styled(HeadingXL)`
+  display: inline-block;
+  margin: margin: 10vh 2vh 2vh 2vh;
+
+  background: -webkit-linear-gradient(
+    120deg,
+    hsla(355, 100%, 73%, 1),
+    hsla(355, 100%, 73%, 1),
+    hsla(29, 100%, 72%, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
+
+const ExpHeading2 = styled(HeadingXL)`
+  display: inline-block;
+  margin: 10vh 2vh 2vh 2vh;
+
+  background: -webkit-linear-gradient(
+    120deg,
+    hsla(355, 100%, 73%, 1),
+    hsla(29, 100%, 72%, 1),
+    hsla(29, 100%, 72%, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
+
+const HeadingL2 = styled(HeadingL)`
+  background: -webkit-linear-gradient(
+    120deg,
+    hsla(29, 100%, 79%, 1),
+    hsla(29, 100%, 79%, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
+
+const GifWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  content-align: left;
+  width: 26%;
+  position: relative;
+  animation-name: textbody;
+  animation-duration: 0.5s;
+`
+
+export default function AboutPage() {
+  return (
+    <>
+      <SEO title="About" />
+      <HeaderLogo />
+      <HomeLayout>
+        <Wrapper>
+          <HeadingXL>About </HeadingXL>
+        </Wrapper>
+        <InlineWrapper>
+          <ImgWrapper>
+            <StaticImage
+              src="../images/karlhalf.png"
+              width={120}
+              aspectRatio={1 / 1}
+              quality={90}
+            />
+          </ImgWrapper>
+
+          <GifWrapper>
+            <TextAbout>Heyya! Name's Karl. </TextAbout>
+            <Link to="/">
+              <img src={banan} alt="ratnce.gif" width={25} />
+            </Link>
+          </GifWrapper>
+
+          <TextAbout>
+            I am a twenty-something System Administrator and Hardware
+            Development student with a curiosity for all things IT. I've said
+            that I would never do front-end, but then I somehow ended up
+            building this site. Currently working at CERN.
+          </TextAbout>
+          <TextAbout>
+            I love running and weightlifting, taking and editing photos. I relax
+            by reading, enjoying a movie or meditating.
+          </TextAbout>
+        </InlineWrapper>
+
+        <Wrapper>
+          <InlineWrapper>
+            <Link to="https://www.linkedin.com/in/katurv/">
+              <ButtonInline>LinkedIn</ButtonInline>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <Link to="https://github.com/JamFox">
+              <ButtonInlineGit>GitHub</ButtonInlineGit>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <a href="cv.pdf" target="blank">
+              <ButtonInlinePDF>CV</ButtonInlinePDF>
+            </a>
+          </InlineWrapper>
+
+          <TextBody> MAIL: karl.turvas@cern.ch </TextBody>
+          <TextBody> PHONE: +372 5333 7528 </TextBody>
+        </Wrapper>
+
+        <PostWrapper2>
+          <ExpHeading2>what now </ExpHeading2>
+        </PostWrapper2>
+
+        <PostWrapper>
+          <ExpHeading>????? </ExpHeading>
+        </PostWrapper>
+
+        <PostWrapper2>
+          <Link to="/">
+            <Post>
+              <HeadingL2>Wonder what will end up here?</HeadingL2>
+              <TextBody>Something interesting I bet</TextBody>
+              <TextDate>brrr</TextDate>
+            </Post>
+          </Link>
+        </PostWrapper2>
+        <PostWrapper>
+          <Post>
+            <HeadingL>This probably wont be as interesting tho</HeadingL>
+            <TextBody>Unless? 👀</TextBody>
+            <TextDate>crabs</TextDate>
+          </Post>
+        </PostWrapper>
+      </HomeLayout>
+    </>
+  )
+}
