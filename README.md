@@ -1,54 +1,30 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://jamfox.dev">
+    <img alt="Gatsby" src="./src/images/icon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  JamFox's JAMstack GatsbyJS webpage
 </h1>
 
-## 🚀 Quick start
+Repository for JamFox's website, CI and hosting by Gatsby.
 
-1.  **Create a Gatsby site.**
+## Under the hood
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+1.  **`/node_modules`**: Contains all of the npm packages that this project depends on.
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+2.  **`/src`**: Contains all of the code related to what you will see on the front-end. `src` is a convention for “source code”.
 
-2.  **Start developing.**
+3.  **`.gitignore`**: Tells git which files it should not track / not maintain a version history for.
 
-    Navigate into your new site’s directory and start it up.
+4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+5.  **`gatsby-config.js`**: Main configuration file for a Gatsby site. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
-3.  **Open the code and start customizing!**
+6.  **`gatsby-node.js`**: File is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-    Your site is now running at http://localhost:8000!
+7.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+8.  **`README.md`**: A text file containing useful reference information about your project.
 
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
