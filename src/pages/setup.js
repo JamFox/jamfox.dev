@@ -54,7 +54,7 @@ const HeadingL2 = styled(HeadingL)`
 `
 
 const TextDateSmall = styled(TextDate)`
-  margin: 0vh 5vh 0vh 20vh;
+  margin: 0vh 5vh 0vh 5vh;
   text-align: left;
   justify-content: top;
 `
