@@ -197,7 +197,7 @@ export default function AboutPage() {
           </ImgWrapper>
 
           <GifWrapper>
-            <TextAboutImg>Heyya! Name's Karl. </TextAboutImg>
+            <TextAboutImg>Heyya! Name's Karl, but you can call me Carl. </TextAboutImg>
             <Link to="/">
               <img src={banan} alt="ratnce.gif" width={25} />
             </Link>
