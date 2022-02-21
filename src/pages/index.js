@@ -41,7 +41,7 @@ const ButtonInline = styled(Button)`
     scroll 0 no-repeat; */
   border: 3px solid var(--pink-color);
   :hover {
-    box-shadow: -3px 11px 0 0 var(--pink-color);
+    box-shadow: 9px 9px 0 0 var(--pink-color);
   }
 `
 
