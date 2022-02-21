@@ -106,7 +106,7 @@ export default function HomePage({data}) {
           <TextHome>Under construction!</TextHome>
           <GifWrapper>
             <TextAbout>
-              (So if anything breaks you can't blame it on my incompetence)
+              (So if anything breaks you can't blame it on my incompetence
             </TextAbout>
             <StaticImage
               src="../images/pepeEZ.webp"
@@ -115,6 +115,7 @@ export default function HomePage({data}) {
               quality={90}
               layout="fixed"
             />
+            <TextAbout>)</TextAbout>
           </GifWrapper>
         </Hero>
 
