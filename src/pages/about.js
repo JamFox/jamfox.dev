@@ -65,7 +65,7 @@ const ButtonInline = styled(Button)`
 const ButtonInlineGit = styled(ButtonInline)`
   border: 3px solid hsla(360, 100%, 100%, 0.75);
   :hover {
-    box-shadow: 9px 9px 0 0 hsla(360, 100%, 100%, 0.55);
+    box-shadow: 0px 9px 0 0 hsla(360, 100%, 100%, 0.55);
   }
   animation-duration: 0.4s;
 `
@@ -73,7 +73,7 @@ const ButtonInlineGit = styled(ButtonInline)`
 const ButtonInlinePDF = styled(ButtonInline)`
   border: 3px solid var(--pink-color);
   :hover {
-    box-shadow: 9px 9px 0 0 hsla(348, 100%, 71%, 0.83);
+    box-shadow: -9px 9px 0 0 hsla(348, 100%, 71%, 0.83);
   }
   animation-duration: 0.3s;
 `
