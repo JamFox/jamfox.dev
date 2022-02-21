@@ -79,7 +79,7 @@ export default function AboutPage() {
           <HeadingXL>Setup </HeadingXL>
           <GifWrapper>
             <TextAbout>Gotta have good tools to do good work, right?</TextAbout>
-              <img src={gif} alt="fox.gif" width={35} />
+            <img src={gif} alt="fox.gif" width={35} layout="fixed" />
           </GifWrapper>
           <HeadingL2> titaniumjam mk3</HeadingL2>
           <Post>
@@ -117,12 +117,15 @@ export default function AboutPage() {
               <TextDateSmall>
                 » GPU - AMD ATI Radeon RX 460/560D (RIP GTX 970 MSI
               </TextDateSmall>
-              <StaticImage
-                src="../images/deadrat.png"
-                width={20}
-                aspectRatio={1 / 1}
-                quality={90}
-              />
+              <Link to="../images/deadrat.png" target="blank">
+                <StaticImage
+                  src="../images/deadrat.png"
+                  width={20}
+                  aspectRatio={1 / 1}
+                  quality={90}
+                  layout="fixed"
+                />
+              </Link>
               <TextDateSmall> )</TextDateSmall>
             </GifWrapperLeft>
             <TextDateSmall>» RAM - 2x4GB+2x8GB (DDR3)</TextDateSmall>
@@ -178,9 +181,7 @@ export default function AboutPage() {
             <TextDateSmall>
               » Raspberry cluster - 2x Model 3B+ / Model 4
             </TextDateSmall>
-            <TextDateSmall>
-              » Backpack - 5.11 RUSH24
-            </TextDateSmall>
+            <TextDateSmall>» Backpack - 5.11 RUSH24</TextDateSmall>
           </Post>
         </Wrapper>
       </HomeLayout>

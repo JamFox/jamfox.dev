@@ -8,7 +8,6 @@ import {
   TextBody,
   HeaderLogo,
   HeadingL,
-  Layout,
   TextDate,
 } from "../components"
 import {HomeLayout} from "../components/LayoutHome"
@@ -194,6 +193,7 @@ export default function AboutPage() {
                 width={120}
                 aspectRatio={1 / 1}
                 quality={90}
+                layout="fixed"
               />
             </ImgWrapper>
           </Link>
@@ -203,7 +203,7 @@ export default function AboutPage() {
               Heyya! Name's Karl, but you can call me Carl.
             </TextAboutImg>
             <Link to="https://youtu.be/OXQwx1EolD8">
-              <img src={gif} alt="ratnce.gif" width={25} />
+              <img src={gif} alt="ratnce.gif" width={25} layout="fixed" />
             </Link>
           </GifWrapper>
 
