@@ -14,7 +14,7 @@ import {
 import {HomeLayout} from "../components/LayoutHome"
 import {StaticImage} from "gatsby-plugin-image"
 import {BREAKPOINT} from "../utils/constants"
-import banan from "../images/ratnce.gif"
+import gif from "../images/ratnce.gif"
 
 const Wrapper = styled.div`
   margin: 2vh 5vh 5vh 5vh;
@@ -187,27 +187,31 @@ export default function AboutPage() {
           <HeadingXL>About </HeadingXL>
         </Wrapper>
         <InlineWrapper>
-          <ImgWrapper>
-            <StaticImage
-              src="../images/karlhalf.png"
-              width={120}
-              aspectRatio={1 / 1}
-              quality={90}
-            />
-          </ImgWrapper>
+          <Link to="https://www.instagram.com/karlturvas/">
+            <ImgWrapper>
+              <StaticImage
+                src="../images/karlhalf.png"
+                width={120}
+                aspectRatio={1 / 1}
+                quality={90}
+              />
+            </ImgWrapper>
+          </Link>
 
           <GifWrapper>
-            <TextAboutImg>Heyya! Name's Karl, but you can call me Carl. </TextAboutImg>
-            <Link to="/">
-              <img src={banan} alt="ratnce.gif" width={25} />
+            <TextAboutImg>
+              Heyya! Name's Karl, but you can call me Carl.
+            </TextAboutImg>
+            <Link to="https://youtu.be/OXQwx1EolD8">
+              <img src={gif} alt="ratnce.gif" width={25} />
             </Link>
           </GifWrapper>
 
           <TextAbout>
-            I am a twenty-something System Administrator and Hardware
-            Development student with a curiosity for all things IT. I've said
-            that I would never do front-end, but then I somehow ended up
-            building this site. Currently working at CERN.
+            I am a twenty-something SysAdmin/DevOps and Hardware Development
+            student with a curiosity for many things. I've said that I would
+            never do front-end, but then I somehow ended up building this site.
+            Currently working at CERN.
           </TextAbout>
           <TextAbout>
             I love running and weightlifting, taking and editing photos. I relax
@@ -231,9 +235,12 @@ export default function AboutPage() {
               <ButtonInlinePDF>CV</ButtonInlinePDF>
             </a>
           </InlineWrapper>
-
-          <TextBody> MAIL: karl.turvas@cern.ch </TextBody>
-          <TextBody> PHONE: +372 5333 7528 </TextBody>
+          <Link to="mailto:karl.turvas@cern.ch">
+            <TextBody> MAIL: karl.turvas@cern.ch </TextBody>
+          </Link>
+          <Link to="https://youtu.be/p0fhF-HfSzU">
+            <TextBody> PHONE: +372 5333 7528 </TextBody>
+          </Link>
         </Wrapper>
 
         <PostWrapper2>
@@ -245,13 +252,11 @@ export default function AboutPage() {
         </PostWrapper>
 
         <PostWrapper2>
-          <Link to="/">
-            <Post>
-              <HeadingL2>Wonder what will end up here?</HeadingL2>
-              <TextBody>Something interesting I bet</TextBody>
-              <TextDate>brrr</TextDate>
-            </Post>
-          </Link>
+          <Post>
+            <HeadingL2>Wonder what will end up here?</HeadingL2>
+            <TextBody>Something interesting I bet</TextBody>
+            <TextDate>brrr</TextDate>
+          </Post>
         </PostWrapper2>
         <PostWrapper>
           <Post>

@@ -23,35 +23,35 @@ export function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Games
+        JamSteam
       </ButtonLink>
       <ButtonLink
         href="https://letterboxd.com/jamfox/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Movies
+        LetterFoxd
       </ButtonLink>
       <ButtonLink
         href="https://myanimelist.net/profile/Jamfox"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Anime
+        JanimeList
       </ButtonLink>
       <ButtonLink
         href="https://open.spotify.com/user/kapikmeow"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Music
+        Foxify
       </ButtonLink>
       <ButtonLink
         href="https://www.goodreads.com/user/show/78068566-jamfox"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Books
+        JamReads
       </ButtonLink>
     </Container>
   )
