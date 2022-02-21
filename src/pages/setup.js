@@ -117,7 +117,7 @@ export default function AboutPage() {
               <TextDateSmall>
                 » GPU - AMD ATI Radeon RX 460/560D (RIP GTX 970 MSI
               </TextDateSmall>
-              <Link to="../images/deadrat.png" target="blank">
+              <Link to="/ratrat">
                 <StaticImage
                   src="../images/deadrat.png"
                   width={20}
