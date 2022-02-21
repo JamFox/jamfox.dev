@@ -8,19 +8,20 @@ import {
   TextBody,
   TextDate,
 } from "../components"
+import {HomeLayout} from "../components/LayoutHome"
 
 export default function BlogPost({data}) {
   return (
     <>
       <SEO title={data.markdownRemark.frontmatter.title} />
       <HeaderBack />
-      <Layout>
+      <HomeLayout>
         <HeadingXL>{data.markdownRemark.frontmatter.title}</HeadingXL>
         <TextDate>{data.markdownRemark.frontmatter.date}</TextDate>
         <TextBody
           dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}
         />
-      </Layout>
+      </HomeLayout>
     </>
   )
 }

@@ -5,18 +5,19 @@ import {
   HeaderLogo,
   HeadingXL,
   HeadingL,
-  Layout,
   SEO,
   TextBody,
   TextDate,
+  Button,
 } from "../components"
+import {HomeLayout} from "../components/LayoutHome"
 import {BREAKPOINT} from "../utils/constants"
 
 const Hero = styled.div`
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
 
   @media (max-width: ${BREAKPOINT}px) {
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
   }
 `
 const TextHome = styled.p`
@@ -48,16 +49,95 @@ const Post = styled.div`
   }
 `
 
+const ButtonInline = styled(Button)`
+  margin: 2vh;
+  width: 180px;
+  /*background: url("https://c.tenor.com/RJgdogvsjEsAAAAd/galaxie-galaxy.gif")
+    scroll 0 no-repeat; */
+  border: 3px solid var(--pink-color);
+  :hover {
+    box-shadow: 9px 9px 0 0 var(--pink-color);
+  }
+`
+
+const ButtonInline1 = styled(ButtonInline)`
+  border: 3px solid hsla(356, 100%, 72%, 1);
+  :hover {
+    box-shadow: 9px 9px 0 0 hsla(356, 100%, 72%, 1);
+  }
+  animation-duration: 0.4s;
+`
+
+const ButtonInline2 = styled(ButtonInline)`
+  border: 3px solid hsla(3, 100%, 72%, 1);
+  :hover {
+    box-shadow: 9px 9px 0 0 hsla(3, 100%, 72%, 1);
+  }
+  animation-duration: 0.3s;
+`
+
+const ButtonInline3 = styled(ButtonInline)`
+  border: 3px solid hsla(8, 100%, 72%, 1);
+  :hover {
+    box-shadow: 9px 9px 0 0 hsla(8, 100%, 72%, 1);
+  }
+  animation-duration: 0.2s;
+`
+
+const ButtonInline4 = styled(ButtonInline)`
+  border: 3px solid var(--orange-color);
+  :hover {
+    box-shadow: 9px 9px 0 0 var(--orange-color);
+  }
+  animation-duration: 0.2s;
+`
+
+const Wrapper = styled.div`
+  text-align: center;
+`
+
+const InlineWrapper = styled.div`
+  display: inline-block;
+`
+
 export default function Blog({data}) {
   return (
     <>
       <SEO title="Blog" />
       <HeaderLogo />
-      <Layout>
+      <HomeLayout>
         <Hero>
           <HeadingXL>JamFox's Memorywarehouse</HeadingXL>
           <TextHome>Writing. For fun!</TextHome>
         </Hero>
+        <Wrapper>
+          <InlineWrapper>
+            <Link to="https://steamcommunity.com/id/JamFox/">
+              <ButtonInline>Games</ButtonInline>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <Link to="https://letterboxd.com/jamfox/">
+              <ButtonInline1>Movies</ButtonInline1>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <Link to="https://myanimelist.net/profile/Jamfox">
+              <ButtonInline2>Anime</ButtonInline2>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <Link to="https://open.spotify.com/user/kapikmeow">
+              <ButtonInline3>Music</ButtonInline3>
+            </Link>
+          </InlineWrapper>
+          <InlineWrapper>
+            <Link to="https://www.goodreads.com/user/show/78068566-jamfox">
+              <ButtonInline4>Books</ButtonInline4>
+            </Link>
+          </InlineWrapper>
+        </Wrapper>
+
         {data.allMarkdownRemark.edges.map(({node}) => (
           <Link to={node.fields.slug} key={node.id}>
             <Post>
@@ -67,7 +147,7 @@ export default function Blog({data}) {
             </Post>
           </Link>
         ))}
-      </Layout>
+      </HomeLayout>
     </>
   )
 }
