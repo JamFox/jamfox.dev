@@ -69,18 +69,86 @@ const GifWrapperLeft = styled(GifWrapper)`
   animation-duration: 0.5s;
 `
 
+const Wiggle = styled.div`
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  left: calc(50% - 3em);
+  top: calc(50% - 2em);
+
+  transform-origin: 50% 5em;
+
+  animation: wiggle 2s linear infinite;
+`
+
+const Fly = styled.div`
+  @keyframes fly {
+    0% {
+    }
+    20% {
+      left: 100%;
+      down: 100px;
+    }
+    80% {
+      left: 0%;
+      down: 100%;
+    }
+    100% {
+      down: -100%;
+      left: -100%;
+    }
+  }
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  height: 112px;
+  width: 150px;
+  background-size: 100% 100%;
+  animation: fly 5s linear infinite;
+`
+
 export default function AboutPage() {
   return (
     <>
       <SEO title="About" />
       <HeaderLogo />
+
       <HomeLayout>
         <Wrapper>
-          <HeadingXL>Setup </HeadingXL>
+          <HeadingXL>Catch </HeadingXL>
+          <Fly>
+            <Link to="/ratrat">
+              <img src={gif} alt="fox.gif" width={105} layout="fixed" />
+            </Link>
+          </Fly>
           <GifWrapper>
             <TextAbout>Gotta have good tools to do good work, right?</TextAbout>
             <img src={gif} alt="fox.gif" width={35} layout="fixed" />
           </GifWrapper>
+
           <HeadingL2> titaniumjam mk3</HeadingL2>
           <Post>
             <TextDateSmall>» Case - Define R5 </TextDateSmall>
@@ -139,7 +207,6 @@ export default function AboutPage() {
               » Keeb - Sofle v2 (Gateron Yellow Inks)
             </TextDateSmall>
             <TextDateSmall>» Mouse - Zowie EC1-A </TextDateSmall>
-            <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
             <TextDateSmall>
               » Audio - HyperX Cloud 2 + Blue Snowball
             </TextDateSmall>
@@ -170,8 +237,7 @@ export default function AboutPage() {
             <TextDateSmall>
               » Distros - CERN CentOS 7 / Arch Linux / Ubuntu (WSL)
             </TextDateSmall>
-            <TextDateSmall>» DE - KDE Plasma (no riced WMs here)</TextDateSmall>
-            <TextDateSmall>» Text editors - SpaceVim / VSCode</TextDateSmall>
+            <TextDateSmall>» Text editors - Vim / VSCode</TextDateSmall>
             <TextDateSmall>
               » Phone (main) - Oneplus 3T hardened LineageOS
             </TextDateSmall>
@@ -181,7 +247,7 @@ export default function AboutPage() {
               » Wifi pentest adapter - Alfa AWUS036NHA
             </TextDateSmall>
             <TextDateSmall>
-              » Raspberry cluster - 2x Model 3B+ / Model 4B
+              » Raspberry cluster - 2x Model 3B+ / Model 4
             </TextDateSmall>
             <TextDateSmall>» Backpack - 5.11 RUSH24</TextDateSmall>
           </Post>

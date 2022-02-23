@@ -208,14 +208,17 @@ export default function AboutPage() {
           </GifWrapper>
 
           <TextAbout>
-            I am a twenty-something SysAdmin/DevOps and Hardware Development
-            student with a curiosity for many things. I've said that I would
-            never do front-end, but then I somehow ended up building this site.
-            Currently working at CERN.
+            I am a SysAdmin/DevOps and Hardware Development student with a
+            curiosity for many things. I've said that I would never do
+            front-end, but then I somehow ended up building this site. Guess
+            it's fitting for a JamFox to have a JAMstack site?
           </TextAbout>
           <TextAbout>
-            I love running and weightlifting, taking and editing photos. I relax
-            by reading, enjoying a movie or meditating.
+            If I'm not centering divs (like I said I wouldn't) or building
+            another mechboard then I'm probably running, weightlifting, taking
+            or editing photos, maybe out with The Bois playing TTRPGs or
+            conquering a hiking trail? Who knows what the life brings next,
+            honestly.
           </TextAbout>
         </InlineWrapper>
 
