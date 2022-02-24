@@ -13,6 +13,7 @@ import {
 import {HomeLayout} from "../components/LayoutHome"
 import {BREAKPOINT} from "../utils/constants"
 import gif from "../images/fox.gif"
+import BGvideo from "../videos/tf.mp4"
 
 const Wrapper = styled.div`
   margin: 2vh 5vh 5vh 5vh;
@@ -130,11 +131,63 @@ const Fly = styled.div`
   animation: fly 5s linear infinite;
 `
 
+const Videofull = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+`
+
+const Video = styled.div`
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  object-fit: cover;
+  pointer-events: none;
+  filter: blur(0.5vw);
+`
+
+const Overlay = styled.div`
+  background-color: rgba(20, 26, 50, 0.5);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 26, 50, 0.5) 0%,
+    rgba(20, 26, 50, 0.5) 85%,
+    rgba(20, 26, 50, 1) 100%
+  );
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`
+
 export default function AboutPage() {
   return (
     <>
       <SEO title="About" />
-      <HeaderLogo />
+      <Videofull>
+        <Video>
+          <video
+            top="0"
+            left="0"
+            position="absolute"
+            object-fit="cover"
+            height="100%"
+            width="100%"
+            class="lazy"
+            autoplay="autoplay"
+            loop=""
+            muted="muted"
+            playsinline=""
+          >
+            <source src={BGvideo} />
+          </video>
+        </Video>
+        <Overlay></Overlay>
+        <HeaderLogo />
+      </Videofull>
 
       <HomeLayout>
         <Wrapper>

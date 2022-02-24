@@ -19,6 +19,15 @@ export const GlobalStyles = createGlobalStyle`
 
   @font-face {
     font-display: block;
+    font-family: Titanfall;
+    font-family: "IBMPlexMono";
+    font-style: normal;
+    font-weight: 700;
+    src: url('${font.titanfall}') format("ttf");
+  }
+
+  @font-face {
+    font-display: block;
     font-family: "IBMPlexMono";
     font-style: normal;
     font-weight: 400;
@@ -33,10 +42,19 @@ export const GlobalStyles = createGlobalStyle`
     src: url('${font.IBMPlexMono700}') format("woff2");
   }
 
+  /*
+  body {
+    background: #141a32;
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  */
+
   body {
     background-color: var(--dark-color);
     color: var(--light-color);
-    font-family: 'IBMPlexMono', sans-serif;
+    font-family: 'IBMPlexMono', 'Titanfall', sans-serif;
     font-size: 17px;
     font-weight: 400;
     height: 100%;
