@@ -60,8 +60,8 @@ const Logo = styled.span`
   display: inline-block;
 
   @media screen and (max-width: 960px) {
-    width: 19.2vw;
-    height: 19.2vw;
+    width: 11.2vw;
+    height: 11.2vw;
   }
 `
 
