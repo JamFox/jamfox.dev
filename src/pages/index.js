@@ -238,16 +238,24 @@ export default function HomePage({data}) {
             Welcome to <TfFont>JamFox's </TfFont>personal page
           </Desc>
           <Link to="/about">
-            <ButtonInline>About Me</ButtonInline>
+            <>
+              <ButtonInline>About Me</ButtonInline>
+            </>
           </Link>
           <Link to="/setup">
-            <ButtonInline1>My Setup</ButtonInline1>
+            <>
+              <ButtonInline1>My Setup</ButtonInline1>
+            </>
           </Link>
           <Link to="https://jamfox.github.io/">
-            <ButtonInline2>NCT News</ButtonInline2>
+            <>
+              <ButtonInline2>NCT News</ButtonInline2>
+            </>
           </Link>
           <Link to="https://youtu.be/4bW-wjC61E0">
-            <ButtonInline3>0451</ButtonInline3>
+            <>
+              <ButtonInline3>0451</ButtonInline3>
+            </>
           </Link>
         </MainButtons>
       </Videofull>
