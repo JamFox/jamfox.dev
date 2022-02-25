@@ -66,7 +66,7 @@ const Logo = styled.span`
 `
 
 const NorthStarText = styled.span`
-  font-family: Titanfall, Arial, Helvetica, sans-serif;
+  font-family: "titanfall", Arial, Helvetica, sans-serif;
   font-size: 84px;
   vertical-align: middle;
   margin-right: 16px;
