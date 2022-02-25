@@ -146,7 +146,6 @@ const FooterA = styled.a`
 `
 
 const ButtonInline = styled(Button)`
-  display: inline-block;
   background-color: hsla(0, 0%, 11%, 0.35);
   margin: 2vh;
   width: 180px;
@@ -181,6 +180,10 @@ const ButtonInline3 = styled(ButtonInline)`
     box-shadow: -9px 9px 0 0 var(--orange-color);
   }
   animation-duration: 0.2s;
+`
+
+const InlineWrapper = styled.div`
+  display: inline-block;
 `
 
 /*
@@ -238,24 +241,24 @@ export default function HomePage({data}) {
             Welcome to <TfFont>JamFox's </TfFont>personal page
           </Desc>
           <Link to="/about">
-            <>
+            <InlineWrapper>
               <ButtonInline>About Me</ButtonInline>
-            </>
+            </InlineWrapper>
           </Link>
           <Link to="/setup">
-            <>
+            <InlineWrapper>
               <ButtonInline1>My Setup</ButtonInline1>
-            </>
+            </InlineWrapper>
           </Link>
           <Link to="https://jamfox.github.io/">
-            <>
+            <InlineWrapper>
               <ButtonInline2>NCT News</ButtonInline2>
-            </>
+            </InlineWrapper>
           </Link>
           <Link to="https://youtu.be/4bW-wjC61E0">
-            <>
+            <InlineWrapper>
               <ButtonInline3>0451</ButtonInline3>
-            </>
+            </InlineWrapper>
           </Link>
         </MainButtons>
       </Videofull>
