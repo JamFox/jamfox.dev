@@ -42,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
     src: url('${font.IBMPlexMono700}') format("woff2");
   }
 
-  /*
+  /* TF default
   body {
     background: #141a32;
     color: white;
@@ -51,7 +51,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   */
 
-  body {
+  /* Original default
+    body {
     background-color: var(--dark-color);
     color: var(--light-color);
     font-family: 'IBMPlexMono', 'Titanfall', sans-serif;
@@ -64,6 +65,16 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 17px;
       padding-top: 15vh;
     }
+  }
+  */
+
+  body {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-family: 'IBMPlexMono', 'Titanfall', Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
   }
 
   div a {

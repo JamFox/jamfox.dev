@@ -6,7 +6,6 @@ import {
   HeadingXL,
   SEO,
   TextBody,
-  HeaderLogo,
   HeadingL,
   TextDate,
 } from "../components"
@@ -180,10 +179,11 @@ export default function AboutPage() {
   return (
     <>
       <SEO title="About" />
-      <HeaderLogo />
       <HomeLayout>
         <Wrapper>
-          <HeadingXL>About </HeadingXL>
+          <Link to="/">
+            <HeadingXL>About </HeadingXL>
+          </Link>
         </Wrapper>
         <InlineWrapper>
           <Link to="https://www.instagram.com/karlturvas/">

@@ -5,7 +5,6 @@ import {StaticImage} from "gatsby-plugin-image"
 import {
   HeadingXL,
   SEO,
-  HeaderLogo,
   TextDate,
   HeadingL,
   TextBody,
@@ -73,10 +72,11 @@ export default function AboutPage() {
   return (
     <>
       <SEO title="About" />
-      <HeaderLogo />
       <HomeLayout>
         <Wrapper>
+          <Link to="/">
           <HeadingXL>Setup </HeadingXL>
+          </Link>
           <GifWrapper>
             <TextAbout>Gotta have good tools to do good work, right?</TextAbout>
             <img src={gif} alt="fox.gif" width={35} layout="fixed" />

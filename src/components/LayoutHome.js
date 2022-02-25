@@ -7,9 +7,11 @@ const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 1400px;
   padding: 0 var(--sides-padding-desktop);
+  padding-top: 10vh;
 
   @media (max-width: ${BREAKPOINT}px) {
     padding: 0 var(--sides-padding-mobile);
+    padding-top: 10vh;
   }
 `
 

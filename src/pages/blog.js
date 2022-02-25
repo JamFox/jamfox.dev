@@ -2,7 +2,6 @@ import React from "react"
 import {Link, graphql} from "gatsby"
 import styled from "styled-components"
 import {
-  HeaderLogo,
   HeadingXL,
   HeadingL,
   SEO,
@@ -10,36 +9,10 @@ import {
   TextDate,
   Button,
 } from "../components"
-import {HomeLayout} from "../components/LayoutHome"
 import {BREAKPOINT} from "../utils/constants"
+import {GlobalStyles} from "../components/GlobalStyles"
+import BGvideo from "../videos/tf.mp4"
 
-const Hero = styled.div`
-  margin-bottom: 10vh;
-
-  @media (max-width: ${BREAKPOINT}px) {
-    margin-bottom: 5vh;
-  }
-`
-const TextHome = styled.p`
-  color: var(--light-color);
-  display: block;
-  font-size: 22px;
-  line-height: 1.6;
-  margin-bottom: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 28em;
-  text-align: center;
-
-  @media (max-width: ${BREAKPOINT}px) {
-    font-size: 19px;
-    margin-bottom: 7vh;
-  }
-
-  position: relative;
-  animation-name: headingxl;
-  animation-duration: 0.4s;
-`
 const Post = styled.div`
   border-bottom: 1px solid lightgray;
   margin-bottom: 50px;
@@ -50,6 +23,8 @@ const Post = styled.div`
 `
 
 const ButtonInline = styled(Button)`
+  display: inline-block;
+  background-color: hsla(0, 0%, 11%, 0.35);
   margin: 2vh;
   width: 180px;
   /*background: url("https://c.tenor.com/RJgdogvsjEsAAAAd/galaxie-galaxy.gif")
@@ -57,6 +32,7 @@ const ButtonInline = styled(Button)`
   border: 3px solid var(--pink-color);
   :hover {
     box-shadow: 9px 9px 0 0 var(--pink-color);
+    background-color: hsla(0, 0%, 11%, 0.55);
   }
 `
 
@@ -100,44 +76,167 @@ const InlineWrapper = styled.div`
   display: inline-block;
 `
 
+const Videofull = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+`
+
+const Video = styled.video`
+  top: 0;
+  left: 0;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  filter: blur(0.6vw);
+`
+
+const Overlay = styled.div`
+  background-color: hsla(0, 0%, 11%, 0.5);
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 11%, 0.5) 0%,
+    hsla(0, 0%, 11%, 0.5) 85%,
+    hsla(0, 0%, 11%, 1) 100%
+  );
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`
+
+const CenterLogo = styled.div`
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  vertical-align: middle;
+  width: max-content;
+  user-select: none !important;
+  pointer-events: none;
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.75));
+
+  @media screen and (max-width: 960px) {
+    filter: drop-shadow(0px 0.4vw 1.6vw rgba(0, 0, 0, 0.75));
+  }
+`
+
+const MainButtons = styled.div`
+  position: absolute;
+  top: calc(30% + 256px - 72px);
+  left: 50%;
+  transform: translateX(-50%);
+  vertical-align: middle;
+  width: max-content;
+  user-select: none !important;
+  text-align: center;
+
+  @media screen and (max-width: 960px) {
+    top: calc(30% + 25.6vw - 7.2vw);
+    width: fit-content;
+  }
+`
+
+const Desc = styled.p`
+  text-align: center;
+  vertical-align: middle;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+`
+
+const TfFont = styled.span`
+  font-family: Titanfall, Arial, Helvetica, sans-serif;
+`
+
+const Pane = styled.div`
+  background: hsla(0, 0%, 11%, 1);
+  padding: 32px;
+  max-width: 900px;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+
+  margin: 0 auto;
+`
+
 export default function Blog({data}) {
   return (
     <>
       <SEO title="Blog" />
-      <HeaderLogo />
-      <HomeLayout>
-        <Hero>
-          <HeadingXL>JamFox's Memorywarehouse</HeadingXL>
-          <TextHome>Writing. For fun!</TextHome>
-        </Hero>
-        <Wrapper>
-          <InlineWrapper>
-            <Link to="https://steamcommunity.com/id/JamFox/">
-              <ButtonInline>Games</ButtonInline>
-            </Link>
-          </InlineWrapper>
-          <InlineWrapper>
-            <Link to="https://letterboxd.com/jamfox/">
-              <ButtonInline1>Movies</ButtonInline1>
-            </Link>
-          </InlineWrapper>
-          <InlineWrapper>
-            <Link to="https://myanimelist.net/profile/Jamfox">
-              <ButtonInline2>Anime</ButtonInline2>
-            </Link>
-          </InlineWrapper>
-          <InlineWrapper>
-            <Link to="https://open.spotify.com/user/kapikmeow">
-              <ButtonInline3>Music</ButtonInline3>
-            </Link>
-          </InlineWrapper>
-          <InlineWrapper>
-            <Link to="https://www.goodreads.com/user/show/78068566-jamfox">
-              <ButtonInline4>Books</ButtonInline4>
-            </Link>
-          </InlineWrapper>
-        </Wrapper>
+      <GlobalStyles />
+      <Videofull>
+        <Video
+          autoPlay
+          loop={true}
+          controls={false}
+          muted
+          playsInLine
+          src={BGvideo}
+        ></Video>
+        <Overlay></Overlay>
+        <CenterLogo>
+          <Link to="/">
+            <HeadingXL>JamFox's Blog</HeadingXL>
+          </Link>
+        </CenterLogo>
+        <MainButtons>
+          <Desc>
+            Welcome to <TfFont>JamFox's </TfFont> memorywarehouse!
+          </Desc>
+        </MainButtons>
+      </Videofull>
+      <Wrapper>
+        <InlineWrapper>
+          <Link to="https://steamcommunity.com/id/JamFox/">
+            <ButtonInline>Games</ButtonInline>
+          </Link>
+        </InlineWrapper>
+        <InlineWrapper>
+          <Link to="https://letterboxd.com/jamfox/">
+            <ButtonInline1>Movies</ButtonInline1>
+          </Link>
+        </InlineWrapper>
+        <InlineWrapper>
+          <Link to="https://myanimelist.net/profile/Jamfox">
+            <ButtonInline2>Anime</ButtonInline2>
+          </Link>
+        </InlineWrapper>
+        <InlineWrapper>
+          <Link to="https://open.spotify.com/user/kapikmeow">
+            <ButtonInline3>Music</ButtonInline3>
+          </Link>
+        </InlineWrapper>
+        <InlineWrapper>
+          <Link to="https://www.goodreads.com/user/show/78068566-jamfox">
+            <ButtonInline4>Books</ButtonInline4>
+          </Link>
+        </InlineWrapper>
+        <InlineWrapper>
+          <Link to="https://www.youtube.com/c/JamFox/videos">
+            <ButtonInline4>YouTube</ButtonInline4>
+          </Link>
+        </InlineWrapper>
+      </Wrapper>
+      <Pane>
+        <h1>Sup?</h1>
+        <p>
+          So either I know, trust you and gave you the link or you somehow
+          you’ve stumbled upon one of the most obscure places in the Net.
+          <h3>Here’s what you need to know</h3>
+          It is meant to be first and foremost an archive of my experiences and
+          thoughts for myself. I do not advertise, monetize and I do not hope to
+          gain anything from this 'blog' besides improving at expressing myself.
+          New posts will appear whenever an idea gets nurtured with enough time
+          and passion.
+        </p>
+      </Pane>
 
+      <Pane>
         {data.allMarkdownRemark.edges.map(({node}) => (
           <Link to={node.fields.slug} key={node.id}>
             <Post>
@@ -147,7 +246,7 @@ export default function Blog({data}) {
             </Post>
           </Link>
         ))}
-      </HomeLayout>
+      </Pane>
     </>
   )
 }

@@ -210,7 +210,7 @@ export default function TfPage() {
             width="100%"
             class="lazy"
             autoplay="autoplay"
-            loop=""
+            loop="true"
             muted="muted"
             playsinline=""
           >
