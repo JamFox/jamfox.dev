@@ -3,7 +3,6 @@ import {graphql} from "gatsby"
 import {
   HeaderBack,
   HeadingXL,
-  Layout,
   SEO,
   TextBody,
   TextDate,

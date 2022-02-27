@@ -45,14 +45,5 @@ module.exports = {
         path: "./src/pages",
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ["G-KXX81CYERE"],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
   ],
 }
