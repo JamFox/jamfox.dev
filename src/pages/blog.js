@@ -186,7 +186,7 @@ export default function Blog({data}) {
         </CenterLogo>
         <MainButtons>
           <Desc>
-            Welcome to <TfFont>JamFox's </TfFont> memorywarehouse!
+            Welcome to <TfFont>JamFox</TfFont>'s memorywarehouse!
           </Desc>
         </MainButtons>
       </Videofull>

@@ -137,7 +137,7 @@ const Pane = styled.div`
 
 const Footer = styled(Pane)`
   display: grid;
-  grid-template-columns: 128px 128px;
+  grid-template-columns: 228px 128px;
   column-gap: 16px;
 `
 
@@ -184,6 +184,12 @@ const ButtonInline3 = styled(ButtonInline)`
 
 const InlineWrapper = styled.div`
   display: inline-block;
+`
+
+const Tos = styled(Desc)`
+  color: hsla(0, 0%, 14%, 1);
+  max-width: 80vw;
+  font-size: 12px;
 `
 
 /*
@@ -238,7 +244,7 @@ export default function HomePage({data}) {
         </CenterLogo>
         <MainButtons>
           <Desc>
-            Welcome to <TfFont>JamFox's </TfFont>personal page
+            Welcome to <TfFont>JamFox</TfFont>'s personal page
           </Desc>
           <Link to="/about">
             <InlineWrapper>
@@ -264,7 +270,11 @@ export default function HomePage({data}) {
       </Videofull>
       <Pane></Pane>
       <Footer>
-        <FooterA></FooterA>
+        <FooterA>
+          <Link to="/terms">
+            <Tos>Terms of Service</Tos>
+          </Link>
+        </FooterA>
       </Footer>
     </>
   )
