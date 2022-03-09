@@ -1,8 +1,42 @@
 import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
-import {SEO} from "../components"
+import {SEO, HeadingXL} from "../components"
 import {GlobalStyles} from "../components/GlobalStyles"
+import {StaticImage} from "gatsby-plugin-image"
+
+const Top = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.15);
+`
+
+const TopLinks = styled.div`
+  float: right;
+  display: flex;
+`
+
+const TopLink = styled.a`
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 24px 32px;
+  white-space: nowrap;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  user-select: none !important;
+  :hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  :active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+`
 
 const Desc = styled.p`
   text-align: center;
@@ -48,32 +82,38 @@ const LinkText = styled.span`
   }
 `
 
-/*
-      <Top>
-        <TopLinks>
-          <TopLink>Yes1</TopLink>
-          <TopLink>Yes2</TopLink>
-          <TopLink>
-            
-            <StaticImage
-              src="../images/pepeEZ.webp"
-              width={15}
-              aspectRatio={1 / 1}
-              quality={90}
-              layout="fixed"
-              vertical-align="middle"
-              display="inline-block"
-            />
-          </TopLink>
-        </TopLinks>
-      </Top>
-*/
-
 export default function HomePage({data}) {
   return (
     <>
       <SEO title="Terms of Service" />
       <GlobalStyles />
+
+      <Top>
+        <TopLinks>
+          <Link to="/">
+            <TopLink>Homepage</TopLink>
+          </Link>
+          <Link to="/terms#">
+            <TopLink>
+              Back up
+              <StaticImage
+                src="../images/pepeEZ.webp"
+                width={15}
+                aspectRatio={1 / 1}
+                quality={90}
+                vertical-align="middle"
+                display="flex"
+              />
+            </TopLink>
+          </Link>
+        </TopLinks>
+      </Top>
+      <Pane></Pane>
+      <Pane>
+          <HeadingXL id="title">
+            <Link to="/">Terms of Service</Link>
+          </HeadingXL>
+      </Pane>
       <Pane>
         <h1 id="ow">OVERVIEW</h1>
         <p>

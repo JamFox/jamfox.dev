@@ -74,9 +74,9 @@ export default function AboutPage() {
       <SEO title="About" />
       <HomeLayout>
         <Wrapper>
-          <Link to="/">
-          <HeadingXL>Setup </HeadingXL>
-          </Link>
+          <HeadingXL>
+            <Link to="/">Setup </Link>
+          </HeadingXL>
           <GifWrapper>
             <TextAbout>Gotta have good tools to do good work, right?</TextAbout>
             <img src={gif} alt="fox.gif" width={35} layout="fixed" />

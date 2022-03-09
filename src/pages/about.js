@@ -181,9 +181,9 @@ export default function AboutPage() {
       <SEO title="About" />
       <HomeLayout>
         <Wrapper>
-          <Link to="/">
-            <HeadingXL>About </HeadingXL>
-          </Link>
+          <HeadingXL>
+            <Link to="/">About </Link>
+          </HeadingXL>
         </Wrapper>
         <InlineWrapper>
           <Link to="https://www.instagram.com/karlturvas/">

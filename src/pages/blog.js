@@ -11,7 +11,41 @@ import {
 } from "../components"
 import {BREAKPOINT} from "../utils/constants"
 import {GlobalStyles} from "../components/GlobalStyles"
+import {StaticImage} from "gatsby-plugin-image"
 import BGvideo from "../videos/tf.mp4"
+
+const Top = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.15);
+`
+
+const TopLinks = styled.div`
+  float: right;
+  display: flex;
+`
+
+const TopLink = styled.a`
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 24px 32px;
+  white-space: nowrap;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  user-select: none !important;
+  :hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  :active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+`
 
 const Post = styled.div`
   border-bottom: 1px solid lightgray;
@@ -169,6 +203,26 @@ export default function Blog({data}) {
     <>
       <SEO title="Blog" />
       <GlobalStyles />
+
+      <Top>
+        <TopLinks>
+          <Link to="/">
+            <TopLink>Homepage</TopLink>
+          </Link>
+          <Link to="/blog#">
+            <TopLink>
+              Back up <StaticImage
+                src="../images/pepeEZ.webp"
+                width={15}
+                aspectRatio={1 / 1}
+                quality={90}
+                vertical-align="middle"
+                display="flex"
+              />
+            </TopLink>
+          </Link>
+        </TopLinks>
+      </Top>
       <Videofull>
         <Video
           autoPlay
@@ -181,7 +235,7 @@ export default function Blog({data}) {
         <Overlay></Overlay>
         <CenterLogo>
           <Link to="/">
-            <HeadingXL>JamFox's Blog</HeadingXL>
+            <HeadingXL id="title">JamFox's Blog</HeadingXL>
           </Link>
         </CenterLogo>
         <MainButtons>
