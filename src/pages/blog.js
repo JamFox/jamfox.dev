@@ -211,13 +211,12 @@ export default function Blog({data}) {
           </Link>
           <Link to="/blog#">
             <TopLink>
-              Back up <StaticImage
+              Back up&nbsp;
+              <StaticImage
                 src="../images/pepeEZ.webp"
                 width={15}
                 aspectRatio={1 / 1}
                 quality={90}
-                vertical-align="middle"
-                display="flex"
               />
             </TopLink>
           </Link>

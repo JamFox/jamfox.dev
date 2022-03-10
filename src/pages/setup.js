@@ -2,13 +2,7 @@ import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import {StaticImage} from "gatsby-plugin-image"
-import {
-  HeadingXL,
-  SEO,
-  TextDate,
-  HeadingL,
-  TextBody,
-} from "../components"
+import {HeadingXL, SEO, TextDate, HeadingL, TextBody} from "../components"
 import {HomeLayout} from "../components/LayoutHome"
 import {BREAKPOINT} from "../utils/constants"
 import gif from "../images/fox.gif"
@@ -50,37 +44,26 @@ const TextDateSmall = styled(TextDate)`
   justify-content: top;
 `
 
-const GifWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  content-align: center;
-  width: auto;
-  margin: 0vh 0vh 15vh 0vh;
-
-  position: relative;
-  animation-name: textbody;
-  animation-duration: 0.4s;
-`
-
-const GifWrapperLeft = styled(GifWrapper)`
-  justify-content: left;
-  margin: 0vh;
-  animation-duration: 0.5s;
+const Emote = styled.img`
+  vertical-align: middle;
+  display: inline;
 `
 
 export default function AboutPage() {
   return (
     <>
-      <SEO title="About" />
+      <SEO title="Setup" />
       <HomeLayout>
         <Wrapper>
           <HeadingXL>
             <Link to="/">Setup </Link>
           </HeadingXL>
-          <GifWrapper>
-            <TextAbout>Gotta have good tools to do good work, right?</TextAbout>
-            <img src={gif} alt="fox.gif" width={35} layout="fixed" />
-          </GifWrapper>
+
+          <TextAbout>
+            Gotta have good tools to do good work, right?
+            <Emote src={gif} alt=":spinfox:" width={35} />
+          </TextAbout>
+
           <HeadingL2> titaniumjam mk3</HeadingL2>
           <Post>
             <TextDateSmall>» Case - Define R5 </TextDateSmall>
@@ -113,21 +96,20 @@ export default function AboutPage() {
           <Post>
             <TextDateSmall>» Case - Define C </TextDateSmall>
             <TextDateSmall>» CPU - i5-4570 @ 3.6GHz </TextDateSmall>
-            <GifWrapperLeft>
-              <TextDateSmall>
-                » GPU - AMD ATI Radeon RX 460/560D (RIP GTX 970 MSI
-              </TextDateSmall>
+            <TextDateSmall>
+              » GPU - AMD ATI Radeon RX 460/560D (RIP GTX 970 MSI
               <Link to="/ratrat">
                 <StaticImage
+                  alt=":deadrat:"
                   src="../images/deadrat.png"
                   width={20}
                   aspectRatio={1 / 1}
                   quality={90}
-                  layout="fixed"
                 />
               </Link>
-              <TextDateSmall> )</TextDateSmall>
-            </GifWrapperLeft>
+              )
+            </TextDateSmall>
+
             <TextDateSmall>» RAM - 2x4GB+2x8GB (DDR3)</TextDateSmall>
             <TextDateSmall>» Storage - 750GB SSD + 1.5TB HDD</TextDateSmall>
             <TextDateSmall>» Monitor1 - HP ZR2330w (1080p 60Hz) </TextDateSmall>

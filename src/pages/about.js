@@ -15,18 +15,17 @@ import {BREAKPOINT} from "../utils/constants"
 import gif from "../images/ratnce.gif"
 
 const Wrapper = styled.div`
-  margin: 2vh 5vh 5vh 5vh;
+  margin: 1vh 1vh 1vh 1vh;
   text-align: center;
 `
 const InlineWrapper = styled.div`
   display: inline-block;
-  margin: 1vh 0vh 0vh 0vh;
+  margin: 1vh 0vh 1vh 0vh;
   text-align: justify;
 `
 const TextAbout = styled.p`
-  width: 100%;
   margin: 1vh 2vh 0vh 0vh;
-
+  vertical-align: middle;
   @keyframes textbody {
     0% {
       right: -500px;
@@ -52,7 +51,7 @@ const ImgWrapper = styled.div`
 `
 
 const ButtonInline = styled(Button)`
-  margin: 2vh;
+  margin: 1.5vh;
   width: 180px;
   border: 3px solid hsla(201, 100%, 35%, 1);
   :hover {
@@ -75,6 +74,12 @@ const ButtonInlinePDF = styled(ButtonInline)`
     box-shadow: -9px 9px 0 0 hsla(348, 100%, 71%, 0.83);
   }
   animation-duration: 0.3s;
+`
+const ButtonInlineInsta = styled(ButtonInline)`
+  border: 3px solid hsla(38, 100%, 68%, 0.8);
+  :hover {
+    box-shadow: 0px 9px 0 0 hsla(38, 100%, 68%, 0.6);
+  }
 `
 
 const Post = styled.div`
@@ -160,19 +165,20 @@ const HeadingL2 = styled(HeadingL)`
   -webkit-text-fill-color: transparent;
 `
 
-const GifWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  content-align: left;
-  width: auto;
-  position: relative;
-  animation-name: textbody;
-  animation-duration: 0.5s;
+const Emote = styled.img`
+  vertical-align: middle;
+  display: inline;
+  margin-left: 1vh;
+  margin-right: 1vh;
 `
 
-const TextAboutImg = styled(TextAbout)`
-  width: auto;
+const LinkText = styled.span`
+  :hover {
+    color: #dddddd;
+  }
+  :active {
+    color: #bbbbbb;
+  }
 `
 
 export default function AboutPage() {
@@ -185,42 +191,47 @@ export default function AboutPage() {
             <Link to="/">About </Link>
           </HeadingXL>
         </Wrapper>
-        <InlineWrapper>
+
+        <ImgWrapper>
           <Link to="https://www.instagram.com/karlturvas/">
-            <ImgWrapper>
-              <StaticImage
-                src="../images/karlhalf.png"
-                width={120}
-                aspectRatio={1 / 1}
-                quality={90}
-                layout="fixed"
-              />
-            </ImgWrapper>
+            <StaticImage
+              src="../images/karlhalf.png"
+              width={120}
+              aspectRatio={1 / 1}
+              quality={90}
+              float="left"
+            />
           </Link>
+        </ImgWrapper>
 
-          <GifWrapper>
-            <TextAboutImg>
-              Heyya! Name's Karl, but you can call me Carl.
-            </TextAboutImg>
-            <Link to="https://youtu.be/OXQwx1EolD8">
-              <img src={gif} alt="ratnce.gif" width={25} layout="fixed" />
-            </Link>
-          </GifWrapper>
+        <TextAbout>
+          Heyya! Name's Karl, but you can call me Carl
+          <Link to="https://youtu.be/OXQwx1EolD8">
+            <Emote src={gif} alt=":ratdance:" width={20} />
+          </Link>
+        </TextAbout>
 
-          <TextAbout>
-            I am a SysAdmin/DevOps and Hardware Development student with a
-            curiosity for many things. I've said that I would never do
-            front-end, but then I somehow ended up building this site. Guess
-            it's fitting for a JamFox to have a JAMstack site?
-          </TextAbout>
-          <TextAbout>
-            If I'm not centering divs (like I said I wouldn't) or building
-            another mechboard then I'm probably running, weightlifting, taking
-            or editing photos, maybe out with The Bois playing TTRPGs or
-            conquering a hiking trail? Who knows what the life brings next,
-            honestly.
-          </TextAbout>
-        </InlineWrapper>
+        <TextAbout>
+          I am a SysAdmin/DevOps by day and Hardware Development student by
+          night with a curiosity for many things. I've said that I would never
+          do front-end, but then I somehow ended up building this site. Guess
+          it's fitting for a JamFox to have a JAMstack site?&nbsp;
+          <StaticImage
+            src="../images/pepeEZ.webp"
+            alt=":pepeEZ:"
+            width={20}
+            aspectRatio={1 / 1}
+            quality={90}
+          />
+        </TextAbout>
+
+        <TextAbout>
+          If I'm not centering divs (like I said I wouldn't) or building another
+          mechboard then I'm probably running, weightlifting, swordfighting,
+          taking or editing photos, maybe out with The Bois playing TTRPGs or
+          conquering a hiking trail? Who knows what the life brings next,
+          honestly.
+        </TextAbout>
 
         <Wrapper>
           <InlineWrapper>
@@ -237,6 +248,12 @@ export default function AboutPage() {
             <a href="cv.pdf" target="blank">
               <ButtonInlinePDF>CV</ButtonInlinePDF>
             </a>
+          </InlineWrapper>
+
+          <InlineWrapper>
+            <Link to="https://www.instagram.com/karlturvas/">
+              <ButtonInlineInsta>Instagram</ButtonInlineInsta>
+            </Link>
           </InlineWrapper>
           <Link to="mailto:karl.turvas@cern.ch">
             <TextBody> MAIL: karl.turvas@cern.ch </TextBody>

@@ -95,14 +95,12 @@ export default function HomePage({data}) {
           </Link>
           <Link to="/terms#">
             <TopLink>
-              Back up
+              Back up&nbsp;
               <StaticImage
                 src="../images/pepeEZ.webp"
                 width={15}
                 aspectRatio={1 / 1}
                 quality={90}
-                vertical-align="middle"
-                display="flex"
               />
             </TopLink>
           </Link>
@@ -110,9 +108,9 @@ export default function HomePage({data}) {
       </Top>
       <Pane></Pane>
       <Pane>
-          <HeadingXL id="title">
-            <Link to="/">Terms of Service</Link>
-          </HeadingXL>
+        <HeadingXL id="title">
+          <Link to="/">Terms of Service</Link>
+        </HeadingXL>
       </Pane>
       <Pane>
         <h1 id="ow">OVERVIEW</h1>
