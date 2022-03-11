@@ -24,7 +24,7 @@ const InlineWrapper = styled.div`
   text-align: justify;
 `
 const TextAbout = styled.p`
-  margin: 1vh 2vh 0vh 0vh;
+  margin: 2vh 2vh 0vh 0vh;
   vertical-align: middle;
   @keyframes textbody {
     0% {
@@ -55,7 +55,7 @@ const ButtonInline = styled(Button)`
   width: 180px;
   border: 3px solid hsla(201, 100%, 35%, 1);
   :hover {
-    box-shadow: 9px 9px 0 0 hsla(201, 100%, 21%, 1);
+    box-shadow: 0px 9px 0 0 hsla(201, 100%, 21%, 1);
   }
   animation-duration: 0.5s;
 `
@@ -71,7 +71,7 @@ const ButtonInlineGit = styled(ButtonInline)`
 const ButtonInlinePDF = styled(ButtonInline)`
   border: 3px solid var(--pink-color);
   :hover {
-    box-shadow: -9px 9px 0 0 hsla(348, 100%, 71%, 0.83);
+    box-shadow: 0px 9px 0 0 hsla(348, 100%, 71%, 0.83);
   }
   animation-duration: 0.3s;
 `
@@ -80,6 +80,7 @@ const ButtonInlineInsta = styled(ButtonInline)`
   :hover {
     box-shadow: 0px 9px 0 0 hsla(38, 100%, 68%, 0.6);
   }
+  animation-duration: 0.2s;
 `
 
 const Post = styled.div`
@@ -172,15 +173,6 @@ const Emote = styled.img`
   margin-right: 1vh;
 `
 
-const LinkText = styled.span`
-  :hover {
-    color: #dddddd;
-  }
-  :active {
-    color: #bbbbbb;
-  }
-`
-
 export default function AboutPage() {
   return (
     <>
@@ -193,7 +185,7 @@ export default function AboutPage() {
         </Wrapper>
 
         <ImgWrapper>
-          <Link to="https://www.instagram.com/karlturvas/">
+          <Link to="/abovt">
             <StaticImage
               src="../images/karlhalf.png"
               width={120}

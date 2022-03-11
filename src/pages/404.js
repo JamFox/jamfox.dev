@@ -11,20 +11,16 @@ const Wrapper = styled.div`
   justify-content: center;
   margin: 5vh;
 `
-const InlineWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5vh;
-  position: relative;
-  animation-name: textbody;
-  animation-duration: 0.5s;
-`
 
 const InlineText = styled(TextBody)`
   display: inline-block;
   margin: 0vh 2vh 0vh;
   line-height: 2.5;
+`
+
+const Emote = styled.img`
+  vertical-align: middle;
+  display: inline;
 `
 
 export default function NotFoundPage() {
@@ -33,13 +29,13 @@ export default function NotFoundPage() {
       <SEO title="404: Not found" />
       <HomeLayout>
         <Wrapper>
-          <HeadingXL>NOT FOUND </HeadingXL>
-          <InlineWrapper>
-            <InlineText style={{textAlign: "center"}}>
-              You&#39;re not supposed to be here {" "}
-            </InlineText>
-            <img src={rock} alt="rock-eyebrow.gif" width={40} />
-          </InlineWrapper>
+          <HeadingXL>NOT FOUND</HeadingXL>
+
+          <InlineText style={{textAlign: "center"}}>
+            You are not supposed to be here&nbsp;
+            <Emote src={rock} alt="rock-eyebrow.gif" width={40} />
+          </InlineText>
+
           <Link to="/">
             <Button>Go home</Button>
           </Link>
