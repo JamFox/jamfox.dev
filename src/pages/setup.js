@@ -76,7 +76,7 @@ export default function AboutPage() {
             </TextDateSmall>
             <TextDateSmall>» Monitor2 - DELL U2412M (1200p 60Hz)</TextDateSmall>
             <TextDateSmall>» Keeb - Ducky Shine 2 (MX-Browns) </TextDateSmall>
-            <TextDateSmall>» Mouse - Zowie EC1-A </TextDateSmall>
+            <TextDateSmall>» Mouse - Zowie EC1-A (1000Hz 800DPI)</TextDateSmall>
             <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
             <TextDateSmall>
               » Audio - HyperX Cloud 2 + Blue Snowball
@@ -120,7 +120,7 @@ export default function AboutPage() {
             <TextDateSmall>
               » Keeb - Sofle v2 (Gateron Yellow Inks)
             </TextDateSmall>
-            <TextDateSmall>» Mouse - Zowie EC1-A </TextDateSmall>
+            <TextDateSmall>» Mouse - Zowie EC1-A (1000Hz 800DPI)</TextDateSmall>
             <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
             <TextDateSmall>
               » Audio - HyperX Cloud 2 + Blue Snowball
@@ -141,7 +141,7 @@ export default function AboutPage() {
             </TextDateSmall>
             <TextDateSmall>» Monitor3 - PHL 244E5 (1080p 60Hz) </TextDateSmall>
             <TextDateSmall>» Keeb - Pteron36 (Kailh Choc Black) </TextDateSmall>
-            <TextDateSmall>» Mouse - Zowie EC1-A </TextDateSmall>
+            <TextDateSmall>» Mouse - Zowie EC1-A (1000Hz 800DPI)</TextDateSmall>
             <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
             <TextDateSmall>» Audio - Logitech G533</TextDateSmall>
           </Post>
