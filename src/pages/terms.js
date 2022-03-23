@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
-import {SEO, HeadingXL} from "../components"
+import {SEO, HeadingXL, Button} from "../components"
 import {GlobalStyles} from "../components/GlobalStyles"
 import {StaticImage} from "gatsby-plugin-image"
 
@@ -431,11 +431,51 @@ export default function HomePage({data}) {
             cancelled + done for + mad free + freer than air + rip bozo +
             slight_smile + cringe again + mad cuz bad + lol + irrelevant + cope
             + jealous + go ahead whine about it + your problem + don't care even
-            more + sex offender + sex defender + not okay + glhf +{" "}
+            more + sex offender + sex defender + not okay + glhf +
             <Link to="/pi">
               <LinkText> million digits of pi </LinkText>
             </Link>
-            + problematic
+            + problematic + who asked + get real + L + bleed + mald seethe cope
+            harder + dilate + incorrect + hoes mad + pound sand + basic skill
+            issue + typo + ratio + ur dad left + you fell off + no u + the
+            audacity + triggered + repelled + ur a minor + k. + any askers + get
+            a life + ok and? + cringe + copium + go outside + touch grass + kick
+            rocks + quote tweet + think again + not based + not funny didn't
+            laugh + social credits -999, 999, 999, 999 + get good + reported +
+            ad hominem + ok boomer + small pp + ur allergic to sunlight + GG! +
+            get rekt + trolled + your loss + muted + banned + kicked + permaban
+            + useless + i slept with ur mom + yo momma + yo momma so fat +
+            redpilled + no bitches allowed + i said it better + tiktok fan + get
+            a life + unsubscribed + plundered + go tell reddit + donowalled +
+            simp + get sticked bug LOL + talk nonsense + trump supporter +
+            your're a full time discord mod + you're* + grammar issue + nerd +
+            get clapped + kys + lorem ipsum dolor sit amet + go outside + bleach
+            + lol + gay + retard + autistic + reported + ask deez + ez clap +
+            straight cash + idgaf + ratio again + stay mad + read FAQ + youre
+            lost + you “re” + stay pressed + reverse double take back +
+            pedophile + cancelled + done for + don't give a damn + get a job +
+            sus + baka + sussy baka + get blocked + mad free + freer than air +
+            furry + rip bozo + you're a (insert stereotype) + slight_smile +
+            aired + cringe again + Super Idol的笑容 + mad cuz bad + my pronouns
+            are xe, xem xyr + irrelevant + deal with it + screencapped your bio
+            + karen/kyle + jealous + you're deaf + balls + i'll be right back +
+            go ahead whine about it + not straight + eat paper + you lose +
+            count to three + your problem + no one cares + log off + don't care
+            even more + sex offender + sex defender + get religion + not okay +
+            glhf + NFT owner + you make bad memes + problematic + fall in line +
+            dog water + you look like a wall + you don't know 2 + 2 with yo head
+            ass + you are going to my cringe compilation + you can't count to
+            five + try again + you failed kindergarten + rickrolled + no lifer +
+            guten freunden schickt man einen deutschen panzer + you have a anime
+            profile picture + an* + fatherless + motherless + sisterless +
+            brotherless + orphan + you can't catch this ratio + catch some
+            bitches + I don't care about your opinion + genshin player + you
+            dress like garbage + 日本語がお上手ですね + get fucked + you can't
+            understand what the word intelligence means with your dumb ass + you
+            have hair + queued + put some thought into what you're going to do
+            with that + stfu + go to bed + yes, i'm taller than you + i think
+            your joke is funny + i rejected your mother's advances + marooned +
+            you can't read + I win + final ratio
           </p>
         </Pane>
         <Pane>
@@ -556,16 +596,14 @@ export default function HomePage({data}) {
           <p>
             The obligations and liabilities of the parties incurred prior to the
             termination date shall survive the termination of this agreement for
-            all purposes. These Terms of Service are effective unless and until
-            terminated by either you or us. You may terminate these Terms of
-            Service at any time by notifying us that you no longer wish to use
-            our Services, or when you cease using our site. If in our sole
-            judgment you fail, or we suspect that you have failed, to comply
-            with any term or provision of these Terms of Service, we also may
-            terminate this agreement at any time without notice and you will
-            remain liable for all amounts due up to and including the date of
-            termination; and/or accordingly may deny you access to our Services
-            (or any part thereof).
+            all purposes. But remember that as he had served him particularly
+            well for many years, the king granted Triboulet the right to choose
+            how he would die. Triboulet, with his sharp mind, said the following
+            (translated from the original French): "Good sire, by Saint Goody
+            Two Shoes and Saint Fatty, patrons of insanity, I ask to die from
+            old age." Having no other choice than to laugh, the king ordered
+            that Triboulet not be executed but instead be banished from the
+            realm.
           </p>
         </Pane>
         <Pane>
@@ -608,8 +646,8 @@ export default function HomePage({data}) {
         <Pane>
           <h2 id="s20">SECTION 20 - CONTACT INFORMATION</h2>
           <p>
-            Questions about the site or Terms of Service should be sent to us at
-            [
+            Questions about the site or the Terms of Deez Nutz? Consult
+            <Link to="/terms#s9"> SECTION 9 </Link> or contact us at [
             <Link to="mailto:karl-andreas7+tos@hotmail.com">
               <LinkText>karl-andreas7+tos@hotmail.com</LinkText>
             </Link>
@@ -617,6 +655,9 @@ export default function HomePage({data}) {
           </p>
         </Pane>
       </Pane>
+      <Link to="/jarvis">
+        <Button>I am offended</Button>
+      </Link>
       <Footer>
         <FooterA>
           <Link to="/pi">
