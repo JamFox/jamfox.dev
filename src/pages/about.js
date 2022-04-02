@@ -6,12 +6,9 @@ import {
   HeadingXL,
   SEO,
   TextBody,
-  HeadingL,
-  TextDate,
 } from "../components"
 import {HomeLayout} from "../components/LayoutHome"
 import {StaticImage} from "gatsby-plugin-image"
-import {BREAKPOINT} from "../utils/constants"
 import gif from "../images/ratnce.gif"
 
 const Wrapper = styled.div`
@@ -75,6 +72,7 @@ const ButtonInlinePDF = styled(ButtonInline)`
   }
   animation-duration: 0.3s;
 `
+
 const ButtonInlineInsta = styled(ButtonInline)`
   border: 3px solid hsla(38, 100%, 68%, 0.8);
   :hover {
@@ -83,6 +81,14 @@ const ButtonInlineInsta = styled(ButtonInline)`
   animation-duration: 0.2s;
 `
 
+const Emote = styled.img`
+  vertical-align: middle;
+  display: inline;
+  margin-left: 1vh;
+  margin-right: 1vh;
+`
+
+/*
 const Post = styled.div`
   margin-bottom: 50px;
 
@@ -90,7 +96,6 @@ const Post = styled.div`
     padding-left: 0;
   }
 `
-
 const PostWrapper = styled.div`
   display: inline-block;
   margin: 1vh 0vh 0vh 0vh;
@@ -165,15 +170,6 @@ const HeadingL2 = styled(HeadingL)`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
-
-const Emote = styled.img`
-  vertical-align: middle;
-  display: inline;
-  margin-left: 1vh;
-  margin-right: 1vh;
-`
-
-/*
         <PostWrapper2>
           <ExpHeading2>what now </ExpHeading2>
         </PostWrapper2>
