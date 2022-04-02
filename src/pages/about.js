@@ -173,6 +173,32 @@ const Emote = styled.img`
   margin-right: 1vh;
 `
 
+/*
+        <PostWrapper2>
+          <ExpHeading2>what now </ExpHeading2>
+        </PostWrapper2>
+
+        <PostWrapper>
+          <ExpHeading>????? </ExpHeading>
+        </PostWrapper>
+
+        <PostWrapper2>
+          <Post>
+            <HeadingL2>Wonder what will end up here?</HeadingL2>
+            <TextBody>Something interesting I bet</TextBody>
+            <TextDate>brrr</TextDate>
+          </Post>
+        </PostWrapper2>
+
+        <PostWrapper>
+          <Post>
+            <HeadingL>This probably wont be as interesting tho</HeadingL>
+            <TextBody>Unless? 👀</TextBody>
+            <TextDate>crabs</TextDate>
+          </Post>
+        </PostWrapper>
+*/
+
 export default function AboutPage() {
   return (
     <>
@@ -206,7 +232,7 @@ export default function AboutPage() {
         <TextAbout>
           I am a SysAdmin/DevOps by day and Hardware Development student by
           night with a curiosity for many things. I've said that I would never
-          do front-end, but then I somehow ended up building this site. Guess
+          do front-end, but then I somehow ended up building this site. I guess
           it's fitting for a JamFox to have a JAMstack site?&nbsp;
           <StaticImage
             src="../images/pepeEZ.webp"
@@ -219,8 +245,8 @@ export default function AboutPage() {
 
         <TextAbout>
           If I'm not centering divs (like I said I wouldn't) or building another
-          mechboard then I'm probably running, weightlifting, swordfighting,
-          taking or editing photos, maybe out with The Bois playing TTRPGs or
+          mechanical ortholinear ergonomic split keyboard then I'm probably running a Spartan obstacle course, weightlifting, HEMA swordfighting,
+          taking or editing photos, reading Dune again, playing TTRPGs or
           conquering a hiking trail? Who knows what the life brings next,
           honestly.
         </TextAbout>
@@ -254,29 +280,6 @@ export default function AboutPage() {
             <TextBody> PHONE: +372 5333 7528 </TextBody>
           </Link>
         </Wrapper>
-
-        <PostWrapper2>
-          <ExpHeading2>what now </ExpHeading2>
-        </PostWrapper2>
-
-        <PostWrapper>
-          <ExpHeading>????? </ExpHeading>
-        </PostWrapper>
-
-        <PostWrapper2>
-          <Post>
-            <HeadingL2>Wonder what will end up here?</HeadingL2>
-            <TextBody>Something interesting I bet</TextBody>
-            <TextDate>brrr</TextDate>
-          </Post>
-        </PostWrapper2>
-        <PostWrapper>
-          <Post>
-            <HeadingL>This probably wont be as interesting tho</HeadingL>
-            <TextBody>Unless? 👀</TextBody>
-            <TextDate>crabs</TextDate>
-          </Post>
-        </PostWrapper>
       </HomeLayout>
     </>
   )
