@@ -87,13 +87,14 @@ export default function AboutPage() {
           <HeadingL2> luna (homeserver) </HeadingL2>
           <Post>
             <TextDateSmall>
-              » Mediaserver - Plex / Jellyfin / Sonarr / Radarr
+              » Mediaserver (dockerized) - Plex / Jellyfin / Sonarr / Radarr
             </TextDateSmall>
             <TextDateSmall>
               » Gameservers - Minecraft Valhelsia 3 / Valheim
             </TextDateSmall>
           </Post>
           <Post>
+            <TextDateSmall>» TV - Samsung 49Q6F (4k 60Hz) </TextDateSmall>
             <TextDateSmall>» Case - Define C </TextDateSmall>
             <TextDateSmall>» CPU - i5-4570 @ 3.6GHz </TextDateSmall>
             <TextDateSmall>

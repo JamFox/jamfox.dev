@@ -241,8 +241,10 @@ export default function AboutPage() {
 
         <TextAbout>
           If I'm not centering divs (like I said I wouldn't) or building another
-          mechanical ortholinear ergonomic split keyboard then I'm probably running a Spartan obstacle course, weightlifting, HEMA swordfighting,
-          taking or editing photos, reading Dune again, playing TTRPGs or
+          mechanical ortholinear ergonomic split keyboard then I'm probably
+          running a Spartan obstacle course, weightlifting, HEMA swordfighting,
+          taking or editing photos, reading Dune again, playing TTRPGs, driving
+          on the <Link to="https://goo.gl/maps/w9wCtHJTbgmx73ee8">LCC</Link> or
           conquering a hiking trail? Who knows what the life brings next,
           honestly.
         </TextAbout>
