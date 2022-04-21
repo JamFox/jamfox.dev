@@ -207,11 +207,8 @@ export default function Blog({data}) {
       <Top>
         <TopLinks>
           <Link to="/">
-            <TopLink>Homepage</TopLink>
-          </Link>
-          <Link to="/blog#">
             <TopLink>
-              Back up&nbsp;
+              Homepage&nbsp;
               <StaticImage
                 src="../images/pepeEZ.webp"
                 width={15}

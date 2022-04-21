@@ -88,113 +88,6 @@ const Emote = styled.img`
   margin-right: 1vh;
 `
 
-/*
-const Post = styled.div`
-  margin-bottom: 50px;
-
-  @media (max-width: ${BREAKPOINT}px) {
-    padding-left: 0;
-  }
-`
-const PostWrapper = styled.div`
-  display: inline-block;
-  margin: 1vh 0vh 0vh 0vh;
-  text-align: center;
-  width: 50%;
-
-  @keyframes post2 {
-    0% {
-      left: 1000px;
-      opacity: 0;
-    }
-    100% {
-      left: 0px;
-      opacity: 1;
-    }
-  }
-  position: relative;
-  animation-name: post2;
-  animation-duration: 0.9s;
-`
-
-const PostWrapper2 = styled(PostWrapper)`
-  @keyframes post {
-    0% {
-      left: -1000px;
-      opacity: 0;
-    }
-    100% {
-      left: 0px;
-      opacity: 1;
-    }
-  }
-  position: relative;
-  animation-name: post;
-  animation-duration: 0.9s;
-`
-
-const ExpHeading = styled(HeadingXL)`
-  display: inline-block;
-  margin: margin: 10vh 2vh 2vh 2vh;
-
-  background: -webkit-linear-gradient(
-    120deg,
-    hsla(355, 100%, 73%, 1),
-    hsla(355, 100%, 73%, 1),
-    hsla(29, 100%, 72%, 1)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`
-
-const ExpHeading2 = styled(HeadingXL)`
-  display: inline-block;
-  margin: 10vh 2vh 2vh 2vh;
-
-  background: -webkit-linear-gradient(
-    120deg,
-    hsla(355, 100%, 73%, 1),
-    hsla(29, 100%, 72%, 1),
-    hsla(29, 100%, 72%, 1)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`
-
-const HeadingL2 = styled(HeadingL)`
-  background: -webkit-linear-gradient(
-    120deg,
-    hsla(29, 100%, 79%, 1),
-    hsla(29, 100%, 79%, 1)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`
-        <PostWrapper2>
-          <ExpHeading2>what now </ExpHeading2>
-        </PostWrapper2>
-
-        <PostWrapper>
-          <ExpHeading>????? </ExpHeading>
-        </PostWrapper>
-
-        <PostWrapper2>
-          <Post>
-            <HeadingL2>Wonder what will end up here?</HeadingL2>
-            <TextBody>Something interesting I bet</TextBody>
-            <TextDate>brrr</TextDate>
-          </Post>
-        </PostWrapper2>
-
-        <PostWrapper>
-          <Post>
-            <HeadingL>This probably wont be as interesting tho</HeadingL>
-            <TextBody>Unless? 👀</TextBody>
-            <TextDate>crabs</TextDate>
-          </Post>
-        </PostWrapper>
-*/
-
 export default function AboutPage() {
   return (
     <>
@@ -226,8 +119,7 @@ export default function AboutPage() {
         </TextAbout>
 
         <TextAbout>
-          I am a SysAdmin/DevOps by day and Hardware Development student by
-          night with a curiosity for many things. I've said that I would never
+          I am a SysAdmin & DevOps primarily, but have a curiosity for many things. I've said that I would never
           do front-end, but then I somehow ended up building this site. I guess
           it's fitting for a JamFox to have a JAMstack site?&nbsp;
           <StaticImage

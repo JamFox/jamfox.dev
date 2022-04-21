@@ -91,11 +91,8 @@ export default function HomePage({data}) {
       <Top>
         <TopLinks>
           <Link to="/">
-            <TopLink>Homepage</TopLink>
-          </Link>
-          <Link to="/terms#">
             <TopLink>
-              Back up&nbsp;
+              Homepage&nbsp;
               <StaticImage
                 src="../images/pepeEZ.webp"
                 width={15}
