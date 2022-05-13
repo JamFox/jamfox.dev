@@ -8,7 +8,7 @@ import {HomeLayout} from "../components/LayoutHome"
 export default function RatPage({data}) {
   return (
     <>
-      <SEO title="Joe" />
+      <SEO title="Jerma" />
       <HomeLayout>
         <Link to="/terms">
           <StaticImage src="../images/jerma.jpg" />

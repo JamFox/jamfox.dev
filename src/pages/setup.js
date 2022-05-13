@@ -7,6 +7,42 @@ import {HomeLayout} from "../components/LayoutHome"
 import {BREAKPOINT} from "../utils/constants"
 import gif from "../images/fox.gif"
 
+const Top = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.15);
+`
+
+const TopLinks = styled.div`
+  float: right;
+  display: flex;
+`
+
+const TopLink = styled.a`
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 24px 32px;
+  white-space: nowrap;
+  display: inline-block;
+
+  color: white;
+  text-decoration: none;
+  user-select: none !important;
+`
+
+const LinkText = styled.span`
+  :hover {
+    color: #dddddd;
+  }
+  :active {
+    color: #bbbbbb;
+  }
+`
+
 const Wrapper = styled.div`
   margin: 2vh 5vh 5vh 5vh;
   text-align: center;
@@ -53,6 +89,20 @@ export default function AboutPage() {
   return (
     <>
       <SEO title="Setup" />
+      <Top>
+        <TopLinks>
+          <TopLink>
+            /
+            <LinkText>
+              <Link to="/">home</Link>
+            </LinkText>
+            /
+            <LinkText>
+              <Link to="/setup">setup</Link>
+            </LinkText>
+          </TopLink>
+        </TopLinks>
+      </Top>
       <HomeLayout>
         <Wrapper>
           <HeadingXL>
@@ -84,15 +134,20 @@ export default function AboutPage() {
             <TextDateSmall>» VR System - Oculus Rift CV1 Touch</TextDateSmall>
           </Post>
 
-          <HeadingL2> luna (homeserver) </HeadingL2>
+          <HeadingL2> sol (homeserver) </HeadingL2>
           <Post>
+            <TextDateSmall>» Server - HP ProLiant DL380 Gen9 </TextDateSmall>
             <TextDateSmall>
-              » Mediaserver (dockerized) - Plex / Jellyfin / Sonarr / Radarr
+              » CPU - 2x Intel Xeon E5-2630 v3 @ 2.40 GHz
             </TextDateSmall>
+            <TextDateSmall>» RAM - 18x16GB (ECC DDR4) </TextDateSmall>
+            <TextDateSmall>» Storage - 8x600GB SAS </TextDateSmall>
             <TextDateSmall>
-              » Gameservers - Minecraft Valhelsia 3 / Valheim
+              » Storage Controller - HP Smart Array P440ar
             </TextDateSmall>
           </Post>
+
+          <HeadingL2> luna (homeserver) </HeadingL2>
           <Post>
             <TextDateSmall>» TV - Samsung 49Q6F (4k 60Hz) </TextDateSmall>
             <TextDateSmall>» Case - Define C </TextDateSmall>

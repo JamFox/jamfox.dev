@@ -29,27 +29,28 @@ const TopLinks = styled.div`
 
 const TopLink = styled.a`
   margin: 0;
-  font-size: 16px;
+  font-size: 26px;
   font-weight: bold;
   line-height: 16px;
   padding: 24px 32px;
   white-space: nowrap;
   display: inline-block;
-  cursor: pointer;
   color: white;
   text-decoration: none;
   user-select: none !important;
+`
+
+const LinkText = styled.span`
   :hover {
-    background-color: rgba(0, 0, 0, 0.25);
+    color: #dddddd;
   }
   :active {
-    background-color: rgba(0, 0, 0, 0.5);
+    color: #bbbbbb;
   }
 `
 
 const Post = styled.div`
-  border-bottom: 1px solid lightgray;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   @media (max-width: ${BREAKPOINT}px) {
     padding-left: 0;
@@ -197,6 +198,10 @@ const Pane = styled.div`
 
   margin: 0 auto;
 `
+const TextBodySmall = styled(TextBody)`
+  font-size: 14px;
+`
+
 
 export default function Blog({data}) {
   return (
@@ -206,20 +211,16 @@ export default function Blog({data}) {
 
       <Top>
         <TopLinks>
-          <Link to="/">
-            <TopLink>Homepage</TopLink>
-          </Link>
-          <Link to="/blog#">
-            <TopLink>
-              Back up&nbsp;
-              <StaticImage
-                src="../images/pepeEZ.webp"
-                width={15}
-                aspectRatio={1 / 1}
-                quality={90}
-              />
-            </TopLink>
-          </Link>
+          <TopLink>
+            /
+            <LinkText>
+              <Link to="/">home</Link>
+            </LinkText>
+            /
+            <LinkText>
+              <Link to="/blog">blog</Link>
+            </LinkText>
+          </TopLink>
         </TopLinks>
       </Top>
       <Videofull>
@@ -290,14 +291,21 @@ export default function Blog({data}) {
       </Pane>
 
       <Pane>
+        <h1>Posts</h1>
         {data.allMarkdownRemark.edges.map(({node}) => (
-          <Link to={node.fields.slug} key={node.id}>
-            <Post>
-              <HeadingL>{node.frontmatter.title}</HeadingL>
-              <TextBody>{node.excerpt}</TextBody>
-              <TextDate>{node.frontmatter.date}</TextDate>
-            </Post>
-          </Link>
+          <Post>
+            <Link to={node.fields.slug} key={node.id}>
+              <TextDate>
+                ⁘ <LinkText>{node.frontmatter.title}</LinkText>
+              </TextDate>
+            </Link>
+
+            <TextBodySmall>
+              <Link to={node.fields.slug} key={node.id}>
+                &nbsp;{node.frontmatter.date}
+              </Link>
+            </TextBodySmall>
+          </Post>
         ))}
       </Pane>
     </>
