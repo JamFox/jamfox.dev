@@ -1,0 +1,150 @@
+import React from "react"
+import {Link} from "gatsby"
+import styled from "styled-components"
+import {HeadingXL, SEO, TextBody, HeadingL, TextDate} from "../components"
+import {HomeLayout} from "../components/LayoutHome"
+import {StaticImage} from "gatsby-plugin-image"
+import {BREAKPOINT} from "../utils/constants"
+
+const Top = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.15);
+`
+
+const TopLinks = styled.div`
+  float: right;
+  display: flex;
+`
+
+const TopLink = styled.a`
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 24px 32px;
+  white-space: nowrap;
+  display: inline-block;
+
+  color: white;
+  text-decoration: none;
+  user-select: none !important;
+`
+
+const LinkText = styled.span`
+  :hover {
+    color: #dddddd;
+  }
+  :active {
+    color: #bbbbbb;
+  }
+`
+
+const Wrapper = styled.div`
+  margin: 1vh 1vh 1vh 1vh;
+  text-align: center;
+`
+
+const Post = styled.div`
+  margin-bottom: 50px;
+  vertical-align: middle;
+  @media (max-width: ${BREAKPOINT}px) {
+    padding-left: 0;
+  }
+`
+
+const HeadingL2 = styled(HeadingL)`
+  font-size: 25px;
+  background: -webkit-linear-gradient(
+    120deg,
+    hsla(29, 100%, 79%, 1),
+    hsla(29, 100%, 79%, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
+const TextBodySmall = styled(TextBody)`
+  font-size: 14px;
+`
+
+export default function AboutPage() {
+  return (
+    <>
+      <SEO title="Links" />
+      <Top>
+        <TopLinks>
+          <TopLink>
+            /
+            <LinkText>
+              <Link to="/">home</Link>
+            </LinkText>
+            /
+            <LinkText>
+              <Link to="/links">links</Link>
+            </LinkText>
+          </TopLink>
+        </TopLinks>
+      </Top>
+      <HomeLayout>
+        <Wrapper>
+          <HeadingXL>
+            <Link to="/">Links </Link>
+          </HeadingXL>
+        </Wrapper>
+
+        <Post>
+          <HeadingL2>Infotech</HeadingL2>
+          <TextDate>
+            <Link to="https://web.mit.edu/kerberos/dialogue.html">
+              <LinkText>
+                Designing an Authentication System: a Dialogue in Four Scenes
+              </LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            Clever story about how Kerberos auth protocol came to be.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://github.com/dylanaraps/pure-bash-bible">
+              <LinkText>pure bash bible</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            Spice up your servers with no dependencies by utilizing unreadable
+            arcane methods.
+          </TextBodySmall>
+        </Post>
+
+        <Post>
+          <HeadingL2>Generally interesting</HeadingL2>
+          <TextDate>
+            <Link to="https://waitbutwhy.com/">
+              <LinkText>Wait But Why</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            The best procrastination website you'll ever find.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://wtfhappenedin1971.com ">
+              <LinkText>WTF Happened In 1971?!</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>Feel the pessimism boiling.</TextBodySmall>
+        </Post>
+
+        <Post>
+          <HeadingL2>Stimulate emotions</HeadingL2>
+          <TextDate>
+            <Link to="https://fauux.neocities.org/">
+              <LinkText>Neocities</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>Wired sound for wired people.</TextBodySmall>
+        </Post>
+      </HomeLayout>
+    </>
+  )
+}

@@ -20,21 +20,24 @@ const TopLinks = styled.div`
 
 const TopLink = styled.a`
   margin: 0;
-  font-size: 16px;
+  font-size: 26px;
   font-weight: bold;
   line-height: 16px;
   padding: 24px 32px;
   white-space: nowrap;
   display: inline-block;
-  cursor: pointer;
+
   color: white;
   text-decoration: none;
   user-select: none !important;
+`
+
+const LinkText = styled.span`
   :hover {
-    background-color: rgba(0, 0, 0, 0.25);
+    color: #dddddd;
   }
   :active {
-    background-color: rgba(0, 0, 0, 0.5);
+    color: #bbbbbb;
   }
 `
 
@@ -73,15 +76,6 @@ const Tos = styled(Desc)`
   font-size: 12px;
 `
 
-const LinkText = styled.span`
-  :hover {
-    color: #dddddd;
-  }
-  :active {
-    color: #bbbbbb;
-  }
-`
-
 export default function HomePage({data}) {
   return (
     <>
@@ -90,17 +84,16 @@ export default function HomePage({data}) {
 
       <Top>
         <TopLinks>
-          <Link to="/">
-            <TopLink>
-              Homepage&nbsp;
-              <StaticImage
-                src="../images/pepeEZ.webp"
-                width={15}
-                aspectRatio={1 / 1}
-                quality={90}
-              />
-            </TopLink>
-          </Link>
+          <TopLink>
+            /
+            <LinkText>
+              <Link to="/">home</Link>
+            </LinkText>
+            /
+            <LinkText>
+              <Link to="/terms">terms</Link>
+            </LinkText>
+          </TopLink>
         </TopLinks>
       </Top>
       <Pane></Pane>

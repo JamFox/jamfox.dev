@@ -11,6 +11,41 @@ import {HomeLayout} from "../components/LayoutHome"
 import {StaticImage} from "gatsby-plugin-image"
 import gif from "../images/ratnce.gif"
 
+const Top = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.15);
+`
+
+const TopLinks = styled.div`
+  float: right;
+  display: flex;
+`
+
+const TopLink = styled.a`
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 24px 32px;
+  white-space: nowrap;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  user-select: none !important;
+`
+
+const LinkText = styled.span`
+  :hover {
+    color: #dddddd;
+  }
+  :active {
+    color: #bbbbbb;
+  }
+`
+
 const Wrapper = styled.div`
   margin: 1vh 1vh 1vh 1vh;
   text-align: center;
@@ -92,6 +127,20 @@ export default function AboutPage() {
   return (
     <>
       <SEO title="About" />
+      <Top>
+        <TopLinks>
+          <TopLink>
+            /
+            <LinkText>
+              <Link to="/">home</Link>
+            </LinkText>
+            /
+            <LinkText>
+              <Link to="/about">about</Link>
+            </LinkText>
+          </TopLink>
+        </TopLinks>
+      </Top>
       <HomeLayout>
         <Wrapper>
           <HeadingXL>
@@ -119,9 +168,10 @@ export default function AboutPage() {
         </TextAbout>
 
         <TextAbout>
-          I am a SysAdmin & DevOps primarily, but have a curiosity for many things. I've said that I would never
-          do front-end, but then I somehow ended up building this site. I guess
-          it's fitting for a JamFox to have a JAMstack site?&nbsp;
+          I am a SysAdmin & DevOps primarily, but have a curiosity for many
+          things. I've said that I would never do front-end, but then I somehow
+          ended up building this site. I guess it's fitting for a JamFox to have
+          a JAMstack site?&nbsp;
           <StaticImage
             src="../images/pepeEZ.webp"
             alt=":pepeEZ:"

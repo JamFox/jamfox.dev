@@ -192,27 +192,6 @@ const Tos = styled(Desc)`
   font-size: 12px;
 `
 
-/*
-      <Top>
-        <TopLinks>
-          <TopLink>Yes1</TopLink>
-          <TopLink>Yes2</TopLink>
-          <TopLink>
-            
-            <StaticImage
-              src="../images/pepeEZ.webp"
-              width={15}
-              aspectRatio={1 / 1}
-              quality={90}
-              layout="fixed"
-              vertical-align="middle"
-              display="inline-block"
-            />
-          </TopLink>
-        </TopLinks>
-      </Top>
-*/
-
 export default function HomePage({data}) {
   return (
     <>
@@ -260,14 +239,14 @@ export default function HomePage({data}) {
           </InlineWrapper>
 
           <InlineWrapper>
-            <Link to="https://jamfox.github.io/">
-              <ButtonInline2>NCT News</ButtonInline2>
+            <Link to="/links">
+              <ButtonInline2>Links</ButtonInline2>
             </Link>
           </InlineWrapper>
 
           <InlineWrapper>
-            <Link to="https://youtu.be/4bW-wjC61E0">
-              <ButtonInline3>0451</ButtonInline3>
+            <Link to="https://jamfox.github.io/">
+              <ButtonInline3>NCT News</ButtonInline3>
             </Link>
           </InlineWrapper>
         </MainButtons>
