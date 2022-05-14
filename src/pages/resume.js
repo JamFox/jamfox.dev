@@ -2,7 +2,6 @@ import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import {
-  Button,
   HeadingXL,
   SEO,
   TextBody,
@@ -90,7 +89,7 @@ export default function AboutPage() {
             </LinkText>
             /
             <LinkText>
-              <Link to="/more">resume</Link>
+              <Link to="#">resume</Link>
             </LinkText>
           </TopLink>
         </TopLinks>
@@ -113,6 +112,7 @@ export default function AboutPage() {
             />
             &nbsp;CERN
           </HeadingL2>
+          <h3>Python developer, Linux Administrator, DevOps Engineer</h3>
           <TextDate>Feb 2022 - Present</TextDate>
           <TextBody>
             Beams Department Accelerator Control Group Technical Student.
@@ -130,6 +130,10 @@ export default function AboutPage() {
           <TextBody>
             Coordinating and standardizing development workflows and automation.
           </TextBody>
+          <TextBody>
+            Configuring Hashicorp Vault with Kerberos integration for secrets
+            management.
+          </TextBody>
         </Post>
 
         <Post>
@@ -143,6 +147,7 @@ export default function AboutPage() {
             />
             &nbsp;ITÜK
           </HeadingL2>
+          <h3>Chairman of the Board</h3>
           <TextDate>May 2021 - May 2022</TextDate>
           <TextBody>
             Managed a board of 7 of the non-profit organisation of nearly 200
@@ -164,8 +169,9 @@ export default function AboutPage() {
               aspectRatio={1 / 1}
               quality={90}
             />
-            &nbsp;TalTech
+            &nbsp;TalTech HPC
           </HeadingL2>
+          <h3>DevOps Engineer, Linux Administrator</h3>
           <TextDate>May 2021 - Feb 2022</TextDate>
           <TextBody>
             Automated cluster configuration management with GitLab CI to
@@ -196,6 +202,7 @@ export default function AboutPage() {
             />
             &nbsp;VRChat 3D Modeler
           </HeadingL2>
+          <h3>Self-employed</h3>
           <TextDate>Jan 2018 - Mar 2018</TextDate>
           <TextBody>
             Imported and optimized 3D models from many different formats and
@@ -215,6 +222,7 @@ export default function AboutPage() {
             />
             &nbsp;CSGO Virtual Items Trader
           </HeadingL2>
+          <h3>Self-employed</h3>
           <TextDate>Oct 2015 - Dec 2017</TextDate>
           <TextBody>
             Day traded virtual goods related to a video-game called Counter

@@ -98,7 +98,7 @@ export default function AboutPage() {
             </LinkText>
             /
             <LinkText>
-              <Link to="/setup">setup</Link>
+              <Link to="#">setup</Link>
             </LinkText>
           </TopLink>
         </TopLinks>

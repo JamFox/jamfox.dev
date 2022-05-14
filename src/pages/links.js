@@ -3,7 +3,6 @@ import {Link} from "gatsby"
 import styled from "styled-components"
 import {HeadingXL, SEO, TextBody, HeadingL, TextDate} from "../components"
 import {HomeLayout} from "../components/LayoutHome"
-import {StaticImage} from "gatsby-plugin-image"
 import {BREAKPOINT} from "../utils/constants"
 
 const Top = styled.div`
@@ -82,7 +81,7 @@ export default function AboutPage() {
             </LinkText>
             /
             <LinkText>
-              <Link to="/links">links</Link>
+              <Link to="#">links</Link>
             </LinkText>
           </TopLink>
         </TopLinks>
@@ -115,6 +114,61 @@ export default function AboutPage() {
             Spice up your servers with no dependencies by utilizing unreadable
             arcane methods.
           </TextBodySmall>
+          <TextDate>
+            <Link to="https://512kb.club/">
+              <LinkText>The 512KB Club</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            I'm not part of this club, be better than me.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://sites.google.com/alanreiser.com/handsdown">
+              <LinkText>Hands Down Layout</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            Fuck QWERTY and standard keyboards in general.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://blog.geocities.institute/about">
+              <LinkText>One Terabyte of Kilobyte Age</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>Geocities internet archeology.</TextBodySmall>
+          <TextDate>
+            <Link to="https://youtu.be/Sy7yPwj2fsg">
+              <LinkText>Zack Freedman</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            Cyborg hardware hacker from the near future making unnecessarily
+            high-effort videos.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://observablehq.com/@tomlarkworthy/hacker-favourites-analysis">
+              <LinkText>Most favorited Hacker News posts of all time</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            HN scraped in 2020-09-1 from the public favourites lists.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://matrix.org/">
+              <LinkText>matrix</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            An open network for secure, decentralized communication.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://www.privacyguides.org/">
+              <LinkText>Privacy Guides</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            The guide to restoring your online privacy.
+          </TextBodySmall>
         </Post>
 
         <Post>
@@ -125,21 +179,66 @@ export default function AboutPage() {
             </Link>
           </TextDate>
           <TextBodySmall>
-            The best procrastination website you'll ever find.
+            The most useful procrastination website you'll ever find.
           </TextBodySmall>
           <TextDate>
-            <Link to="https://wtfhappenedin1971.com ">
+            <Link to="https://wtfhappenedin1971.com/">
               <LinkText>WTF Happened In 1971?!</LinkText>
             </Link>
           </TextDate>
           <TextBodySmall>Feel the pessimism boiling.</TextBodySmall>
+          <TextDate>
+            <Link to="https://everynoise.com/">
+              <LinkText>Every Noise At Once</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            Algorithmically-generated, readability-adjusted scatter-plot of the
+            musical genre-space.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://youtu.be/YQ_xWvX1n9g">
+              <LinkText>Folding Ideas</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            "Just a movie" or "just a game"? Think again.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://youtu.be/tubXWOJfU5A">
+              <LinkText>BDobbinsFTW</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            The Gameplay Commentary taken to its logical evolution.
+          </TextBodySmall>
+        </Post>
+
+        <Post>
+          <HeadingL2>Procrastination</HeadingL2>
+          <TextDate>
+            <Link to="https://www.youtube.com/c/Ididathing/">
+              <LinkText>I did a thing</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            Probably the most entertaining channel you can find.
+          </TextBodySmall>
+          <TextDate>
+            <Link to="https://tildes.net/">
+              <LinkText>Tildes</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            Non-profit community site driven by its users' interests.
+          </TextBodySmall>
         </Post>
 
         <Post>
           <HeadingL2>Stimulate emotions</HeadingL2>
           <TextDate>
             <Link to="https://fauux.neocities.org/">
-              <LinkText>Neocities</LinkText>
+              <LinkText>Fauux Neocity</LinkText>
             </Link>
           </TextDate>
           <TextBodySmall>Wired sound for wired people.</TextBodySmall>

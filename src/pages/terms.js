@@ -3,7 +3,6 @@ import {Link} from "gatsby"
 import styled from "styled-components"
 import {SEO, HeadingXL, Button} from "../components"
 import {GlobalStyles} from "../components/GlobalStyles"
-import {StaticImage} from "gatsby-plugin-image"
 
 const Top = styled.div`
   position: fixed;
@@ -91,7 +90,7 @@ export default function HomePage({data}) {
             </LinkText>
             /
             <LinkText>
-              <Link to="/terms">terms</Link>
+              <Link to="#">terms</Link>
             </LinkText>
           </TopLink>
         </TopLinks>

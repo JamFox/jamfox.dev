@@ -94,7 +94,7 @@ export default function AboutPage() {
       <SEO title="ă̴̡̞b̴͉́̔o̵̙̲̓u̷͎̬̽ț̶͇͌͝t̶̨̢̨̡̡̢̛͚͍̬͖̩̼̮̻̗̰͓̲̰̪̩̞̮͓̟̮̻̹̖͍̂̉̉͊̌̒̎̄͌̇̋̈́̌̿̂́͛̀̔͊̚͘͠͠͝" />
       <HomeLayout>
         <HeadingXL>
-          <Link to="/abovt">AbO̶ut </Link>
+          <Link to="#">AbO̶ut </Link>
         </HeadingXL>
 
         <ImgWrapper>
@@ -167,7 +167,6 @@ export default function AboutPage() {
             </TextBody>
           </Link>
         </Wrapper>
-
       </HomeLayout>
     </>
   )

@@ -1,12 +1,7 @@
 import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
-import {
-  Button,
-  HeadingXL,
-  SEO,
-  TextBody,
-} from "../components"
+import {Button, HeadingXL, SEO, TextBody} from "../components"
 import {HomeLayout} from "../components/LayoutHome"
 import {StaticImage} from "gatsby-plugin-image"
 import gif from "../images/ratnce.gif"
@@ -123,6 +118,16 @@ const Emote = styled.img`
   margin-right: 1vh;
 `
 
+const Pane = styled.div`
+  background: hsla(0, 0%, 11%, 1);
+  padding: 64px;
+  max-width: 900px;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+
+  margin: 0 auto;
+`
+
 export default function AboutPage() {
   return (
     <>
@@ -136,7 +141,7 @@ export default function AboutPage() {
             </LinkText>
             /
             <LinkText>
-              <Link to="/about">about</Link>
+              <Link to="#">about</Link>
             </LinkText>
           </TopLink>
         </TopLinks>
@@ -220,6 +225,30 @@ export default function AboutPage() {
             <TextBody> PHONE: +372 5333 7528 </TextBody>
           </Link>
         </Wrapper>
+        <Pane></Pane>
+        <h3>I want to know more!</h3>
+        <TextAbout>Sure! But the following is under construction.</TextAbout>
+        <TextAbout>
+          If LinkedIn's too bloated check out my
+          <b>
+            <LinkText>
+              <Link to="/resume"> Resume </Link>
+            </LinkText>
+          </b>
+          right here on jamfox.dev! Indulge in some stats about me on the
+          <b>
+            <LinkText>
+              <Link to="/stats"> Stats </Link>
+            </LinkText>
+          </b>
+          page! Hop on to
+          <b>
+            <LinkText>
+              <Link to="/log"> The Log </Link>
+            </LinkText>
+          </b>
+          if you're interested in my homelab or other projects!
+        </TextAbout>
       </HomeLayout>
     </>
   )

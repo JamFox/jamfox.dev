@@ -68,7 +68,7 @@ export default function RatPage({data}) {
             </LinkText>
             /
             <LinkText>
-              <Link to="/jarvis">jarvis</Link>
+              <Link to="#">jarvis</Link>
             </LinkText>
           </TopLink>
         </TopLinks>
