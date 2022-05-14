@@ -217,7 +217,7 @@ export default function AboutPage() {
         <Post>
           <HeadingL2>Procrastination</HeadingL2>
           <TextDate>
-            <Link to="https://www.youtube.com/c/Ididathing/">
+            <Link to="https://youtu.be/Lti_zl3MnT4">
               <LinkText>I did a thing</LinkText>
             </Link>
           </TextDate>
