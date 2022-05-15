@@ -149,7 +149,9 @@ export default function AboutPage() {
 
           <HeadingL2> luna (homeserver) </HeadingL2>
           <Post>
-            <TextDateSmall>» TV - Samsung 49Q6F (4k 60Hz) </TextDateSmall>
+            <TextDateSmall>
+              » Display - Samsung QN49Q6F (4K 60Hz)
+            </TextDateSmall>
             <TextDateSmall>» Case - Define C </TextDateSmall>
             <TextDateSmall>» CPU - i5-4570 @ 3.6GHz </TextDateSmall>
             <TextDateSmall>
@@ -167,11 +169,8 @@ export default function AboutPage() {
             </TextDateSmall>
 
             <TextDateSmall>» RAM - 2x4GB+2x8GB (DDR3)</TextDateSmall>
-            <TextDateSmall>» Storage - 750GB SSD + 1.5TB HDD</TextDateSmall>
-            <TextDateSmall>» Monitor1 - HP ZR2330w (1080p 60Hz) </TextDateSmall>
-            <TextDateSmall>» Monitor2 - PHL 244E5 (1080p 60Hz)</TextDateSmall>
             <TextDateSmall>
-              » Monitor3 - PHL 273V7QDSB (1080p 70Hz)
+              » Storage - 500GB SSD + 250GB SSD + 1TB HDD + 500GB HDD
             </TextDateSmall>
             <TextDateSmall>
               » Keeb - Sofle v2 (Gateron Yellow Inks)
@@ -179,9 +178,8 @@ export default function AboutPage() {
             <TextDateSmall>» Mouse - Zowie EC1-A (1000Hz 800DPI)</TextDateSmall>
             <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
             <TextDateSmall>
-              » Audio - HyperX Cloud 2 + Blue Snowball
+              » Audio - Denon AVR-1612 with 5.1 surround speakers
             </TextDateSmall>
-            <TextDateSmall>» Tablet - XP-PEN G430S </TextDateSmall>
           </Post>
 
           <HeadingL2> legion (laptop) </HeadingL2>
@@ -197,6 +195,7 @@ export default function AboutPage() {
             </TextDateSmall>
             <TextDateSmall>» Monitor3 - PHL 244E5 (1080p 60Hz) </TextDateSmall>
             <TextDateSmall>» Keeb - Pteron36 (Kailh Choc Black) </TextDateSmall>
+            <TextDateSmall>» Tablet - XP-PEN G430S </TextDateSmall>
             <TextDateSmall>» Mouse - Zowie EC1-A (1000Hz 800DPI)</TextDateSmall>
             <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
             <TextDateSmall>» Audio - Logitech G533</TextDateSmall>
@@ -215,6 +214,7 @@ export default function AboutPage() {
             </TextDateSmall>
             <TextDateSmall>» Phone (secondary) - Oneplus 5T </TextDateSmall>
             <TextDateSmall>» Soldering iron - TS100 B2 </TextDateSmall>
+            <TextDateSmall>» 3D printer - Anycubic Mega SE </TextDateSmall>
             <TextDateSmall>
               » Wifi pentest adapter - Alfa AWUS036NHA
             </TextDateSmall>
@@ -222,6 +222,9 @@ export default function AboutPage() {
               » Raspberry cluster - 2x Model 3B+ / Model 4B
             </TextDateSmall>
             <TextDateSmall>» Backpack - 5.11 RUSH24</TextDateSmall>
+            <TextDateSmall>
+              » Sling pack - Heimplanet Transit Line Sling Pocket
+            </TextDateSmall>
           </Post>
         </Wrapper>
       </HomeLayout>
