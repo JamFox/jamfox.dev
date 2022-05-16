@@ -140,7 +140,7 @@ export default function AboutPage() {
             <TextDateSmall>
               » CPU - 2x Intel Xeon E5-2630 v3 @ 2.40 GHz
             </TextDateSmall>
-            <TextDateSmall>» RAM - 18x16GB (ECC DDR4) </TextDateSmall>
+            <TextDateSmall>» RAM - 18x16GB (ECC DDR4 2133CL15) </TextDateSmall>
             <TextDateSmall>» Storage - 8x600GB SAS </TextDateSmall>
             <TextDateSmall>
               » Storage Controller - HP Smart Array P440ar
@@ -149,9 +149,7 @@ export default function AboutPage() {
 
           <HeadingL2> luna (homeserver) </HeadingL2>
           <Post>
-            <TextDateSmall>
-              » Display - Samsung QN49Q6F (4K 60Hz)
-            </TextDateSmall>
+            <TextDateSmall>» Display - Samsung QN49Q6F (4K 60Hz)</TextDateSmall>
             <TextDateSmall>» Case - Define C </TextDateSmall>
             <TextDateSmall>» CPU - i5-4570 @ 3.6GHz </TextDateSmall>
             <TextDateSmall>
@@ -182,6 +180,16 @@ export default function AboutPage() {
             </TextDateSmall>
           </Post>
 
+          <HeadingL2> equinox (cluster) </HeadingL2>
+          <Post>
+            <TextDateSmall>» Main - Raspberry Pi Model 4B</TextDateSmall>
+            <TextDateSmall>
+              » Secondary - 2x Raspberry Pi 2x Model 3B+
+            </TextDateSmall>
+            <TextDateSmall>» Automation controller - Arduino Uno</TextDateSmall>
+            <TextDateSmall>» Camera - Raspberry Pi Camera 2</TextDateSmall>
+          </Post>
+
           <HeadingL2> legion (laptop) </HeadingL2>
           <Post>
             <TextDateSmall>» Model - Lenovo Legion 5 17ACH6H</TextDateSmall>
@@ -201,7 +209,7 @@ export default function AboutPage() {
             <TextDateSmall>» Audio - Logitech G533</TextDateSmall>
           </Post>
 
-          <HeadingL2> Other tools </HeadingL2>
+          <HeadingL2> Other </HeadingL2>
           <Post>
             <TextDateSmall>» OS - Windows 10 / Linux </TextDateSmall>
             <TextDateSmall>
@@ -217,9 +225,6 @@ export default function AboutPage() {
             <TextDateSmall>» 3D printer - Anycubic Mega SE </TextDateSmall>
             <TextDateSmall>
               » Wifi pentest adapter - Alfa AWUS036NHA
-            </TextDateSmall>
-            <TextDateSmall>
-              » Raspberry cluster - 2x Model 3B+ / Model 4B
             </TextDateSmall>
             <TextDateSmall>» Backpack - 5.11 RUSH24</TextDateSmall>
             <TextDateSmall>
