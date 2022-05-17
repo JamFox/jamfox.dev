@@ -133,7 +133,7 @@ export default function AboutPage() {
 
           <TextDate>
             <Link to="https://vrchat.com/">
-              <LinkText>VRChat</LinkText>
+              <LinkText>VRChat </LinkText>
             </Link>
             (Not sure? Check out:
             <Link to="https://youtu.be/4PHT-zBxKQQ">
