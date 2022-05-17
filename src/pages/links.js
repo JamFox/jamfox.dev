@@ -68,6 +68,41 @@ const TextBodySmall = styled(TextBody)`
   font-size: 14px;
 `
 
+const Desc = styled.p`
+  text-align: center;
+  vertical-align: middle;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+`
+
+const Pane = styled.div`
+  background: hsla(0, 0%, 11%, 1);
+  padding: 32px;
+  max-width: 900px;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+
+  margin: 0 auto;
+`
+
+const Footer = styled(Pane)`
+  display: grid;
+  grid-template-columns: 228px 128px;
+  column-gap: 16px;
+`
+
+const FooterA = styled.a`
+  line-height: 2;
+`
+
+const Tos = styled(Desc)`
+  color: hsla(0, 0%, 14%, 1);
+  max-width: 80vw;
+  font-size: 12px;
+`
+
 export default function AboutPage() {
   return (
     <>
@@ -344,6 +379,13 @@ export default function AboutPage() {
           </TextBodySmall>
         </Post>
       </HomeLayout>
+      <Footer>
+        <FooterA>
+          <Link to="https://youtube.com/playlist?list=FLCF_318p-7YO2OM18OEYpyw">
+            <Tos>sekrit favorits</Tos>
+          </Link>
+        </FooterA>
+      </Footer>
     </>
   )
 }
