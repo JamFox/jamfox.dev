@@ -356,6 +356,15 @@ export default function AboutPage() {
           <HeadingL2>Other</HeadingL2>
 
           <TextDate>
+            <Link to="https://youtu.be/euik1Zrs30w">
+              <LinkText>rat spin 10 hours</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            rat. spin.
+          </TextBodySmall>
+
+          <TextDate>
             <Link to="https://youtu.be/Lti_zl3MnT4">
               <LinkText>I did a thing</LinkText>
             </Link>
@@ -363,7 +372,6 @@ export default function AboutPage() {
           <TextBodySmall>
             Probably the most entertaining channel you can find.
           </TextBodySmall>
-
           <TextDate>
             <Link to="https://www.youtube.com/c/2kliksphilip">
               <LinkText>2kliksphilip</LinkText>
