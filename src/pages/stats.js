@@ -154,6 +154,7 @@ export default function HomePage({data}) {
             <li>Graffiti (marker)</li>
             <li>Photography</li>
             <li>Cooking</li>
+            <li>Writing</li>
           </ul>
           <li>2 years or more</li>
           <ul>
