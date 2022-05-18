@@ -104,10 +104,94 @@ export default function HomePage({data}) {
         <HeadingXL id="title">
           <Link to="/">Stats</Link>
         </HeadingXL>
+
+        <p>Table of Contents (click to jump to section):</p>
+        <ol>
+          <li>
+            <Link to="/stats#physical">
+              <LinkText>Physical</LinkText>
+            </Link>
+          </li>
+          <li>
+            <Link to="/stats#hobbies">
+              <LinkText>Hobbies Tried</LinkText>
+            </Link>
+          </li>
+          <li>
+            <Link to="/stats#travel">
+              <LinkText>Destinations Traveled</LinkText>
+            </Link>
+          </li>
+        </ol>
       </Pane>
 
       <Pane>
-        <HeadingL id="s1">SECTION 1 - Destinations Traveled</HeadingL>
+        <HeadingL id="physical">Physical</HeadingL>
+        <ul>
+          <li>Sex: Male</li>
+          <li>Height: 183cm</li>
+          <li>Weight: 75kg</li>
+          <li>Shoe: 44-45 EU</li>
+        </ul>
+      </Pane>
+
+      <Pane>
+        <HeadingL id="hobbies">Hobbies Tried</HeadingL>
+        <ul>
+          <li>10 years or more</li>
+          <ul>
+            <li>Judo</li>
+            <li>Running</li>
+            <li>Gym / Calisthenics</li>
+            <li>Gaming</li>
+            <li>IT software</li>
+            <li>Photo editing</li>
+          </ul>
+          <li>5 years or more</li>
+          <ul>
+            <li>IT hardware</li>
+            <li>Drawing (graphite)</li>
+            <li>Graffiti (marker)</li>
+            <li>Photography</li>
+            <li>Cooking</li>
+          </ul>
+          <li>2 years or more</li>
+          <ul>
+            <li>Volleyball</li>
+            <li>Virtual item trading</li>
+            <li>Hip-Hop dance</li>
+            <li>Video editing</li>
+            <li>Parkour</li>
+          </ul>
+          <li>1 year or more</li>
+          <ul>
+            <li>Cross-country skiing</li>
+            <li>Drums</li>
+            <li>Guitar</li>
+            <li>Cars</li>
+            <li>House dance</li>
+          </ul>
+          <li> Less than 1 year</li>
+          <ul>
+            <li>HEMA swordfighting</li>
+            <li>3D modeling</li>
+            <li>Lock picking</li>
+            <li>Basketball</li>
+            <li>Football</li>
+            <li>Alpine skiing</li>
+            <li>Tennis</li>
+            <li>Surfing</li>
+            <li>Estonian folk dance</li>
+            <li>Sewing</li>
+            <li>Archery</li>
+            <li>Airsoft</li>
+            <li>Snowboarding</li>
+          </ul>
+        </ul>
+      </Pane>
+
+      <Pane>
+        <HeadingL id="travel">Destinations Traveled</HeadingL>
 
         <p>Table of Contents (click to see destinations):</p>
         <ol>
