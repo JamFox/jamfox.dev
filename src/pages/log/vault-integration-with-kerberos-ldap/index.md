@@ -3,8 +3,59 @@ title: "Hashicorp Vault integration with Kerberos/LDAP"
 date: "2022-05-15"
 ---
 
-What is Vault?
-==============
+Table of contents:
+
+*   [What is Vault?](#What)
+	*   [How do I access Vault?](#access)
+	
+*   [ADMIN GUIDE](#admin)
+	*   [Necessary first step](#step)
+	*   [LDAP config (user auth)](#ldap)
+	*   [Kerberos config (host auth)](#krb)
+	*   [Creating policies](#policy)
+		*   [Syntax and usage](#syntax)
+		*   [Path capabilities cheat sheet](#path)
+		*   [Templating policies](#template)
+
+*   [CLIENT GUIDE](#client)
+	*   [Necessary first step](#step2)
+	*   [User auth](#user)
+	*   [Host auth](#host)
+	*   [Using Vault](#using)
+		*   [Key-Value Secrets](#key)
+		*   [Secret sharing using key/value V1](#secret)
+			*   [Short of it - cheat sheet](#short)
+			*   [Long of it - a practical demo](#long)
+		*   [Transit secrets](#transit)
+			*   [Usage example](#transitusage)
+		*   [Transform secrets](#transform)
+			*   [Usage example](#transformusage)
+		*   [Active Directory secrets](#adsecrets)
+		*   [OpenLDAP secrets](#ldapsecrets)
+		*   [PKI secrets](#pkisecrets)
+		*   [PKI secrets](#pkisecrets)
+			*   [Usage example](#pkiusage)
+		*   [Database secrets](#db)
+
+*   [USAGE QUICK GUIDE](#demo)
+	*   [CLI](#democli)
+		*   [CERN AD user usage](#demoad)
+		*   [Personal secrets](#demopersonal)
+		*   [Inbox secrets](#demoinbox)
+		*   [General secrets](#demogeneral)
+	*   [Host](#demohost)
+		*   [CERN AD host usage](#demohostad)
+		*   [Manual host usage](demohostadmanual)
+		*   [Ansible host usage](#demohostadansible)
+	*   [Web UI](#demoweb)
+		*   [CERN AD user usage](#demowebad)
+		*   [Personal secrets](#demowebpersonal)
+		*   [Inbox secrets](#demowebinbox)
+		*   [General secrets](#demowebgeneral)
+	
+
+
+# <a id="What"></a> What is Vault?
 
 Vault is an identity-based secrets and encryption management system. A secret is anything that you want to tightly control access to, such as API encryption keys, passwords, or certificates. Vault provides encryption services that are gated by authentication and authorization methods. Using Vault’s UI, CLI, or HTTP API, access to secrets and other sensitive data can be securely stored and managed, tightly controlled (restricted), and auditable.
 
@@ -39,8 +90,7 @@ CERN specific potential use cases:
 *   **PKI certificate management** - generate dynamic X.509 certificates.
 *   **Dynamic database credentials** - generates database credentials dynamically based on configured roles. These credentials can also be used for other purposes than accessing databases too!
 
-How do I access Vault?
-======================
+## <a id="access"></a> How do I access Vault?
 
 Use the CLI tool, by [installing it](https://www.vaultproject.io/docs/install) and setting your environment variable `VAULT_ADDR='https://vault.cern.ch:8200'`
 
@@ -48,25 +98,22 @@ OR
 
 Use the web UI by navigating to https://vault.cern.ch:8200 in your browser and log in using LDAP method by using your CERN account credentials.
 
-ADMIN GUIDE
-======================
+# <a id="admin"></a> ADMIN GUIDE
 
 Following sections describes what the Vault back-end admin must do in order to enable LDAP and Kerberos integrations to work with CERN auth methods and also how to map LDAP groups to Vault policies.
 
-Table of Contents
-=================
+Table of Contents:
 
-*   [Table of Contents](#TableofContents)
-*   [Necessary first step](#Necessaryfirststep)
-*   [LDAP config (user auth)](#LDAPconfig(userauth))
-*   [Kerberos config (host auth)](#Kerberosconfig(hostauth))
-*   [Creating policies](#Creatingpolicies)
-    *   [Syntax and usage](#Syntaxandusage)
-    *   [Path capabilities cheat sheet](#Pathcapabilitiescheatsheet)
-    *   [Templating policies](#Templatingpolicies)
+*   [ADMIN GUIDE](#admin)
+	*   [Necessary first step](#step)
+	*   [LDAP config (user auth)](#ldap)
+	*   [Kerberos config (host auth)](#krb)
+	*   [Creating policies](#policy)
+		*   [Syntax and usage](#syntax)
+		*   [Path capabilities cheat sheet](#path)
+		*   [Templating policies](#template)
 
-Necessary first step
-====================
+## <a id="step"></a> Necessary first step
 
 Current CERN Kerberos configuration includes the lines which are incompatible with Vault as parsing these lines leads Vault to believe that the Kerberos is using v4 instead of v5:
 
@@ -92,8 +139,8 @@ Remove incompatible Kerberos v4 lines (the following command finds the line `v4_
 sed -i "$(grep -n v4_name_convert /etc/krb5.conf.nov4 | cut -d : -f1),$(expr $(grep -n v4_name_convert /etc/krb5.conf.nov4 | cut -d : -f1) + 4)d" /etc/krb5.conf.nov4
 ```
 
-LDAP config (user auth)
-=======================
+## <a id="ldap"></a> LDAP config (user auth)
+
 
 [Official Vault LDAP documentation](https://www.vaultproject.io/docs/auth/ldap) and [API documentation](https://www.vaultproject.io/api-docs/auth/ldap).
 
@@ -154,8 +201,7 @@ Map Vault policies to LDAP groups:
 vault write auth/ldap/groups/<LDAP GROUP NAME> policies=<VAULT POLICY NAME>
 ```
 
-Kerberos config (host auth)
-===========================
+## <a id="krb"></a> Kerberos config (host auth)
 
 [Official Vault Kerberos documentation](https://www.vaultproject.io/docs/auth/kerberos) and [API documentation](https://www.vaultproject.io/api-docs/auth/kerberos).
 
@@ -219,8 +265,7 @@ Map Vault policies to LDAP groups:
 vault write auth/kerberos/groups/<LDAP GROUP NAME> policies=<VAULT POLICY NAME>
 ```
 
-Creating policies
-=================
+## <a id="policy"></a> Creating policies
 
 [Official Vault Policies documentation](https://www.vaultproject.io/docs/concepts/policies)
 
@@ -228,8 +273,7 @@ Everything in Vault is path based, and policies are no exception. Policies provi
 
 Policies are **deny by default**, so an empty policy grants no permission in the system.
 
-Syntax and usage
-----------------
+### <a id="syntax"></a> Syntax and usage
 
 Policies are written in [HCL](https://github.com/hashicorp/hcl) or JSON and describe which paths in Vault a user or machine is allowed to access.
 
@@ -312,8 +356,8 @@ path "secret/+/+/teamb" {
 }
 ```
 
-Path capabilities cheat sheet
------------------------------
+### <a id="path"></a> Path capabilities cheat sheet
+
 
 [`create`](https://www.vaultproject.io/docs/concepts/policies#create) (`POST/PUT`) - Allows creating data at the given path. Very few parts of Vault distinguish between `create` and `update`, so most operations require both `create` and `update` capabilities. Parts of Vault that provide such a distinction are noted in documentation.
 
@@ -333,8 +377,7 @@ For example, modifying the audit log backends requires a token with `sudo` privi
 
 [`deny`](https://www.vaultproject.io/docs/concepts/policies#deny) - Disallows access. This always takes precedence regardless of any other defined capabilities, including `sudo`.
 
-Templating policies
--------------------
+### <a id="template"></a> Templating policies
 
 [Policy templating](https://www.vaultproject.io/docs/concepts/policies#templated-policies=) allows the automating mapping of paths to certain users for example. Admin has no way of knowing who exactly will log into Vault and it would be very time inefficient to create a path for each user's personal secrets manually, templating enables to automate this.
 
@@ -382,34 +425,32 @@ path "kv/personal/{{identity.entity.aliases.auth_ldap_35641cad.name}}/*" {  
 
 
 
-CLIENT GUIDE
-======================
-
-Table of Contents
-=================
+# <a id="client"></a> CLIENT GUIDE
 
 
-*   [Table of Contents](#TableofContents)
-*   [Necessary first step](#Necessaryfirststep)
-*   [User auth](#Userauth)
-*   [Host auth](#Hostauth)
-*   [Using Vault](#UsingVault)
-    *   [Key-Value Secrets](#Key-ValueSecrets)
-        *   [Secret sharing using key/value V1](#Secretsharingusingkey/valueV1)
-            *   [Short of it - cheat sheet](#Shortofit-cheatsheet)
-            *   [Long of it - a practical demo](#Longofit-apracticaldemo)
-    *   [Transit secrets](#Transitsecrets)
-        *   [Usage example](#Usageexample)
-    *   [Transform secrets (requires Vault Enterprise)](#Transformsecrets(requiresVaultEnterprise))
-        *   [Usage example](#Usageexample.1)
-    *   [Active Directory secrets](#ActiveDirectorysecrets)
-    *   [OpenLDAP secrets](#OpenLDAPsecrets)
-    *   [PKI secrets](#PKIsecrets)
-        *   [Usage example](#Usageexample)
-    *   [Database secrets](#Databasesecrets)
+Table of Contents:
 
-Necessary first step
-====================
+*   [CLIENT GUIDE](#client)
+	*   [Necessary first step](#step2)
+	*   [User auth](#user)
+	*   [Host auth](#host)
+	*   [Using Vault](#using)
+		*   [Key-Value Secrets](#key)
+		*   [Secret sharing using key/value V1](#secret)
+			*   [Short of it - cheat sheet](#short)
+			*   [Long of it - a practical demo](#long)
+		*   [Transit secrets](#transit)
+			*   [Usage example](#transitusage)
+		*   [Transform secrets](#transform)
+			*   [Usage example](#transformusage)
+		*   [Active Directory secrets](#adsecrets)
+		*   [OpenLDAP secrets](#ldapsecrets)
+		*   [PKI secrets](#pkisecrets)
+		*   [PKI secrets](#pkisecrets)
+			*   [Usage example](#pkiusage)
+		*   [Database secrets](#db)
+
+## <a id="step2"></a> Necessary first step
 
 Current CERN Kerberos configuration includes the lines which are incompatible with Vault as parsing these lines leads Vault to believe that the Kerberos is using v4 instead of v5:
 
@@ -429,8 +470,8 @@ Remove incompatible Kerberos v4 lines (the following command finds the line `v4_
 sed -i "$(grep -n v4_name_convert /etc/krb5.conf.nov4 | cut -d : -f1),$(expr $(grep -n v4_name_convert /etc/krb5.conf.nov4 | cut -d : -f1) + 4)d" /etc/krb5.conf.nov4
 ```
 
-User auth
-=========
+## <a id="user"></a> User auth
+
 
 The easiest way for users to authenticate to Vault is using the LDAP method.
 
@@ -440,8 +481,8 @@ Authenticate to Vault using Vault CLI:
 vault login -method=ldap username=<YOUR USERNAME>
 ```
 
-Host auth
-=========
+## <a id="host"></a> Host auth
+
 
 The easiest way of automating access to Vault for hosts, deployment of apps, services or other autonomous tasks is to leverage keytabs and use the Vault's Kerberos login method. Every CERN host has or can have a valid keytab by using the `cern-get-keytab` CLI tool. The following will leverage this keytab as a means of authenticating to Vault. Please note that you can also create a key for a service as per [the official documentation](https://www.vaultproject.io/docs/auth/kerberos#configuration=), but this will not provide any meaningful compartmentalization as any automated tasks will still have to be executed as root. The only way to compartmentalize Vault access and secrets is to add hosts to e-groups/LDAP groups and map Vault policies to those groups.
 
@@ -470,15 +511,15 @@ TODO: figure out and document a way to obtain a Kerberos SPNEGO token without Va
 
 <table class="wrapped confluenceTable"><colgroup><col></colgroup><tbody><tr><td class="confluenceTd"><p><code class="bash plain">curl \</code><br><code class="bash spaces">&nbsp;&nbsp;</code><code class="bash plain">--header </code><code class="bash string">"Authorization: Negotiate &lt;BASE64 SPNEGO TOKEN&gt;"</code> <code class="bash plain">\</code><br><code class="bash spaces">&nbsp;&nbsp;</code><code class="bash plain">--request POST \</code><br><code class="bash spaces">&nbsp;&nbsp;</code><code class="bash plain">http:</code><code class="bash plain">//</code><code class="bash plain">$(VAULT_ADDR):8200</code><code class="bash plain">/v1/auth/kerberos/login</code></p></td></tr></tbody></table>
 
-Using Vault
-===========
+## <a id="using"></a> Using Vault
+
 
 Everything in Vault is path based, you can imagine these paths as similar to a Linux file tree, there is a root and paths spring out from there. Policies (created by admins or moderators of Vault) provide a declarative way to grant or forbid access to certain paths and operations in Vault.
 
 For any of the following to work requires a Vault admin to enable the use of any of the following [secret engines](https://www.vaultproject.io/docs/secrets).
 
-Key-Value Secrets
------------------
+### <a id="key"></a> Key-Value Secrets
+
 
 [Official](https://www.vaultproject.io/docs/secrets/kv) Vault KV Secrets documentation.
 
@@ -488,11 +529,13 @@ When running the `kv` secrets backend non-versioned, only the most recently writ
 
 Non-versioned aka [KV V1](https://www.vaultproject.io/docs/secrets/kv/kv-v1) is easier to set up and requires almost no extra setup.
 
-### Secret sharing using key/value V1
+### <a id="secret"></a> Secret sharing using key/value V1
+
 
 Keeping personal secrets, sharing secrets with colleagues can be done most easily by mapping policies to e-groups/LDAP groups and using [policy templating](https://www.vaultproject.io/docs/concepts/policies#templated-policies). The following chapters documents the usage of using the [KV V1](https://www.vaultproject.io/docs/secrets/kv/kv-v1) usage and not the [KV V2](https://www.vaultproject.io/docs/secrets/kv/kv-v2).
 
-#### Short of it - cheat sheet
+#### <a id="short"></a> Short of it - cheat sheet
+
 
 List enabled secrets engines:
 
@@ -533,7 +576,8 @@ If you wish to enter secrets without exposing the secret in my shell's history:
     4.  Press Ctrl+d to end the pipe and write the secret
 *   Using API, use a JSON file for the payload.
 
-#### Long of it - a practical demo
+#### <a id="long"></a> Long of it - a practical demo
+
 
 The following policy is something that is set up by the Vault admins, this is not something the client will have to bother with, but is displayed here just to provide extra context. Following example allows anyone with this policy to:
 
@@ -571,8 +615,9 @@ So you would use the following CLI commad:
 vault kv put kv/acc-adm/services/accsvc password=N3wSecur3p4ssw0rD!
 ```
 
-Transit secrets
----------------
+### <a id="transit"></a> Transit secrets
+
+
 
 The [transit secrets engine](https://www.vaultproject.io/docs/secrets/transit#transit-secrets-engine=) handles cryptographic functions on data in-transit. Vault doesn't store the data sent to the secrets engine. It can also be viewed as "cryptography as a service" or "encryption as a service". The transit secrets engine can also sign and verify data; generate hashes and HMACs of data; and act as a source of random bytes.
 
@@ -580,7 +625,8 @@ The primary use case for `transit` is to encrypt data from applications while st
 
 After the secrets engine is configured and a user/machine has a Vault token with the proper permission, it can use this secrets engine.
 
-### Usage example
+#### <a id="transitusage"></a> Usage example
+
 
 Encrypt some plaintext data using the `/encrypt` endpoint with a named key:
 
@@ -608,13 +654,15 @@ The resulting data is base64-encoded (see the note above for details on why). De
 base64 --decode <<< "bXkgc2VjcmV0IGRhdGEK"
 ```
 
-Transform secrets (requires [Vault Enterprise](https://www.hashicorp.com/products/vault/))
-------------------------------------------------------------------------------------------
+### <a id="transform"></a> Transform secrets (requires [Vault Enterprise](https://www.hashicorp.com/products/vault/))
+
+
 
   
 The [transform secrets engine](https://www.vaultproject.io/docs/secrets/transform#transform-secrets-engine=) handles secure data transformation and tokenization against provided input value. The secret engine currently supports `fpe`, `masking`, and `tokenization` as data transformation types. The secret engine currently supports `fpe`, `masking`, and `tokenization` as data transformation types.
 
-### Usage example
+#### <a id="transformusage"></a> Usage example
+
 
 After the secrets engine is configured and a user/machine has a Vault token with the proper permission, it can use this secrets engine to encode and decode input values.
 
@@ -660,8 +708,8 @@ Key              Value
 decoded_value    4444
 ```
 
-Active Directory secrets
-------------------------
+### <a id="adsecrets"></a> Active Directory secrets
+
 
 The [Active Directory (AD) secrets engine](https://www.vaultproject.io/docs/secrets/ad#active-directory-secrets-engine=) has two main features: 
 
@@ -669,13 +717,15 @@ The first feature (password rotation) is where the AD secrets engine rotates AD 
 
 The second feature (service account check-out) is where a library of service accounts can be checked out by a person or by machines. Vault will automatically rotate the password each time a service account is checked in. Service accounts can be voluntarily checked in, or Vault will check them in when their lending period (or, "ttl", in Vault's language) ends.
 
-OpenLDAP secrets
-----------------
+### <a id="ldapsecrets"></a> OpenLDAP secrets
+
+
 
 The [OpenLDAP secret engine](https://www.vaultproject.io/docs/secrets/openldap#openldap-secrets-engine=) allows management of LDAP entry passwords as well as dynamic creation of credentials. This engine supports interacting with Active Directory which is compatible with **LDAP v3**.
 
-PKI secrets
------------
+### <a id="pkisecrets"></a> PKI secrets
+
+
 
 The [PKI secrets engine](https://www.vaultproject.io/docs/secrets/pki#pki-secrets-engine=) generates dynamic X.509 certificates. With this secrets engine, services can get certificates without going through the usual manual process of generating a private key and CSR, submitting to a CA, and waiting for a verification and signing process to complete. Vault's built-in authentication and authorization mechanisms provide the verification functionality.
 
@@ -683,7 +733,8 @@ By keeping TTLs relatively short, revocations are less likely to be needed, keep
 
 In addition, by allowing revocation to mostly be forgone, this secrets engine allows for ephemeral certificates. Certificates can be fetched and stored in memory upon application startup and discarded upon shutdown, without ever being written to disk.
 
-### Usage example
+#### <a id="pkiusage"></a> ### Usage example
+
 
 Configure a CA certificate and private key. Vault can accept an existing key pair, or it can generate its own self-signed root. In general, we recommend maintaining your root CA outside of Vault and providing Vault a signed intermediate CA:
 
@@ -732,8 +783,8 @@ private_key_type    rsa
 serial_number       1d:2e:c6:06:45:18:60:0e:23:d6:c5:17:43:c0:fe:46:ed:d1:50:be
 ```
 
-Database secrets
-----------------
+### <a id="db"></a> Database secrets
+
 
 The database secrets engine generates database credentials dynamically based on configured roles. It works with a number of different databases through a plugin interface. There are a number of built-in database types, and an exposed framework for running custom database types for extendability. This means that services that need to access a database no longer need to hardcode credentials: they can request them from Vault, and use Vault's leasing mechanism to more easily roll keys. These are referred to as "dynamic roles" or "dynamic secrets".
 
@@ -760,10 +811,29 @@ Supported databases:
 *   [Custom](https://www.vaultproject.io/docs/secrets/databases/custom)
 
 
-USAGE QUICK GUIDE
-======================
+# <a id="demo"></a> USAGE QUICK GUIDE
 
-**CLI**
+Table of contents:
+
+*   [USAGE QUICK GUIDE](#demo)
+	*   [CLI](#democli)
+		*   [CERN AD user usage](#demoad)
+		*   [Personal secrets](#demopersonal)
+		*   [Inbox secrets](#demoinbox)
+		*   [General secrets](#demogeneral)
+	*   [Host](#demohost)
+		*   [CERN AD host usage](#demohostad)
+		*   [Manual host usage](demohostadmanual)
+		*   [Ansible host usage](#demohostadansible)
+	*   [Web UI](#demoweb)
+		*   [CERN AD user usage](#demowebad)
+		*   [Personal secrets](#demowebpersonal)
+		*   [Inbox secrets](#demowebinbox)
+		*   [General secrets](#demowebgeneral)
+
+
+## <a id="democli"></a> CLI
+
 
 Install Vault according to the [official documentation](https://www.vaultproject.io/docs/install). For CentOS:
 
@@ -779,8 +849,8 @@ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashi
 sudo yum -y install vault
 ```
 
-CERN AD user usage
-==================
+### <a id="demoad"></a> CERN AD user usage
+
 
 NOTE: following requires that you are part of the `acc-adm-support` e-group!
 
@@ -802,8 +872,8 @@ List enabled secrets engines:
 vault secrets list
 ```
 
-Personal secrets
-----------------
+### <a id="demopersonal"></a> Personal secrets
+
 
 Personal secrets path is a path that only one account has access to, the path where you create secrets that are specific to your use cases.
 
@@ -831,8 +901,8 @@ List all secret paths under your user name:
 vault kv list kv/personal/"$USER"/
 ```
 
-Inbox secrets
--------------
+### <a id="demoinbox"></a> Inbox secrets
+
 
 Inbox secrets is a path template that allows sharing secrets with one account. Under every personal secret path there is a special sub path called inbox where other users have read/write access to (this is the only path in the personal secrets path where others have read/write access to). That path is `personal/<USERNAME>/inbox/from-<ANY OTHER USERNAME>/*`
 
@@ -846,8 +916,9 @@ vault kv put kv/personal/kturvas/inbox/from-"$USER"/demosecret secret_from_"$USE
 
 Note that you only have access to other people's personal secrets path if it is under the inbox paths `kv/personal/*/inbox/from-"$USER"` and `kv/personal/*/inbox/"$USER"`
 
-General secrets
----------------
+### <a id="demogeneral"></a>General secrets
+
+
 
 General secrets correspond to some policy that allows reading/writing secrets shared by a group of users (like users of an e-group/LDAP group). The following requires that you are part of the `acc-adm-support` e-group for example.
 
@@ -859,7 +930,8 @@ vault kv list
 
   
 
-**Host**
+## <a id="demohost"></a> Host
+
 
 Install Vault according to the [official documentation](https://www.vaultproject.io/docs/install). For CentOS:
 
@@ -877,13 +949,14 @@ sudo yum -y install vault
 
 NOTE: this install method is temporary and should be done manually until we decide to have Vault in internal repos. You could also use the rpm on NFS at `/nfs/cs-ccr-nfshome/user/kturvas/starnet/vault-1.10.2-1.x86_64.rpm`  
 
-CERN AD host usage
-==================
+### <a id="demohostad"></a> CERN AD host usage
+
+
 
 Your host must be part of Computers by OS Unknown group for the following to work since VMs used for testing were only in one group, Computers by OS Unknown, at the time of writing. Of course, the potential of dividing hosts in different e-groups in the future allows for more versatility.
 
-Manual host usage
------------------
+### <a id="demohostadmanual"></a> Manual host usage
+
 
 If you do not wish to add Vault to your host's ansible workflow or would just like to observe how it works in principal.
 
@@ -921,8 +994,8 @@ Now, if your host is also part of Computers by OS Unknown you will be able to **
 
 Authenticate as a user part of `acc-adm-support` to create secrets under that path for hosts to be able to read and fetch them.
 
-Ansible host usage
-------------------
+### <a id="demohostadansible"></a> Ansible host usage
+
 
 It is advisable to organise tasks that use Vault in a manner where they are skipped if no connection to Vault is present. This allows using Vault in a very non-intrusive way where all previous workflows will not be affected in case of errors.
 
@@ -1002,10 +1075,10 @@ Example of fetching and using secrets (inserting secrets into applications using
 
   
 
-**Web UI**
+## <a id="demoweb"></a> Web UI
 
-CERN AD user usage
-==================
+### <a id="demowebad"></a> CERN AD user usage
+
 
 NOTE: following requires that you are part of the acc-adm-support e-group!
 
@@ -1017,8 +1090,8 @@ Click on `kv/` secrets engine:
 
 ![](attachments/187372014/187371992.png)
 
-Personal secrets
-----------------
+### <a id="demowebpersonal"></a> Personal secrets
+
 
 Personal secrets path is a path that only one account has access to, the path where you create secrets that are specific to your use cases.
 
@@ -1040,8 +1113,8 @@ Now you should be able to see the new secret you created:
 
 ![](attachments/187372014/187371997.png)
 
-Inbox secrets
--------------
+### <a id="demowebinbox"></a> Inbox secrets
+
 
 Inbox secrets is a path template that allows sharing secrets with one account. Under every personal secret path there is a special sub path called inbox where other users have read/write access to (this is the only path in the personal secrets path where others have read/write access to). That path is `personal/<USERNAME>/inbox/from-<ANY OTHER USERNAME>/*`
 
@@ -1057,8 +1130,7 @@ Note that you only have access to other people's personal secrets path if it is 
 
   
 
-General secrets
----------------
+### <a id="demowebgeneral"></a> General secrets
 
 General secrets correspond to some policy that allows reading/writing secrets shared by a group of users (like users of an e-group/LDAP group). The following requires that you are part of the `acc-adm-support` e-group for example.
 

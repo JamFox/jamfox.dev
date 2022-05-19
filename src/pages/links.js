@@ -354,16 +354,19 @@ export default function AboutPage() {
 
         <Post>
           <HeadingL2>Other</HeadingL2>
+          <TextDate>
+            <Link to="https://xkcd.com/1205/">
+              <LinkText>xkcd</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>Witty, sometimes useful short comic panels.</TextBodySmall>
 
           <TextDate>
             <Link to="https://youtu.be/euik1Zrs30w">
               <LinkText>rat spin 10 hours</LinkText>
             </Link>
           </TextDate>
-          <TextBodySmall>
-            rat. spin.
-          </TextBodySmall>
-
+          <TextBodySmall>rat. spin.</TextBodySmall>
           <TextDate>
             <Link to="https://youtu.be/Lti_zl3MnT4">
               <LinkText>I did a thing</LinkText>
