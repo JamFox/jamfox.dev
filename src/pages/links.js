@@ -350,6 +350,15 @@ export default function AboutPage() {
           <TextBodySmall>
             The Gameplay Commentary taken to its logical evolution.
           </TextBodySmall>
+
+          <TextDate>
+            <Link to="https://2b2t.miraheze.org/wiki/Nocom">
+              <LinkText>2b2t wiki</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            The unfathomable stories, wars, exploits and hacks from the oldest anarchy server in minecraft.
+          </TextBodySmall>
         </Post>
 
         <Post>
