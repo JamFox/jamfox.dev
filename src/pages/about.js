@@ -236,13 +236,7 @@ export default function AboutPage() {
                 <Link to="/resume"> Resume </Link>
               </LinkText>
             </b>
-            right here on jamfox.dev! Indulge in some stats about me on the
-            <b>
-              <LinkText>
-                <Link to="/stats"> Stats </Link>
-              </LinkText>
-            </b>
-            page! Hop on to
+            right here on jamfox.dev! Hop on to
             <b>
               <LinkText>
                 <Link to="/log"> The Log </Link>
