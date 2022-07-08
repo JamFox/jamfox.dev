@@ -130,7 +130,6 @@ export default function AboutPage() {
 
         <Post>
           <HeadingL2>Explore / Experiences</HeadingL2>
-
           <TextDate>
             <Link to="https://vrchat.com/">
               <LinkText>VRChat </LinkText>
@@ -144,7 +143,6 @@ export default function AboutPage() {
           <TextBodySmall>
             Experience the early web once again, on overdrive.
           </TextBodySmall>
-
           <TextDate>
             <Link to="https://matrix.org/">
               <LinkText>matrix</LinkText>
@@ -153,7 +151,6 @@ export default function AboutPage() {
           <TextBodySmall>
             An open network for secure, decentralized communication.
           </TextBodySmall>
-
           <TextDate>
             <Link to="https://everynoise.com/">
               <LinkText>Every Noise At Once</LinkText>
@@ -163,7 +160,6 @@ export default function AboutPage() {
             Algorithmically-generated, readability-adjusted scatter-plot of the
             musical genre-space.
           </TextBodySmall>
-
           <TextDate>
             <Link to="https://tildes.net/">
               <LinkText>Tildes</LinkText>
@@ -172,13 +168,19 @@ export default function AboutPage() {
           <TextBodySmall>
             Non-profit community site driven by its users' interests.
           </TextBodySmall>
-
           <TextDate>
             <Link to="https://blog.geocities.institute/about">
               <LinkText>One Terabyte of Kilobyte Age</LinkText>
             </Link>
           </TextDate>
           <TextBodySmall>Geocities internet archeology.</TextBodySmall>
+
+          <TextDate>
+            <Link to="https://neal.fun/absurd-trolley-problems/">
+              <LinkText>Absurd Trolley Problems</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>Get to know yourself by answering increasingly absurd trolley problems.</TextBodySmall>
         </Post>
 
         <Post>
@@ -269,6 +271,34 @@ export default function AboutPage() {
           <TextBodySmall>
             The best reviews on consumer-grade display and audio technology.
           </TextBodySmall>
+
+          <TextDate>
+            <Link to="https://foaas.herokuapp.com/">
+              <LinkText>Fuck Off As A Service</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            FOAAS provides a modern, RESTful, scalable solution to the common
+            problem of telling people to fuck off.
+          </TextBodySmall>
+
+          <TextDate>
+            <Link to="https://landscape.cncf.io/">
+              <LinkText>Cloud Native Interactive Landscape</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            As if you didn't have enough technologies to learn.
+          </TextBodySmall>
+
+          <TextDate>
+            <Link to="https://documentation.divio.com/">
+              <LinkText>The documentation system</LinkText>
+            </Link>
+          </TextDate>
+          <TextBodySmall>
+            The Grand Unified Theory of Documentation.
+          </TextBodySmall>
         </Post>
 
         <Post>
@@ -357,7 +387,8 @@ export default function AboutPage() {
             </Link>
           </TextDate>
           <TextBodySmall>
-            The unfathomable stories, wars, exploits and hacks from the oldest anarchy server in minecraft.
+            The unfathomable stories, wars, exploits and hacks from the oldest
+            anarchy server in minecraft.
           </TextBodySmall>
         </Post>
 
@@ -368,7 +399,9 @@ export default function AboutPage() {
               <LinkText>xkcd</LinkText>
             </Link>
           </TextDate>
-          <TextBodySmall>Witty, sometimes useful short comic panels.</TextBodySmall>
+          <TextBodySmall>
+            Witty, sometimes useful short comic panels.
+          </TextBodySmall>
 
           <TextDate>
             <Link to="https://youtu.be/euik1Zrs30w">
