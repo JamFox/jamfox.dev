@@ -1,79 +1,19 @@
 import React from "react"
 import {Link} from "gatsby"
-import styled from "styled-components"
-import {SEO, HeadingXL, Button} from "../components"
+import {
+  SEO,
+  HeadingXL,
+  Button,
+  Top,
+  TopLinks,
+  TopLink,
+  LinkText,
+  Footer,
+  FooterA,
+  Tos,
+  Pane,
+} from "../components"
 import {GlobalStyles} from "../components/GlobalStyles"
-
-const Top = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 64px;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.15);
-`
-
-const TopLinks = styled.div`
-  float: right;
-  display: flex;
-`
-
-const TopLink = styled.a`
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 16px;
-  padding: 24px 32px;
-  white-space: nowrap;
-  display: inline-block;
-
-  color: white;
-  text-decoration: none;
-  user-select: none !important;
-`
-
-const LinkText = styled.span`
-  :hover {
-    color: #dddddd;
-  }
-  :active {
-    color: #bbbbbb;
-  }
-`
-
-const Desc = styled.p`
-  text-align: center;
-  vertical-align: middle;
-  max-width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 16px;
-`
-
-const Pane = styled.div`
-  background: hsla(0, 0%, 11%, 1);
-  padding: 32px;
-  max-width: 900px;
-  overflow-x: hidden;
-  overflow-wrap: break-word;
-
-  margin: 0 auto;
-`
-
-const Footer = styled(Pane)`
-  display: grid;
-  grid-template-columns: 228px 128px;
-  column-gap: 16px;
-`
-
-const FooterA = styled.a`
-  line-height: 2;
-`
-
-const Tos = styled(Desc)`
-  color: hsla(0, 0%, 14%, 1);
-  max-width: 80vw;
-  font-size: 12px;
-`
 
 export default function HomePage({data}) {
   return (

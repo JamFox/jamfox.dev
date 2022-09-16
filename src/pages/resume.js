@@ -2,51 +2,19 @@ import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import {
+  HomeLayout,
   HeadingXL,
   SEO,
   TextBody,
   HeadingL,
   TextDate,
+  Top,
+  TopLinks,
+  TopLink,
+  LinkText,
 } from "../components"
-import {HomeLayout} from "../components/LayoutHome"
 import {StaticImage} from "gatsby-plugin-image"
 import {BREAKPOINT} from "../utils/constants"
-
-const Top = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 64px;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.15);
-`
-
-const TopLinks = styled.div`
-  float: right;
-  display: flex;
-`
-
-const TopLink = styled.a`
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 16px;
-  padding: 24px 32px;
-  white-space: nowrap;
-  display: inline-block;
-
-  color: white;
-  text-decoration: none;
-  user-select: none !important;
-`
-
-const LinkText = styled.span`
-  :hover {
-    color: #dddddd;
-  }
-  :active {
-    color: #bbbbbb;
-  }
-`
 
 const Wrapper = styled.div`
   margin: 1vh 1vh 1vh 1vh;

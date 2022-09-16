@@ -1,27 +1,7 @@
 import React from "react"
 import {Link} from "gatsby"
-import styled from "styled-components"
-import {SEO} from "../components"
+import {SEO, LinkText,Pane} from "../components"
 import {GlobalStyles} from "../components/GlobalStyles"
-
-const Pane = styled.div`
-  background: hsla(0, 0%, 11%, 1);
-  padding: 32px;
-  max-width: 900px;
-  overflow-x: hidden;
-  overflow-wrap: break-word;
-
-  margin: 0 auto;
-`
-
-const LinkText = styled.span`
-  :hover {
-    color: #dddddd;
-  }
-  :active {
-    color: #bbbbbb;
-  }
-`
 
 export default function HomePage({data}) {
   return (

@@ -1,55 +1,27 @@
 import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
-import {Button, HeadingXL, SEO, TextBody} from "../components"
-import {HomeLayout} from "../components/LayoutHome"
+import {
+  HomeLayout,
+  ButtonInline,
+  HeadingXL,
+  SEO,
+  TextBody,
+  Top,
+  TopLinks,
+  TopLink,
+  LinkText,
+  Pane,
+  Emote,
+} from "../components"
 import {StaticImage} from "gatsby-plugin-image"
-import gif from "../images/ratnce.gif"
-
-const Top = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 64px;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.15);
-`
-
-const TopLinks = styled.div`
-  float: right;
-  display: flex;
-`
-
-const TopLink = styled.a`
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 16px;
-  padding: 24px 32px;
-  white-space: nowrap;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  user-select: none !important;
-`
-
-const LinkText = styled.span`
-  :hover {
-    color: #dddddd;
-  }
-  :active {
-    color: #bbbbbb;
-  }
-`
+import Gif from "../images/ratnce.gif"
 
 const Wrapper = styled.div`
   margin: 1vh 1vh 1vh 1vh;
   text-align: center;
 `
-const InlineWrapper = styled.div`
-  display: inline-block;
-  margin: 1vh 0vh 1vh 0vh;
-  text-align: justify;
-`
+
 const TextAbout = styled.p`
   margin: 2vh 0vh 0vh 0vh;
   vertical-align: middle;
@@ -77,16 +49,6 @@ const ImgWrapper = styled.div`
   animation-duration: 0.4s;
 `
 
-const ButtonInline = styled(Button)`
-  margin: 1.5vh;
-  width: 180px;
-  border: 3px solid hsla(201, 100%, 35%, 1);
-  :hover {
-    box-shadow: 0px 9px 0 0 hsla(201, 100%, 21%, 1);
-  }
-  animation-duration: 0.5s;
-`
-
 const ButtonInlineGit = styled(ButtonInline)`
   border: 3px solid hsla(360, 100%, 100%, 0.75);
   :hover {
@@ -109,23 +71,6 @@ const ButtonInlineInsta = styled(ButtonInline)`
     box-shadow: 0px 9px 0 0 hsla(38, 100%, 68%, 0.6);
   }
   animation-duration: 0.2s;
-`
-
-const Emote = styled.img`
-  vertical-align: middle;
-  display: inline;
-  margin-left: 1vh;
-  margin-right: 1vh;
-`
-
-const Pane = styled.div`
-  background: hsla(0, 0%, 11%, 1);
-  padding: 64px;
-  max-width: 900px;
-  overflow-x: hidden;
-  overflow-wrap: break-word;
-
-  margin: 0 auto;
 `
 
 export default function AboutPage() {
@@ -168,7 +113,7 @@ export default function AboutPage() {
         <TextAbout>
           Heyya! Name's Karl, but you can call me Carl
           <Link to="https://youtu.be/OXQwx1EolD8">
-            <Emote src={gif} alt=":ratdance:" width={20} />
+            <Emote src={Gif} alt=":ratdance:" width={20} />
           </Link>
         </TextAbout>
 
@@ -197,27 +142,27 @@ export default function AboutPage() {
         </TextAbout>
 
         <Wrapper>
-          <InlineWrapper>
+          
             <Link to="https://www.linkedin.com/in/katurv/">
               <ButtonInline>LinkedIn</ButtonInline>
             </Link>
-          </InlineWrapper>
-          <InlineWrapper>
+          
+          
             <Link to="https://github.com/JamFox">
               <ButtonInlineGit>GitHub</ButtonInlineGit>
             </Link>
-          </InlineWrapper>
-          <InlineWrapper>
+          
+          
             <a href="cv.pdf" target="blank">
               <ButtonInlinePDF>CV</ButtonInlinePDF>
             </a>
-          </InlineWrapper>
+          
 
-          <InlineWrapper>
+          
             <Link to="https://www.instagram.com/karlturvas/">
               <ButtonInlineInsta>Instagram</ButtonInlineInsta>
             </Link>
-          </InlineWrapper>
+          
           <Link to="mailto:karl.turvas@cern.ch">
             <TextBody> MAIL: karl.turvas@cern.ch </TextBody>
           </Link>

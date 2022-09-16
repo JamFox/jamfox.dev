@@ -1,9 +1,8 @@
 import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
-import {Button, HeadingXL, SEO, TextBody} from "../components"
-import {HomeLayout} from "../components/LayoutHome"
-import rock from "../images/rock-eye.gif"
+import {HomeLayout, Button, HeadingXL, SEO, TextBody, Emote} from "../components"
+import Rock from "../images/rock-eye.gif"
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,11 +17,6 @@ const InlineText = styled(TextBody)`
   line-height: 2.5;
 `
 
-const Emote = styled.img`
-  vertical-align: middle;
-  display: inline;
-`
-
 export default function NotFoundPage() {
   return (
     <>
@@ -33,7 +27,7 @@ export default function NotFoundPage() {
 
           <InlineText style={{textAlign: "center"}}>
             You are not supposed to be here&nbsp;
-            <Emote src={rock} alt="rock-eyebrow.gif" width={40} />
+            <Emote src={Rock} alt="rock-eyebrow.gif" width={40} />
           </InlineText>
 
           <Link to="/">

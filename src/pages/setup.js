@@ -2,53 +2,29 @@ import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components"
 import {StaticImage} from "gatsby-plugin-image"
-import {HeadingXL, SEO, TextDate, HeadingL, TextBody} from "../components"
-import {HomeLayout} from "../components/LayoutHome"
+import {
+  HomeLayout,
+  HeadingXL,
+  SEO,
+  TextDate,
+  HeadingL,
+  TextBody,
+  Top,
+  TopLinks,
+  TopLink,
+  LinkText,
+  Emote
+} from "../components"
 import {BREAKPOINT} from "../utils/constants"
 import gif from "../images/fox.gif"
 
-const Top = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 64px;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.15);
-`
-
-const TopLinks = styled.div`
-  float: right;
-  display: flex;
-`
-
-const TopLink = styled.a`
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 16px;
-  padding: 24px 32px;
-  white-space: nowrap;
-  display: inline-block;
-
-  color: white;
-  text-decoration: none;
-  user-select: none !important;
-`
-
-const LinkText = styled.span`
-  :hover {
-    color: #dddddd;
-  }
-  :active {
-    color: #bbbbbb;
-  }
-`
 
 const Wrapper = styled.div`
   margin: 2vh 5vh 5vh 5vh;
   text-align: center;
 `
 
-const TextAbout = styled(TextBody)`
+const SmallHeader = styled(TextBody)`
   width: auto;
   margin: 1vh 0vh 1vh 0vh;
   position: relative;
@@ -80,11 +56,6 @@ const TextDateSmall = styled(TextDate)`
   justify-content: top;
 `
 
-const Emote = styled.img`
-  vertical-align: middle;
-  display: inline;
-`
-
 export default function AboutPage() {
   return (
     <>
@@ -109,10 +80,10 @@ export default function AboutPage() {
             <Link to="/">Setup </Link>
           </HeadingXL>
 
-          <TextAbout>
+          <SmallHeader>
             Gotta have good tools to do good work, right?
             <Emote src={gif} alt=":spinfox:" width={35} />
-          </TextAbout>
+          </SmallHeader>
 
           <HeadingL2> titaniumjam mk3</HeadingL2>
           <Post>
