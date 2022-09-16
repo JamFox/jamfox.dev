@@ -36,20 +36,7 @@ export const Button = styled.a`
   :hover {
     box-shadow: 9px 9px 0 0 var(--hotpink-color);
   }
-
-  @keyframes button {
-    0% {
-      left: -500px;
-      opacity: 0;
-    }
-    100% {
-      left: 0px;
-      opacity: 1;
-    }
-  }
   position: relative;
-  animation-name: button;
-  animation-duration: 0.5s;
 
   @media (max-width: ${BREAKPOINT}px) {
     font-size: 20px;
@@ -64,5 +51,8 @@ export const ButtonInline = styled(Button)`
   :hover {
     box-shadow: 0px 9px 0 0 hsla(201, 100%, 21%, 1);
   }
-  animation-duration: 0.5s;
+`
+
+export const FixWrapper = styled.div`
+  display: inline-block;
 `

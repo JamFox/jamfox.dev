@@ -13,6 +13,7 @@ import {
   LinkText,
   Pane,
   Emote,
+  FixWrapper,
 } from "../components"
 import {StaticImage} from "gatsby-plugin-image"
 import Gif from "../images/ratnce.gif"
@@ -25,19 +26,7 @@ const Wrapper = styled.div`
 const TextAbout = styled.p`
   margin: 2vh 0vh 0vh 0vh;
   vertical-align: middle;
-  @keyframes textbody {
-    0% {
-      right: -500px;
-      opacity: 0;
-    }
-    100% {
-      right: 0px;
-      opacity: 1;
-    }
-  }
   position: relative;
-  animation-name: textbody;
-  animation-duration: 0.5s;
 `
 
 const ImgWrapper = styled.div`
@@ -45,8 +34,6 @@ const ImgWrapper = styled.div`
   margin: 2vh;
 
   position: relative;
-  animation-name: textbody;
-  animation-duration: 0.4s;
 `
 
 const ButtonInlineGit = styled(ButtonInline)`
@@ -54,7 +41,6 @@ const ButtonInlineGit = styled(ButtonInline)`
   :hover {
     box-shadow: 0px 9px 0 0 hsla(360, 100%, 100%, 0.55);
   }
-  animation-duration: 0.4s;
 `
 
 const ButtonInlinePDF = styled(ButtonInline)`
@@ -62,7 +48,6 @@ const ButtonInlinePDF = styled(ButtonInline)`
   :hover {
     box-shadow: 0px 9px 0 0 hsla(348, 100%, 71%, 0.83);
   }
-  animation-duration: 0.3s;
 `
 
 const ButtonInlineInsta = styled(ButtonInline)`
@@ -70,7 +55,6 @@ const ButtonInlineInsta = styled(ButtonInline)`
   :hover {
     box-shadow: 0px 9px 0 0 hsla(38, 100%, 68%, 0.6);
   }
-  animation-duration: 0.2s;
 `
 
 export default function AboutPage() {
@@ -142,27 +126,30 @@ export default function AboutPage() {
         </TextAbout>
 
         <Wrapper>
-          
-            <Link to="https://www.linkedin.com/in/katurv/">
+          <Link to="https://www.linkedin.com/in/katurv/">
+            <FixWrapper>
               <ButtonInline>LinkedIn</ButtonInline>
-            </Link>
-          
-          
-            <Link to="https://github.com/JamFox">
-              <ButtonInlineGit>GitHub</ButtonInlineGit>
-            </Link>
-          
-          
-            <a href="cv.pdf" target="blank">
-              <ButtonInlinePDF>CV</ButtonInlinePDF>
-            </a>
-          
+            </FixWrapper>
+          </Link>
 
-          
-            <Link to="https://www.instagram.com/karlturvas/">
+          <Link to="https://github.com/JamFox">
+            <FixWrapper>
+              <ButtonInlineGit>GitHub</ButtonInlineGit>
+            </FixWrapper>
+          </Link>
+
+          <a href="cv.pdf" target="blank">
+            <FixWrapper>
+              <ButtonInlinePDF>CV</ButtonInlinePDF>
+            </FixWrapper>
+          </a>
+
+          <Link to="https://www.instagram.com/karlturvas/">
+            <FixWrapper>
               <ButtonInlineInsta>Instagram</ButtonInlineInsta>
-            </Link>
-          
+            </FixWrapper>
+          </Link>
+
           <Link to="mailto:karl.turvas@cern.ch">
             <TextBody> MAIL: karl.turvas@cern.ch </TextBody>
           </Link>

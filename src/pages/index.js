@@ -16,6 +16,7 @@ import {
   Videofull,
   Overlay,
   CenterLogo,
+  FixWrapper,
 } from "../components"
 import {GlobalStyles} from "../components/GlobalStyles"
 import BGvideo from "../videos/tf.mp4"
@@ -79,7 +80,6 @@ const ButtonInline1 = styled(ButtonInline0)`
   :hover {
     box-shadow: 3px 11px 0 0 hsla(356, 100%, 72%, 1);
   }
-  animation-duration: 0.4s;
 `
 
 const ButtonInline2 = styled(ButtonInline0)`
@@ -87,7 +87,6 @@ const ButtonInline2 = styled(ButtonInline0)`
   :hover {
     box-shadow: -3px 11px 0 0 hsla(7, 100%, 72%, 1);
   }
-  animation-duration: 0.3s;
 `
 
 const ButtonInline3 = styled(ButtonInline0)`
@@ -95,7 +94,6 @@ const ButtonInline3 = styled(ButtonInline0)`
   :hover {
     box-shadow: -9px 9px 0 0 var(--orange-color);
   }
-  animation-duration: 0.2s;
 `
 
 export default function HomePage({data}) {
@@ -133,19 +131,27 @@ export default function HomePage({data}) {
           </Desc>
 
           <Link to="/about">
-            <ButtonInline0>About Me</ButtonInline0>
+            <FixWrapper>
+              <ButtonInline0>About Me</ButtonInline0>
+            </FixWrapper>
           </Link>
 
           <Link to="/setup">
-            <ButtonInline1>My Setup</ButtonInline1>
+            <FixWrapper>
+              <ButtonInline1>My Setup</ButtonInline1>
+            </FixWrapper>
           </Link>
 
           <Link to="/links">
-            <ButtonInline2>Links</ButtonInline2>
+            <FixWrapper>
+              <ButtonInline2>Links</ButtonInline2>
+            </FixWrapper>
           </Link>
 
           <Link to="https://jamfox.github.io/">
-            <ButtonInline3>NCT News</ButtonInline3>
+            <FixWrapper>
+              <ButtonInline3>NCT News</ButtonInline3>
+            </FixWrapper>
           </Link>
         </MainButtons>
       </Videofull>

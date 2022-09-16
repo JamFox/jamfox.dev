@@ -1,8 +1,4 @@
-export {
-  MainButtons,
-  Button,
-  ButtonInline,
-} from "./Button"
+export {MainButtons, Button, ButtonInline, FixWrapper} from "./Button"
 export {Pane} from "./Structure"
 export {GlobalStyles} from "./GlobalStyles"
 export {Image, Emote} from "./Image"

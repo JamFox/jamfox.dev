@@ -28,8 +28,6 @@ const SmallHeader = styled(TextBody)`
   width: auto;
   margin: 1vh 0vh 1vh 0vh;
   position: relative;
-  animation-name: headingxl;
-  animation-duration: 0.4s;
 `
 
 const Post = styled.div`

@@ -19,6 +19,7 @@ import {
   Videofull,
   Overlay,
   CenterLogo,
+  FixWrapper,
 } from "../components"
 import {BREAKPOINT} from "../utils/constants"
 import {GlobalStyles} from "../components/GlobalStyles"
@@ -37,7 +38,6 @@ const ButtonInline1 = styled(ButtonInline)`
   :hover {
     box-shadow: 9px 9px 0 0 hsla(356, 100%, 72%, 1);
   }
-  animation-duration: 0.4s;
 `
 
 const ButtonInline2 = styled(ButtonInline)`
@@ -45,7 +45,6 @@ const ButtonInline2 = styled(ButtonInline)`
   :hover {
     box-shadow: 9px 9px 0 0 hsla(3, 100%, 72%, 1);
   }
-  animation-duration: 0.3s;
 `
 
 const ButtonInline3 = styled(ButtonInline)`
@@ -53,7 +52,6 @@ const ButtonInline3 = styled(ButtonInline)`
   :hover {
     box-shadow: 9px 9px 0 0 hsla(8, 100%, 72%, 1);
   }
-  animation-duration: 0.2s;
 `
 
 const ButtonInline4 = styled(ButtonInline)`
@@ -61,7 +59,6 @@ const ButtonInline4 = styled(ButtonInline)`
   :hover {
     box-shadow: 9px 9px 0 0 var(--orange-color);
   }
-  animation-duration: 0.2s;
 `
 
 const Wrapper = styled.div`
@@ -111,27 +108,39 @@ export default function Blog({data}) {
       </Videofull>
       <Wrapper>
         <Link to="https://steamcommunity.com/id/JamFox/">
-          <ButtonInline>Games</ButtonInline>
+          <FixWrapper>
+            <ButtonInline>Games</ButtonInline>
+          </FixWrapper>
         </Link>
 
         <Link to="https://letterboxd.com/jamfox/">
-          <ButtonInline1>Movies</ButtonInline1>
+          <FixWrapper>
+            <ButtonInline1>Movies</ButtonInline1>
+          </FixWrapper>
         </Link>
 
         <Link to="https://myanimelist.net/profile/Jamfox">
-          <ButtonInline2>Anime</ButtonInline2>
+          <FixWrapper>
+            <ButtonInline2>Anime</ButtonInline2>
+          </FixWrapper>
         </Link>
 
         <Link to="https://open.spotify.com/user/kapikmeow">
-          <ButtonInline3>Music</ButtonInline3>
+          <FixWrapper>
+            <ButtonInline3>Music</ButtonInline3>
+          </FixWrapper>
         </Link>
 
         <Link to="https://www.goodreads.com/user/show/78068566-jamfox">
-          <ButtonInline4>Books</ButtonInline4>
+          <FixWrapper>
+            <ButtonInline4>Books</ButtonInline4>
+          </FixWrapper>
         </Link>
 
         <Link to="https://www.youtube.com/c/JamFox/videos">
-          <ButtonInline4>YouTube</ButtonInline4>
+          <FixWrapper>
+            <ButtonInline4>YouTube</ButtonInline4>
+          </FixWrapper>
         </Link>
       </Wrapper>
       <Pane>

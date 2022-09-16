@@ -11,20 +11,7 @@ export const TextBody = styled.div`
   @media (max-width: ${BREAKPOINT}px) {
     margin: 0 0 5vh 0;
   }
-
-  @keyframes textbody {
-    0% {
-      left: -500px;
-      opacity: 0;
-    }
-    100% {
-      left: 0px;
-      opacity: 1;
-    }
-  }
   position: relative;
-  animation-name: textbody;
-  animation-duration: 0.5s;
 `
 
 export const TextBodySmall = styled(TextBody)`
@@ -110,20 +97,7 @@ export const HeadingL = styled.h2`
   @media (max-width: ${BREAKPOINT}px) {
     font-size: 30px;
   }
-
-  @keyframes headingl {
-    0% {
-      left: 500px;
-      opacity: 0;
-    }
-    100% {
-      left: 0px;
-      opacity: 1;
-    }
-  }
   position: relative;
-  animation-name: headingl;
-  animation-duration: 0.5s;
 `
 
 export const HeadingXL = styled.h1`
@@ -144,20 +118,7 @@ export const HeadingXL = styled.h1`
   @media (max-width: ${BREAKPOINT}px) {
     font-size: 45px;
   }
-
-  @keyframes headingxl {
-    0% {
-      top: -500px;
-      opacity: 0;
-    }
-    100% {
-      top: 0px;
-      opacity: 1;
-    }
-  }
   position: relative;
-  animation-name: headingxl;
-  animation-duration: 0.5s;
 `
 
 export const Desc = styled.p`

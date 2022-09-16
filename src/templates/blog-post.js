@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import {graphql} from "gatsby"
 import {HomeLayout, HeadingXL, SEO, TextBodyLight, TextDate} from "../components"
 import {defineCustomElements as deckDeckGoHighlightElement} from "@deckdeckgo/highlight-code/dist/loader"

@@ -19,28 +19,13 @@ const Wrapper = styled.div`
 const TextAbout = styled.p`
   margin: 1vh 2vh 0vh 0vh;
   vertical-align: middle;
-  @keyframes textbody {
-    0% {
-      right: -500px;
-      opacity: 0;
-    }
-    100% {
-      right: 0px;
-      opacity: 1;
-    }
-  }
   position: relative;
-  animation-name: textbody;
-  animation-duration: 0.1s;
 `
 
 const ImgWrapper = styled.div`
   float: left;
   margin: 10vh;
-
   position: relative;
-  animation-name: textbody;
-  animation-duration: 0.1s;
 `
 
 const ButtonInline = styled(Button)`
@@ -50,7 +35,6 @@ const ButtonInline = styled(Button)`
   :hover {
     box-shadow: 9px 9px 0 0 hsla(23, 100%, 21%, 1);
   }
-  animation-duration: 0.1s;
 `
 
 const ButtonInlineGit = styled(ButtonInline)`
@@ -60,7 +44,6 @@ const ButtonInlineGit = styled(ButtonInline)`
   :hover {
     box-shadow: 0px 244px 0 0 hsla(23, 100%, 100%, 0.55);
   }
-  animation-duration: 0.1s;
 `
 
 const ButtonInlinePDF = styled(ButtonInline)`
@@ -68,7 +51,6 @@ const ButtonInlinePDF = styled(ButtonInline)`
   :hover {
     box-shadow: -90px 9px 0 0 hsla(3, 100%, 71%, 0.83);
   }
-  animation-duration: 0.1s;
 `
 const ButtonInlineInsta = styled(ButtonInline)`
   width: 1000px;
