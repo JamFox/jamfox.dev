@@ -80,8 +80,16 @@ export default function Blog({data}) {
       <Pane>
         <h1>Sup?</h1>
         <p>
-          Here's where I document and log things of interest. Like my homelab
-          setup or CSGO trading misadventures.
+          Here's where I share stories and log things of interest. Like my
+          homelab disasters or CSGO trading misadventures.
+        </p>
+        <p>
+          For technical documentation check out
+          <b>
+            <LinkText>
+              <Link to="https://docs.jamfox.dev"> docs.jamfox.dev </Link>
+            </LinkText>
+          </b>
         </p>
       </Pane>
 

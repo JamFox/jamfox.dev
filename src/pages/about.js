@@ -160,21 +160,21 @@ export default function AboutPage() {
         <Pane></Pane>
         <Pane>
           <h3>I want to know more!</h3>
-          <TextAbout>Sure! But the following is under construction.</TextAbout>
           <TextAbout>
-            If LinkedIn's too bloated check out my
-            <b>
-              <LinkText>
-                <Link to="/resume"> Resume </Link>
-              </LinkText>
-            </b>
-            right here on jamfox.dev! Hop on to
+            Hop on to
             <b>
               <LinkText>
                 <Link to="/log"> The Log </Link>
               </LinkText>
             </b>
-            if you're interested in my homelab or other projects!
+            if you're interested in articles, stories! 
+            Or check out technical
+            documentation at
+            <b>
+              <LinkText>
+                <Link to="https://docs.jamfox.dev"> docs.jamfox.dev </Link>
+              </LinkText>
+            </b>
           </TextAbout>
         </Pane>
       </HomeLayout>
