@@ -150,8 +150,8 @@ export default function AboutPage() {
             </FixWrapper>
           </Link>
 
-          <Link to="mailto:karl.turvas@cern.ch">
-            <TextBody> MAIL: karl.turvas@cern.ch </TextBody>
+          <Link to="mailto:karl@jamfox.dev">
+            <TextBody> MAIL: karl@jamfox.dev </TextBody>
           </Link>
           <Link to="https://youtu.be/p0fhF-HfSzU">
             <TextBody> PHONE: +372 5333 7528 </TextBody>
@@ -167,8 +167,7 @@ export default function AboutPage() {
                 <Link to="/log"> The Log </Link>
               </LinkText>
             </b>
-            if you're interested in articles, stories! 
-            Or check out technical
+            if you're interested in articles, stories! Or check out technical
             documentation at
             <b>
               <LinkText>
