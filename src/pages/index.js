@@ -147,12 +147,6 @@ export default function HomePage({data}) {
               <ButtonInline2>Links</ButtonInline2>
             </FixWrapper>
           </Link>
-
-          <Link to="https://jamfox.github.io/">
-            <FixWrapper>
-              <ButtonInline3>NCT News</ButtonInline3>
-            </FixWrapper>
-          </Link>
         </MainButtons>
       </Videofull>
 
