@@ -34,7 +34,10 @@ const Post = styled.div`
 export default function Blog({data}) {
   return (
     <>
-      <SEO title="Log" />
+      <SEO
+        title="Log"
+        description="Here's where I share stories and log things of interest. Like my homelab disasters or CSGO trading misadventures."
+      />
       <GlobalStyles />
 
       <Top>

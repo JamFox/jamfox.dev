@@ -68,7 +68,7 @@ const Wrapper = styled.div`
 export default function Blog({data}) {
   return (
     <>
-      <SEO title="Blog" />
+      <SEO title="Blog" description="JamFox's Blog" />
       <GlobalStyles />
 
       <Top>

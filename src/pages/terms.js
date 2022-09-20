@@ -18,7 +18,7 @@ import {GlobalStyles} from "../components/GlobalStyles"
 export default function HomePage({data}) {
   return (
     <>
-      <SEO title="Terms of Service" />
+      <SEO title="Terms of Service" description="JamFox's Personal Site ToS" />
       <GlobalStyles />
 
       <Top>

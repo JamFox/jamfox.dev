@@ -57,7 +57,7 @@ const TextDateSmall = styled(TextDate)`
 export default function AboutPage() {
   return (
     <>
-      <SEO title="Setup" />
+      <SEO title="Setup" description="Specs of my homelab, gaming computer and everything else!" />
       <Top>
         <TopLinks>
           <TopLink>

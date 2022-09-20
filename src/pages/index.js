@@ -70,7 +70,7 @@ const ButtonInline0 = styled(ButtonInline)`
   width: 180px;
   border: 3px solid var(--pink-color);
   :hover {
-    box-shadow: 9px 9px 0 0 var(--pink-color);
+    box-shadow: 0px 9px 0 0 var(--pink-color);
     background-color: hsla(0, 0%, 11%, 0.55);
   }
 `
@@ -78,28 +78,21 @@ const ButtonInline0 = styled(ButtonInline)`
 const ButtonInline1 = styled(ButtonInline0)`
   border: 3px solid hsla(356, 100%, 72%, 1);
   :hover {
-    box-shadow: 3px 11px 0 0 hsla(356, 100%, 72%, 1);
+    box-shadow: 0px 9px 0 0 hsla(356, 100%, 72%, 1);
   }
 `
 
 const ButtonInline2 = styled(ButtonInline0)`
   border: 3px solid hsla(7, 100%, 72%, 1);
   :hover {
-    box-shadow: -3px 11px 0 0 hsla(7, 100%, 72%, 1);
-  }
-`
-
-const ButtonInline3 = styled(ButtonInline0)`
-  border: 3px solid var(--orange-color);
-  :hover {
-    box-shadow: -9px 9px 0 0 var(--orange-color);
+    box-shadow: 0px 9px 0 0 hsla(7, 100%, 72%, 1);
   }
 `
 
 export default function HomePage({data}) {
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="Home" description="JamFox's Personal Site"/>
       <GlobalStyles />
       <Videofull>
         <Video

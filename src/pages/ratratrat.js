@@ -17,7 +17,7 @@ const Heading = styled(HeadingL)`
 export default function RatPage({data}) {
   return (
     <>
-      <SEO title="Rat" />
+      <SEO title="Rat" description="rats rats, we are rats" />
 
       <HomeLayout>
         <Link to="/ratratratrat">

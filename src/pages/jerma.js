@@ -7,7 +7,7 @@ import {HomeLayout, SEO} from "../components"
 export default function RatPage({data}) {
   return (
     <>
-      <SEO title="Jerma" />
+      <SEO title="Jerma" description="jeeerm" />
       <HomeLayout>
         <Link to="/terms">
           <StaticImage src="../images/jerma.jpg" />

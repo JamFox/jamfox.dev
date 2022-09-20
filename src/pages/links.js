@@ -45,7 +45,7 @@ const HeadingL2 = styled(HeadingL)`
 export default function AboutPage() {
   return (
     <>
-      <SEO title="Links" />
+      <SEO title="Links" description="Interesting links from all around the web!" />
       <Top>
         <TopLinks>
           <TopLink>

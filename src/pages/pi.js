@@ -6,7 +6,7 @@ import {GlobalStyles} from "../components/GlobalStyles"
 export default function HomePage({data}) {
   return (
     <>
-      <SEO title="Pi" />
+      <SEO title="Pi" description="Some digits of Pi" />
       <GlobalStyles />
       <Pane>
         <p>

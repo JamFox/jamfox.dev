@@ -20,7 +20,7 @@ const InlineText = styled(TextBody)`
 export default function NotFoundPage() {
   return (
     <>
-      <SEO title="404: Not found" />
+      <SEO title="404" description="Not Found"/>
       <HomeLayout>
         <Wrapper>
           <HeadingXL>NOT FOUND</HeadingXL>

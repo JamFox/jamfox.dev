@@ -60,7 +60,7 @@ const ButtonInlineInsta = styled(ButtonInline)`
 export default function AboutPage() {
   return (
     <>
-      <SEO title="About" />
+      <SEO title="About" description="About Me" />
       <Top>
         <TopLinks>
           <TopLink>

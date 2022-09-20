@@ -25,7 +25,10 @@ const Heading = styled(HeadingL)`
 export default function RatPage({data}) {
   return (
     <>
-      <SEO title="Jarvis" />
+      <SEO
+        title="Jarvis"
+        description="Jarvis, looks like some shitposting dude on this weird website has reposted offensive meme...."
+      />
       <Top>
         <TopLinks>
           <TopLink>
