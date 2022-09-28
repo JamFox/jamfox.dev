@@ -207,7 +207,7 @@ export default function AboutPage() {
             </TextDateSmall>
             <TextDateSmall>» Car - 2008 Kia Cee'D 1.6 CRDi</TextDateSmall>
             <TextDateSmall>
-              » Glasses - Ray-Ban Rob RX6472 2943 50
+              » Glasses - Ray-Ban Rob RX6472 2943 52
             </TextDateSmall>
             <TextDateSmall>
               » Eyes - R -1.75 (-0.50) 100° L -1.50 (-0.50) 75°
