@@ -135,9 +135,9 @@ export default function HomePage({data}) {
             </FixWrapper>
           </Link>
 
-          <Link to="/links">
+          <Link to="https://docs.jamfox.dev/">
             <FixWrapper>
-              <ButtonInline2>Links</ButtonInline2>
+              <ButtonInline2>My Docs</ButtonInline2>
             </FixWrapper>
           </Link>
         </MainButtons>
