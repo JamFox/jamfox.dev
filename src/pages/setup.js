@@ -57,7 +57,10 @@ const TextDateSmall = styled(TextDate)`
 export default function AboutPage() {
   return (
     <>
-      <SEO title="Setup" description="Specs of my homelab, gaming computer and everything else!" />
+      <SEO
+        title="Setup"
+        description="Specs of my homelab, gaming computer and everything else!"
+      />
       <Top>
         <TopLinks>
           <TopLink>
@@ -173,7 +176,9 @@ export default function AboutPage() {
             <TextDateSmall>» Monitor3 - PHL 244E5 (1080p 60Hz) </TextDateSmall>
             <TextDateSmall>» Keeb - Pteron36 (Kailh Choc Black) </TextDateSmall>
             <TextDateSmall>» Tablet - XP-PEN G430S </TextDateSmall>
-            <TextDateSmall>» Mouse - Logitech G Pro X Superlight (1000Hz 800DPI)</TextDateSmall>
+            <TextDateSmall>
+              » Mouse - Logitech G Pro X Superlight (1000Hz 800DPI)
+            </TextDateSmall>
             <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
             <TextDateSmall>» Audio - Logitech G533</TextDateSmall>
           </Post>
@@ -182,9 +187,9 @@ export default function AboutPage() {
           <Post>
             <TextDateSmall>» OS - Windows 10 / Linux </TextDateSmall>
             <TextDateSmall>
-              » Distros - CentOS / Arch Linux / Ubuntu (WSL)
+              » Distros - CentOS/RHEL / Arch Linux / Ubuntu (WSL) / Debian
             </TextDateSmall>
-            <TextDateSmall>» DE - KDE Plasma (no riced WMs here)</TextDateSmall>
+            <TextDateSmall>» DE - KDE Plasma (no riced WM yet)</TextDateSmall>
             <TextDateSmall>» Text editors - SpaceVim / VSCode</TextDateSmall>
             <TextDateSmall>
               » Phone (main) - Oneplus 3T hardened LineageOS
@@ -200,8 +205,12 @@ export default function AboutPage() {
             <TextDateSmall>
               » Sling pack - Heimplanet Transit Line Sling Pocket
             </TextDateSmall>
+            <TextDateSmall>» Car - 2008 Kia Cee'D 1.6 CRDi</TextDateSmall>
             <TextDateSmall>
-              » Car - 2008 Kia Cee'D 1.6 CRDi
+              » Glasses - Ray-Ban Rob RX6472 2943 50
+            </TextDateSmall>
+            <TextDateSmall>
+              » Eyes - R -1.75 (-0.50) 100° L -1.50 (-0.50) 75°
             </TextDateSmall>
           </Post>
         </Wrapper>
