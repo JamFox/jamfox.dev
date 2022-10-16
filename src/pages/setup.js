@@ -110,10 +110,10 @@ export default function AboutPage() {
           <Post>
             <TextDateSmall>» Server - HP ProLiant DL380 Gen9 </TextDateSmall>
             <TextDateSmall>
-              » CPU - 2x Intel Xeon E5-2630 v3 @ 2.40 GHz
+              » CPU - 2x Intel Xeon E5-2637 v3 @ 3.5GHz 
             </TextDateSmall>
-            <TextDateSmall>» RAM - 18x16GB (ECC DDR4 2133CL15) </TextDateSmall>
-            <TextDateSmall>» Storage - 8x600GB SAS </TextDateSmall>
+            <TextDateSmall>» RAM - 16x16GB (ECC DDR4 2133CL15) </TextDateSmall>
+            <TextDateSmall>» Storage - 8x600GB SAS (4 logical in RAID1) </TextDateSmall>
             <TextDateSmall>
               » Storage Controller - HP Smart Array P440ar
             </TextDateSmall>
