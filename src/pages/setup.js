@@ -113,9 +113,7 @@ export default function AboutPage() {
               » CPU - 2x Intel Xeon E5-2637 v3 @ 3.5GHz
             </TextDateSmall>
             <TextDateSmall>» RAM - 16x16GB (ECC DDR4 2133CL15) </TextDateSmall>
-            <TextDateSmall>
-              » Storage - 8x600GB SAS (RAID10)
-            </TextDateSmall>
+            <TextDateSmall>» Storage - 8x600GB SAS (RAID10)</TextDateSmall>
             <TextDateSmall>
               » Storage Controller - HP Smart Array P440ar
             </TextDateSmall>
@@ -213,6 +211,9 @@ export default function AboutPage() {
             </TextDateSmall>
             <TextDateSmall>
               » Eyes - R -1.75 (-0.50) 100° L -1.50 (-0.50) 75°
+            </TextDateSmall>
+            <TextDateSmall>
+              » Skis (Alpine) - Rossignol React R10 Ti (2022)
             </TextDateSmall>
           </Post>
         </Wrapper>
