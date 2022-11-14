@@ -205,7 +205,9 @@ export default function AboutPage() {
             <TextDateSmall>
               » Sling pack - Heimplanet Transit Line Sling Pocket
             </TextDateSmall>
-            <TextDateSmall>» Car - 2008 Kia Cee'D 1.6 CRDi</TextDateSmall>
+            <TextDateSmall>
+              » Car - Kia ProCee'D 1.6 CRDi 2008 115PS/85kW
+            </TextDateSmall>
             <TextDateSmall>
               » Glasses - Ray-Ban Rob RX6472 2943 52
             </TextDateSmall>
