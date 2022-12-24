@@ -195,6 +195,9 @@ export default function AboutPage() {
               » Phone (main) - Oneplus 3T hardened LineageOS
             </TextDateSmall>
             <TextDateSmall>» Phone (secondary) - Oneplus 5T </TextDateSmall>
+            <TextDateSmall>
+              » E-reader - Kobo Libra 2
+            </TextDateSmall>
             <TextDateSmall>» Watch - Garmin Forerunner 735XT </TextDateSmall>
             <TextDateSmall>» Soldering iron - TS100 B2 </TextDateSmall>
             <TextDateSmall>» 3D printer - Anycubic Mega SE </TextDateSmall>
