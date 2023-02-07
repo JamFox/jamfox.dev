@@ -2,10 +2,11 @@ import styled from "styled-components"
 import {BREAKPOINT} from "../utils/constants"
 
 export const TextBody = styled.div`
+  font-family: 'roboto';
   color: var(--dark-color-light);
   display: block;
-  letter-spacing: -0.003em;
-  line-height: 1.3;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
   margin: 0 5% 1vh 5%;
 
   @media (max-width: ${BREAKPOINT}px) {
@@ -81,6 +82,7 @@ export const LinkText = styled.span`
 `
 
 export const HeadingL = styled.h2`
+  font-family: 'IBMPlexMono';
   background: -webkit-linear-gradient(
     120deg,
     hsla(355, 100%, 85%, 1),
@@ -101,6 +103,7 @@ export const HeadingL = styled.h2`
 `
 
 export const HeadingXL = styled.h1`
+  font-family: 'IBMPlexMono';
   background: -webkit-linear-gradient(
     120deg,
     hsla(29, 100%, 72%, 1),
@@ -122,6 +125,7 @@ export const HeadingXL = styled.h1`
 `
 
 export const Desc = styled.p`
+  font-family: 'IBMPlexMono';
   text-align: center;
   vertical-align: middle;
   max-width: 80vw;

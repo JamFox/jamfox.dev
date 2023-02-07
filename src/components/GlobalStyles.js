@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     --dark-color: hsla(0, 0%, 11%, 1);
     --dark-color-light: hsla(0, 0%, 62%, 0.9);
     --dark-color-lighter: hsla(0, 0%, 29%, 0.7);
-    --light-color: hsl(0, 0%, 99%);
+    --light-color: hsl(0, 0%, 85%);
     --light-color-translucent: hsla(0, 0%, 99%, 0.92);
     --sides-padding-desktop: 3%;
     --sides-padding-mobile: 5%;
@@ -39,6 +39,14 @@ export const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 700;
     src: url('${font.IBMPlexMono700}') format("woff2");
+  }
+
+  @font-face {
+    font-display: block;
+    font-family: "archivo";
+    font-style: normal;
+    font-weight: 400;
+    src: url('${font.archivo}');
   }
 
   /* TF default
@@ -70,8 +78,8 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: var(--dark-color);
     color: var(--light-color);
-    font-family: 'IBMPlexMono', 'titanfall', Arial, Helvetica, sans-serif;
-    font-size: 17px;
+    font-family: 'archivo', 'IBMPlexMono', Helvetica, sans-serif;
+    font-size: 20px;
     font-weight: 400;
     margin: 0;
   }

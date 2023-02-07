@@ -36,6 +36,10 @@ const ImgWrapper = styled.div`
   position: relative;
 `
 
+const TextBodyCode = styled(TextBody)`
+  font-family: 'IBMPlexMono';
+`
+
 const ButtonInlineGit = styled(ButtonInline)`
   border: 3px solid hsla(360, 100%, 100%, 0.75);
   :hover {
@@ -151,10 +155,10 @@ export default function AboutPage() {
           </Link>
 
           <Link to="mailto:karl@jamfox.dev">
-            <TextBody> MAIL: karl@jamfox.dev </TextBody>
+            <TextBodyCode> MAIL: karl@jamfox.dev </TextBodyCode>
           </Link>
           <Link to="https://youtu.be/p0fhF-HfSzU">
-            <TextBody> PHONE: +372 5333 7528 </TextBody>
+            <TextBodyCode> PHONE: +372 5333 7528 </TextBodyCode>
           </Link>
         </Wrapper>
         <Pane></Pane>

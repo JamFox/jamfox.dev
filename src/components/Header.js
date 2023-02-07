@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const Top = styled.div`
+  font-family: 'IBMPlexMono';
   position: fixed;
   width: 100%;
   height: 64px;
@@ -9,11 +10,13 @@ export const Top = styled.div`
 `
 
 export const TopLinks = styled.div`
+  font-family: 'IBMPlexMono';
   float: right;
   display: flex;
 `
 
 export const TopLink = styled.a`
+  font-family: 'IBMPlexMono';
   margin: 0;
   font-size: 26px;
   font-weight: bold;

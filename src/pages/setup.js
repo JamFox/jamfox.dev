@@ -39,6 +39,7 @@ const Post = styled.div`
 `
 
 const HeadingL2 = styled(HeadingL)`
+  font-family: 'IBMPlexMono';
   background: -webkit-linear-gradient(
     120deg,
     hsla(29, 100%, 79%, 1),
@@ -49,6 +50,8 @@ const HeadingL2 = styled(HeadingL)`
 `
 
 const TextDateSmall = styled(TextDate)`
+  font-family: 'IBMPlexMono';
+  line-height: 1.4;
   margin: 0vh 0vh 0vh 0vh;
   text-align: left;
   justify-content: top;
