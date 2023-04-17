@@ -195,9 +195,9 @@ export default function AboutPage() {
             <TextDateSmall>» DE - KDE Plasma (no riced WM yet)</TextDateSmall>
             <TextDateSmall>» Text editors - SpaceVim / VSCode</TextDateSmall>
             <TextDateSmall>
-              » Phone (main) - Oneplus 3T hardened LineageOS
+              » Phone (main) - Oneplus 5T DivestOS
             </TextDateSmall>
-            <TextDateSmall>» Phone (secondary) - Oneplus 5T </TextDateSmall>
+            <TextDateSmall>» Phone (secondary) - Iphone 12 Pro </TextDateSmall>
             <TextDateSmall>
               » E-reader - Kobo Libra 2
             </TextDateSmall>
