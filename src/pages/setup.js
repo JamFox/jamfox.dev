@@ -100,12 +100,6 @@ export default function AboutPage() {
               » Monitor1 - Samsung C27HG70 (1440p 144Hz)
             </TextDateSmall>
             <TextDateSmall>» Monitor2 - DELL U2412M (1200p 60Hz)</TextDateSmall>
-            <TextDateSmall>» Keeb - Ducky Shine 2 (MX-Browns) </TextDateSmall>
-            <TextDateSmall>» Mouse - Zowie EC1-A (1000Hz 800DPI)</TextDateSmall>
-            <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
-            <TextDateSmall>
-              » Audio - HyperX Cloud 2 + Blue Snowball
-            </TextDateSmall>
             <TextDateSmall>» VR System - Oculus Rift CV1 Touch</TextDateSmall>
           </Post>
 
@@ -122,7 +116,7 @@ export default function AboutPage() {
             </TextDateSmall>
           </Post>
 
-          <HeadingL2> luna (homeserver) </HeadingL2>
+          <HeadingL2> luna (workstation) </HeadingL2>
           <Post>
             <TextDateSmall>» Display - Samsung QN49Q6F (4K 60Hz)</TextDateSmall>
             <TextDateSmall>» Case - Define C </TextDateSmall>
@@ -140,19 +134,15 @@ export default function AboutPage() {
               </Link>
               )
             </TextDateSmall>
-
             <TextDateSmall>» RAM - 2x4GB+2x8GB (DDR3)</TextDateSmall>
             <TextDateSmall>
               » Storage - 500GB SSD + 250GB SSD + 1TB HDD + 500GB HDD
             </TextDateSmall>
+            <TextDateSmall>» Monitor1 - Built-in (1080p 60Hz)</TextDateSmall>
             <TextDateSmall>
-              » Keeb - Sofle v2 (Gateron Yellow Inks)
+              » Monitor2 - PHL 273V7QDSB (1080p 70Hz)
             </TextDateSmall>
-            <TextDateSmall>» Mouse - Zowie EC1-A (1000Hz 800DPI)</TextDateSmall>
-            <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
-            <TextDateSmall>
-              » Audio - Denon AVR-1612 with 5.1 surround speakers
-            </TextDateSmall>
+            <TextDateSmall>» Monitor3 - PHL 244E5 (1080p 60Hz) </TextDateSmall>
           </Post>
 
           <HeadingL2> equinox (cluster) </HeadingL2>
@@ -165,25 +155,33 @@ export default function AboutPage() {
             <TextDateSmall>» Camera - Raspberry Pi Camera 2</TextDateSmall>
           </Post>
 
-          <HeadingL2> legion (laptop) </HeadingL2>
+          <HeadingL2> terra (laptop) </HeadingL2>
           <Post>
-            <TextDateSmall>» Model - Lenovo Legion 5 17ACH6H</TextDateSmall>
-            <TextDateSmall>» CPU - AMD Ryzen 5 5600H</TextDateSmall>
-            <TextDateSmall>» GPU - RTX 3060 </TextDateSmall>
-            <TextDateSmall>» RAM - 2x8GB (DDR4 3600) </TextDateSmall>
-            <TextDateSmall>» Storage - 1TB SSD </TextDateSmall>
-            <TextDateSmall>» Monitor1 - Built-in (1080p 60Hz)</TextDateSmall>
-            <TextDateSmall>
-              » Monitor2 - PHL 273V7QDSB (1080p 70Hz)
-            </TextDateSmall>
-            <TextDateSmall>» Monitor3 - PHL 244E5 (1080p 60Hz) </TextDateSmall>
+            <TextDateSmall>» Model - HP Elitebook 840 G8</TextDateSmall>
+            <TextDateSmall>» CPU - Intel Core I5-1135G7</TextDateSmall>
+            <TextDateSmall>» RAM - 2x 16GB (DDR4 3200) </TextDateSmall>
+            <TextDateSmall>» Storage - 1TB NVMe</TextDateSmall>
+          </Post>
+
+          <HeadingL2> Input </HeadingL2>
+          <Post>
+            <TextDateSmall>» Headphone (gaming) - Logitech G533</TextDateSmall>
+            <TextDateSmall>» Headphone (EDC) - Sony WH-1000XM5</TextDateSmall>
+            <TextDateSmall>» Headphone (buds) - Anker SoundBuds Slim+</TextDateSmall>
+            <TextDateSmall>» Microphone - Blue Snowball </TextDateSmall>
+            <TextDateSmall>» Keeb - Helidox 'Corne' Choc SMD (Kailh Choc Red) </TextDateSmall>
+            <TextDateSmall>» Keeb - Ferris Sweep v2.2 (Kailh Choc Blue) </TextDateSmall>
             <TextDateSmall>» Keeb - Pteron36 (Kailh Choc Black) </TextDateSmall>
+            <TextDateSmall>
+              » Keeb - Sofle v2 (Lubed & filmed Gateron Yellow Ink)
+            </TextDateSmall>
+            <TextDateSmall>» Keeb - Ducky Shine 2 (MX Brown) </TextDateSmall>
             <TextDateSmall>» Tablet - XP-PEN G430S </TextDateSmall>
             <TextDateSmall>
-              » Mouse - Logitech G Pro X Superlight (1000Hz 800DPI)
+              » Mouse (gaming)- Logitech G Pro X Superlight (1000Hz 800DPI)
             </TextDateSmall>
+            <TextDateSmall>» Mouse (work) - Zowie EC1-A (1000Hz 800DPI)</TextDateSmall>
             <TextDateSmall>» Mousepad - Cooler Master MP510</TextDateSmall>
-            <TextDateSmall>» Audio - Logitech G533</TextDateSmall>
           </Post>
 
           <HeadingL2> Other </HeadingL2>
