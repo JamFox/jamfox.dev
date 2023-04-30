@@ -163,7 +163,7 @@ export default function AboutPage() {
             <TextDateSmall>» Storage - 1TB NVMe</TextDateSmall>
           </Post>
 
-          <HeadingL2> Input </HeadingL2>
+          <HeadingL2> I/O </HeadingL2>
           <Post>
             <TextDateSmall>» Headphone (gaming) - Logitech G533</TextDateSmall>
             <TextDateSmall>» Headphone (EDC) - Sony WH-1000XM5</TextDateSmall>
@@ -207,7 +207,10 @@ export default function AboutPage() {
             </TextDateSmall>
             <TextDateSmall>» Backpack - 5.11 RUSH24</TextDateSmall>
             <TextDateSmall>
-              » Sling pack - Heimplanet Transit Line Sling Pocket
+              » Sling pack (EDC) - Alpaka Modular Sling
+            </TextDateSmall>
+            <TextDateSmall>
+              » Sling pack (hike) - Heimplanet Transit Line Sling Pocket
             </TextDateSmall>
             <TextDateSmall>
               » Car - Kia ProCee'D 1.6 CRDi 2008 115PS/85kW
