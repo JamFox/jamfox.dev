@@ -186,7 +186,7 @@ export default function AboutPage() {
 
           <HeadingL2> Other </HeadingL2>
           <Post>
-            <TextDateSmall>» OS - Windows 10 / Linux </TextDateSmall>
+            <TextDateSmall>» OS - Windows 11 / Linux </TextDateSmall>
             <TextDateSmall>
               » Distros - CentOS/RHEL / Arch Linux / Ubuntu (WSL) / Debian
             </TextDateSmall>
