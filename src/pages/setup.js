@@ -152,6 +152,7 @@ export default function AboutPage() {
               » Secondary - 2x Raspberry Pi Model 3B+
             </TextDateSmall>
             <TextDateSmall>» Automation controller - Arduino Uno</TextDateSmall>
+            <TextDateSmall>» PoE Hat - Waveshare PoE HAT (B)</TextDateSmall>
             <TextDateSmall>» Camera - Raspberry Pi Camera 2</TextDateSmall>
           </Post>
 
