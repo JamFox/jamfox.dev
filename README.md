@@ -7,7 +7,11 @@
   JamFox's JAMstack GatsbyJS webpage
 </h1>
 
-Repository for JamFox's website, CI and hosting by Gatsby.
+Repository for JamFox's website, CI and hosting by Gatsby. Deployed by GitHub Actions.
+
+## Usage
+
+Check and use the Makefile for all the available commands.
 
 ## Under the hood
 
