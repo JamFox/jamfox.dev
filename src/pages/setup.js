@@ -116,6 +116,16 @@ export default function AboutPage() {
             </TextDateSmall>
           </Post>
 
+          <HeadingL2> ignis (nas) </HeadingL2>
+          <Post>
+            <TextDateSmall>» Server - Synology DS220+</TextDateSmall>
+            <TextDateSmall>
+              » CPU - Intel Celeron J4025
+            </TextDateSmall>
+            <TextDateSmall>» RAM - 2GB+4GB D4NESO-2666-4G (DDR4) </TextDateSmall>
+            <TextDateSmall>» Storage - 2x8TB SEAGATE Exos 7E10 (RAID1)</TextDateSmall>
+          </Post>
+
           <HeadingL2> luna (workstation) </HeadingL2>
           <Post>
             <TextDateSmall>» Display - Samsung QN49Q6F (4K 60Hz)</TextDateSmall>
