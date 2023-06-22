@@ -123,7 +123,7 @@ export default function AboutPage() {
               » CPU - Intel Celeron J4025
             </TextDateSmall>
             <TextDateSmall>» RAM - 2GB+4GB D4NESO-2666-4G (DDR4) </TextDateSmall>
-            <TextDateSmall>» Storage - 2x8TB SEAGATE Exos 7E10 (RAID1)</TextDateSmall>
+            <TextDateSmall>» Storage - 2x8TB SEAGATE Exos 7E10 (SHR)</TextDateSmall>
           </Post>
 
           <HeadingL2> luna (workstation) </HeadingL2>
