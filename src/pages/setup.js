@@ -89,7 +89,7 @@ export default function AboutPage() {
             <Emote src={gif} alt=":spinfox:" width={35} />
           </SmallHeader>
 
-          <HeadingL2> titaniumjam mk3</HeadingL2>
+          <HeadingL2> titaniumjam mk3 (gaming)</HeadingL2>
           <Post>
             <TextDateSmall>» Case - Define R5 </TextDateSmall>
             <TextDateSmall>» CPU - Ryzen 5 5600X @ 4.6GHz PBO</TextDateSmall>
@@ -103,8 +103,9 @@ export default function AboutPage() {
             <TextDateSmall>» VR System - Oculus Rift CV1 Touch</TextDateSmall>
           </Post>
 
-          <HeadingL2> sol (homeserver) </HeadingL2>
+          <HeadingL2><Link to="https://docs.jamfox.dev/content/homelab/">jamlab (homelab)</Link></HeadingL2>
           <Post>
+            <TextDateSmall>sol (experiment server) </TextDateSmall>
             <TextDateSmall>» Server - HP ProLiant DL380 Gen9 </TextDateSmall>
             <TextDateSmall>
               » CPU - 2x Intel Xeon E5-2637 v3 @ 3.5GHz
@@ -116,14 +117,33 @@ export default function AboutPage() {
             </TextDateSmall>
           </Post>
 
-          <HeadingL2> ignis (nas) </HeadingL2>
           <Post>
+            <TextDateSmall>&#8203;</TextDateSmall>
+            <TextDateSmall>ignis (nas and mediaserver)</TextDateSmall>
             <TextDateSmall>» Server - Synology DS220+</TextDateSmall>
             <TextDateSmall>
               » CPU - Intel Celeron J4025
             </TextDateSmall>
             <TextDateSmall>» RAM - 2GB+4GB D4NESO-2666-4G (DDR4) </TextDateSmall>
             <TextDateSmall>» Storage - 2x8TB SEAGATE Exos 7E10 (SHR)</TextDateSmall>
+          </Post>
+
+          <Post>
+            <TextDateSmall>&#8203;</TextDateSmall>
+            <TextDateSmall>equinox (rpi cluster)</TextDateSmall>
+            <TextDateSmall>» Main - Raspberry Pi Model 4B</TextDateSmall>
+            <TextDateSmall>
+              » Secondary - 2x Raspberry Pi Model 3B+
+            </TextDateSmall>
+            <TextDateSmall>» PoE Hat - Waveshare PoE HAT (B)</TextDateSmall>
+            <TextDateSmall>» Camera - Raspberry Pi Camera 2</TextDateSmall>
+          </Post>
+
+          <Post>
+            <TextDateSmall>&#8203;</TextDateSmall>
+            <TextDateSmall>automata (automation controller)</TextDateSmall>
+            <TextDateSmall>» Automation controller - Arduino Uno R3</TextDateSmall>
+            <TextDateSmall>» Sensor kit - ELEGOO UNO R3 Most Complete Starter Kit</TextDateSmall>
           </Post>
 
           <HeadingL2> luna (workstation) </HeadingL2>
@@ -153,17 +173,6 @@ export default function AboutPage() {
               » Monitor2 - PHL 273V7QDSB (1080p 70Hz)
             </TextDateSmall>
             <TextDateSmall>» Monitor3 - PHL 244E5 (1080p 60Hz) </TextDateSmall>
-          </Post>
-
-          <HeadingL2> equinox (cluster) </HeadingL2>
-          <Post>
-            <TextDateSmall>» Main - Raspberry Pi Model 4B</TextDateSmall>
-            <TextDateSmall>
-              » Secondary - 2x Raspberry Pi Model 3B+
-            </TextDateSmall>
-            <TextDateSmall>» Automation controller - Arduino Uno</TextDateSmall>
-            <TextDateSmall>» PoE Hat - Waveshare PoE HAT (B)</TextDateSmall>
-            <TextDateSmall>» Camera - Raspberry Pi Camera 2</TextDateSmall>
           </Post>
 
           <HeadingL2> terra (laptop) </HeadingL2>
